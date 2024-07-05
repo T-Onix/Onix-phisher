@@ -1,0 +1,94 @@
+[Fri Jun 28 12:51:29 2024] PHP 8.3.4 Development Server (http://localhost:44) started
+[Fri Jun 28 12:51:42 2024] [::1]:32292 Accepted
+[Fri Jun 28 12:51:42 2024] [::1]:32292 [200]: GET /
+[Fri Jun 28 12:51:42 2024] [::1]:32292 Closing
+[Fri Jun 28 12:51:43 2024] [::1]:32306 Accepted
+[Fri Jun 28 12:51:43 2024] [::1]:32307 Accepted
+[Fri Jun 28 12:51:43 2024] [::1]:32308 Accepted
+[Fri Jun 28 12:51:43 2024] [::1]:32306 [200]: GET /style.css
+[Fri Jun 28 12:51:43 2024] [::1]:32307 [200]: GET /loc.js
+[Fri Jun 28 12:51:43 2024] [::1]:32306 Closing
+[Fri Jun 28 12:51:43 2024] [::1]:32307 Closing
+[Fri Jun 28 12:51:43 2024] [::1]:32308 [200]: GET /client.min.js
+[Fri Jun 28 12:51:43 2024] [::1]:32308 Closing
+[Fri Jun 28 12:51:44 2024] [::1]:32322 Accepted
+[Fri Jun 28 12:51:45 2024] [::1]:32322 [200]: GET /loc.js
+[Fri Jun 28 12:51:45 2024] [::1]:32322 Closing
+[Fri Jun 28 12:51:45 2024] [::1]:32330 Accepted
+[Fri Jun 28 12:51:45 2024] [::1]:32330 [200]: GET /client.min.js
+[Fri Jun 28 12:51:45 2024] [::1]:32330 Closing
+[Fri Jun 28 12:51:46 2024] [::1]:32337 Accepted
+[Fri Jun 28 12:51:46 2024] [::1]:32337 [404]: GET /favicon.ico - No such file or directory
+[Fri Jun 28 12:51:46 2024] [::1]:32337 Closing
+[Fri Jun 28 12:51:48 2024] [::1]:32350 Accepted
+[Fri Jun 28 12:51:49 2024] [::1]:32350 [200]: POST /info.php
+[Fri Jun 28 12:51:49 2024] [::1]:32350 Closing
+[Fri Jun 28 12:52:04 2024] [::1]:32421 Accepted
+[Fri Jun 28 12:52:04 2024] [::1]:32421 [200]: POST /key.php
+[Fri Jun 28 12:52:04 2024] [::1]:32421 Closing
+[Fri Jun 28 12:52:04 2024] [::1]:32422 Accepted
+[Fri Jun 28 12:52:04 2024] [::1]:32422 [200]: POST /key.php
+[Fri Jun 28 12:52:04 2024] [::1]:32422 Closing
+[Fri Jun 28 12:52:05 2024] [::1]:32429 Accepted
+[Fri Jun 28 12:52:05 2024] [::1]:32434 Accepted
+[Fri Jun 28 12:52:05 2024] [::1]:32429 [200]: POST /key.php
+[Fri Jun 28 12:52:05 2024] [::1]:32429 Closing
+[Fri Jun 28 12:52:05 2024] [::1]:32434 [200]: POST /key.php
+[Fri Jun 28 12:52:05 2024] [::1]:32434 Closing
+[Fri Jun 28 12:52:05 2024] [::1]:32437 Accepted
+[Fri Jun 28 12:52:06 2024] [::1]:32437 [200]: POST /key.php
+[Fri Jun 28 12:52:06 2024] [::1]:32437 Closing
+[Fri Jun 28 12:52:06 2024] [::1]:32438 Accepted
+[Fri Jun 28 12:52:06 2024] [::1]:32438 [200]: POST /key.php
+[Fri Jun 28 12:52:06 2024] [::1]:32438 Closing
+[Fri Jun 28 12:52:10 2024] [::1]:32463 Accepted
+[Fri Jun 28 12:52:11 2024] [::1]:32463 [200]: POST /key.php
+[Fri Jun 28 12:52:11 2024] [::1]:32463 Closing
+[Fri Jun 28 12:52:11 2024] [::1]:32465 Accepted
+[Fri Jun 28 12:52:11 2024] [::1]:32465 [200]: POST /key.php
+[Fri Jun 28 12:52:11 2024] [::1]:32465 Closing
+[Fri Jun 28 12:52:12 2024] [::1]:32477 Accepted
+[Fri Jun 28 12:52:12 2024] [::1]:32480 Accepted
+[Fri Jun 28 12:52:12 2024] [::1]:32477 [200]: POST /key.php
+[Fri Jun 28 12:52:12 2024] [::1]:32477 Closing
+[Fri Jun 28 12:52:12 2024] [::1]:32480 [200]: POST /key.php
+[Fri Jun 28 12:52:12 2024] [::1]:32480 Closing
+[Fri Jun 28 12:52:13 2024] [::1]:32485 Accepted
+[Fri Jun 28 12:52:13 2024] [::1]:32485 [200]: POST /key.php
+[Fri Jun 28 12:52:13 2024] [::1]:32485 Closing
+[Fri Jun 28 12:52:13 2024] [::1]:32492 Accepted
+[Fri Jun 28 12:52:13 2024] [::1]:32492 [200]: POST /key.php
+[Fri Jun 28 12:52:13 2024] [::1]:32492 Closing
+[Fri Jun 28 12:52:14 2024] [::1]:32497 Accepted
+[Fri Jun 28 12:52:14 2024] [::1]:32500 Accepted
+[Fri Jun 28 12:52:14 2024] [::1]:32497 [200]: POST /key.php
+[Fri Jun 28 12:52:14 2024] [::1]:32497 Closing
+[Fri Jun 28 12:52:14 2024] [::1]:32500 [200]: POST /key.php
+[Fri Jun 28 12:52:14 2024] [::1]:32500 Closing
+[Fri Jun 28 12:52:14 2024] [::1]:32503 Accepted
+[Fri Jun 28 12:52:14 2024] [::1]:32503 [200]: POST /key.php
+[Fri Jun 28 12:52:14 2024] [::1]:32503 Closing
+[Fri Jun 28 12:52:15 2024] [::1]:32506 Accepted
+[Fri Jun 28 12:52:15 2024] [::1]:32506 [200]: POST /key.php
+[Fri Jun 28 12:52:15 2024] [::1]:32506 Closing
+[Fri Jun 28 12:52:17 2024] [::1]:32520 Accepted
+[Fri Jun 28 12:52:17 2024] [::1]:32520 [200]: GET /?
+[Fri Jun 28 12:52:17 2024] [::1]:32520 Closing
+[Fri Jun 28 12:52:19 2024] [::1]:32533 Accepted
+[Fri Jun 28 12:52:19 2024] [::1]:32534 Accepted
+[Fri Jun 28 12:52:19 2024] [::1]:32535 Accepted
+[Fri Jun 28 12:52:19 2024] [::1]:32533 [200]: GET /style.css
+[Fri Jun 28 12:52:19 2024] [::1]:32534 [200]: GET /loc.js
+[Fri Jun 28 12:52:19 2024] [::1]:32535 [200]: GET /client.min.js
+[Fri Jun 28 12:52:19 2024] [::1]:32533 Closing
+[Fri Jun 28 12:52:19 2024] [::1]:32534 Closing
+[Fri Jun 28 12:52:19 2024] [::1]:32535 Closing
+[Fri Jun 28 12:52:20 2024] [::1]:32546 Accepted
+[Fri Jun 28 12:52:20 2024] [::1]:32546 [200]: GET /loc.js
+[Fri Jun 28 12:52:20 2024] [::1]:32546 Closing
+[Fri Jun 28 12:52:21 2024] [::1]:32551 Accepted
+[Fri Jun 28 12:52:21 2024] [::1]:32551 [200]: GET /client.min.js
+[Fri Jun 28 12:52:21 2024] [::1]:32551 Closing
+[Fri Jun 28 12:52:21 2024] [::1]:32556 Accepted
+[Fri Jun 28 12:52:22 2024] [::1]:32556 [200]: POST /info.php
+[Fri Jun 28 12:52:22 2024] [::1]:32556 Closing

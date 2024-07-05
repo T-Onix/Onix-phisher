@@ -1,0 +1,145 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  min-height: 100vh;
+  background: #0d1117;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.all-container {
+  padding-top: 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  width: 50px;
+}
+.logo-container .logo {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.login-text {
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+.signin-container {
+  width: 265px;
+  background: #161b22;
+  box-sizing: content-box;
+  border: 1px solid #25262d;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.input {
+  background: #0d1117 !important;
+  border: 0 !important;
+  color: #fff !important;
+  height: 32px !important;
+  font-weight: lighter !important;
+  font-size: 0.9rem !important;
+}
+
+.input:focus {
+  background: #0d1117 !important;
+}
+
+.inputTitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: lighter;
+}
+
+.forget-password {
+  font-size: 0.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: #58a6ff;
+}
+
+.signin-btn {
+  width: 100%;
+  height: 32px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #238636;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, opacity 0.3s;
+}
+.signin-btn:hover {
+  background: #2ea043 !important;
+}
+.signin-btn:active {
+  opacity: 0.5 !important;
+}
+.signin-btn:focus {
+  background: #238636 !important;
+}
+
+.new-container {
+  width: 270px;
+  padding: 15px;
+  box-sizing: content-box;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.new-text {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+
+.links-container {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  margin-top: 4rem;
+}
+
+.alert-container {
+  width: 300px;
+  padding: 15px;
+  color: #ff7b72;
+  background-image: linear-gradient(rgba(248, 81, 73, 0.1));
+  border: 1px solid rgba(248, 81, 73, 0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  display: none;
+}
+.alert-container .alert-close {
+  width: 1rem;
+}
+.alert-container .alert-close:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

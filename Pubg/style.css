@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+	* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+body{
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	background-image: url(https://laptop88.vn//media/news/2877_game_gi___ng_pubg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	color: white;
+	font-family: 'Questrial', sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+.navbar {
+color:white;
+background: linear-gradient(-45deg, #d65a31, #a34a28);
+height: 70px;
+width:1188px;
+margin: 1em auto;
+position:relative;
+border-radius: 5px;
+display: flex;
+align-items: center;
+}
+
+.search-bar {
+	text-align: left;
+	position: absolute;
+	left: 1rem;
+}
+
+.nav-icons {
+	position: absolute;
+	margin-top: 0;
+	right: 1rem;
+	vertical-align: middle;
+}
+
+.nav-icons li {
+	display: inline-block;
+	padding: 10px;
+	border-radius: 50%;
+	margin-left: 15px;
+	transition: background 0.3s ease-in;
+}
+
+.nav-icons li:hover {
+	background: rgb(0,0,0,0.2);
+}
+
+.nav-icons li a {
+}
+
+nav i {
+	font-size: 20px;
+}
+
+ul li {
+	list-style: none;
+}
+
+nav input{
+height: 30pt;
+border-radius: 3px;
+margin: 0 10px;
+border: none;
+background: rgb(0,0,0,0.2);
+color:white;
+width: 300px;
+padding: 15px;
+}
+
+button{
+padding: 10px 15px;
+border-radius: 3px;
+border: none;
+font-size:15px;
+font-weight: bold;
+letter-spacing: 1.5px;
+font-family: 'Questrial', sans-serif;
+background-color: #B0C4DE;
+}
+
+a {
+text-decoration: none;
+position: relative;
+color:white;
+font-size: 12.5px;
+}
+
+form.login {
+	transform: translateY(6rem);
+	border-radius: 3px;
+	width: 330px;
+	height: 450px;
+	padding-top: 5rem !important;
+	padding: 0 2rem;
+	background: rgb(0,0,0,0.9);
+	margin: auto;
+	position: relative;
+}
+
+form.login input {
+	background: rgb(255,255,255,0.2);
+}
+
+.inputs {
+	margin-top: 5rem;
+}
+.inputs input {
+	padding: 15px 10px;
+	width: 100%;
+	border-radius: 2px;
+	outline: none;
+	border: 2px solid #ccc;
+	color: #ccc;
+	margin-bottom: 20px;
+}
+
+.logo {
+	position: absolute;
+	top: -5rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: auto;
+	width: 200px;
+	height: 200px;
+}
+
+form.login button {
+	background: linear-gradient(-45deg, #d65a31, #a34a28);
+	width: 100%;
+	font-size: 13px;
+	text-transform: uppercase;
+	padding: 15px;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+form.login a {
+	color: #d65a31;
+}
+
+p {
+	font-size: 13px;
+	color: #fff;
+}
