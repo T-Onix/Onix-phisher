@@ -6,7 +6,6 @@ import os
 import linecache
 import random
 import win32gui, win32con
-import multiprocessing
 import urllib3; urllib3.disable_warnings()
 try:
     from colorama import Fore , init; init()
