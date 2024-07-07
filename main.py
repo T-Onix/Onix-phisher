@@ -52,7 +52,7 @@ else:
     except:
         os.system("clear")
         pass
-    sleep(1)
+    sleep(0.2)
     pass
 
 #Banner ====================================================================================================
@@ -109,13 +109,13 @@ except KeyboardInterrupt:
 def zero_exit():
     sys.exit()
 
-os.chdir("..")
 
 #option 1 ====================================================================================================
 def instagram():
     global port
     path = os.getcwd()
     os.chdir(rf"{path}\instagram")
+
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
