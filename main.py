@@ -13,7 +13,11 @@ try:
     import pandas as pd
     import keyboard
 except ImportError:
-    print("install colorama module !") 
+    install = input(f"{Fore.RED}unfortunitly you dont have excepetd modules!!\n{Fore.GREEN}Want to install ? (y/n)")
+    if install == "y":
+        os.system("pip install colorama , playsound , pandas , keyboard")
+    else:
+        exit(Fore.GREEN + "have a good day".title()) 
 #build localhost====================================================================================================
 def php_server():
     with open("server" , "w") as log:
