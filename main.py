@@ -47,7 +47,7 @@ except:
     pass
 
 if check != 0:
-    print ("Please Install PHP !")
+    print (f"{Fore.RED}[-]{Fore.BLUE} Please Install PHP !")
     sys.exit()
 
 else:
