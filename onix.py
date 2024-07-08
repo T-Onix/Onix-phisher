@@ -12,7 +12,7 @@ try:
     import pandas as pd
     import keyboard
 except ImportError:
-    install = input(f"{Fore.RED}unfortunitly you dont have excepetd modules!!\n{Fore.GREEN}Want to install ? (y/n) :")
+    install = input(f"{Fore.RED}unfortunately you dont have excepetd modules!!\n{Fore.GREEN}Want to install ? (y/n) :")
     if install.lower == "y" or install.upper == "y":
         os.system("pip install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
@@ -41,7 +41,7 @@ win32gui.ShowWindow(getsize , win32con.SW_MAXIMIZE)
 check = subprocess.call("php -v" , stdout=subprocess.DEVNULL)
 
 if check != 0:
-    print (f"{Fore.RED}[-]{Fore.BLUE} Please Install PHP !")
+    print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
     sys.exit()
 
 else:
