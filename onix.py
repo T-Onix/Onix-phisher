@@ -93,6 +93,12 @@ print(f"""
 
 try:
     ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
+    voices = ["good_idea.mp3" , "im_with_you.mp3" , "nice_choose.mp3" , "you_own.mp3"]
+    voice_path = os.getcwd()
+    os.chdir(fr"{voice_path}\Voice")
+    playsound(random.choice(voices))
+    sleep(0.2)
+    os.chdir("..")
 except KeyboardInterrupt:
     exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
