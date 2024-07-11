@@ -69,7 +69,7 @@ else:
     except Exception:
         os.system("clear")
         pass
-    sleep(0.2)
+    sleep(0.1)
     pass
 
 #Banner ====================================================================================================
@@ -408,10 +408,9 @@ def netflix():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    try:
-                        Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
-                    except KeyboardInterrupt:
-                        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+                    
+                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+    
                     break
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
@@ -524,6 +523,8 @@ def Google():
                 
                     Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
                     
+                    break
+
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
@@ -807,6 +808,9 @@ def Pubg():
 if ask == "0":
     zero_exit()
 
+if ask == "00":
+    from Port_Scan import Port_Scanner
+
 if ask == "1":
     instagram()
 
@@ -824,6 +828,3 @@ if ask == "5":
 
 if ask == "6":
     Pubg()
-
-if ask == "00":
-    from Port_Scan import Port_Scanner
