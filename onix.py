@@ -26,8 +26,8 @@ os.system("title Onix Phisher")
 
 #Check Connection====================================================================================================
 try:
-    connection = requests.get("https://soft98.ir")
-    connection1 = requests.get("https://www.digikala.com")
+    connection = requests.get("https://www.nasa.gov")
+    connection1 = requests.get("https://www.kali.org")
 
     if connection.status_code == 200 or connection1.status_code == 200:
         pass
