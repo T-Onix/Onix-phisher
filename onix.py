@@ -103,7 +103,7 @@ print(f"""
 {Fore.RED}[4]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[5]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[6]{Fore.LIGHTWHITE_EX} Pubg
 
 
-{Fore.RED}[7]{Fore.LIGHTWHITE_EX} Port Scanner
+{Fore.RED}[00]{Fore.LIGHTWHITE_EX} Port Scanner
 
 {Fore.RED}[0]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
@@ -111,12 +111,13 @@ print(f"""
 
 try:
     ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
-    voices = ("good_idea.mp3" , "im_with_you.mp3" , "nice_choose.mp3" , "you_own.mp3")
-    voice_path = os.getcwd()
-    os.chdir(fr"{voice_path}\Voice")
-    playsound(random.choice(voices))
-    sleep(0.2)
-    os.chdir("..")
+    if ask != "0":
+        voices = ("good_idea.mp3" , "im_with_you.mp3" , "nice_choose.mp3" , "you_own.mp3")
+        voice_path = os.getcwd()
+        os.chdir(fr"{voice_path}\Voice")
+        playsound(random.choice(voices))
+        sleep(0.2)
+        os.chdir("..")
 except KeyboardInterrupt:
     exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
@@ -824,5 +825,5 @@ if ask == "5":
 if ask == "6":
     Pubg()
 
-if ask == "7":
+if ask == "00":
     from Port_Scan import Port_Scanner
