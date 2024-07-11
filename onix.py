@@ -1,4 +1,3 @@
-from time import sleep
 import subprocess
 import json
 import sys
@@ -6,16 +5,18 @@ import os
 import linecache
 import random
 import requests
+from time import sleep
 try:
-    import win32gui, win32con
     from colorama import Fore , init; init()
     from playsound import playsound
+    import win32gui, win32con
     import pandas as pd
     import keyboard
+    
 except ImportError or ModuleNotFoundError:
     install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) :")
     if install.lower == "y" or install.upper == "y":
-        os.system("pip install colorama , playsound , pandas , keyboard , pywin32")
+        os.system("pip3 install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
     else:
         exit(Fore.GREEN + "have a good day".title())
@@ -86,7 +87,7 @@ print(fr"""{random.choice(Banner_color)}
 `.   ` ..' /  |  |   |  ||  |`.   \  .'    /                |     |        |    || |  .'''-. |  |     _| | .'''-. |                  || |  | | 
     '-...-'`   |  |   |  ||  |  `.  `'    .'                 |      \      /    . | |/.'''. \|  |   .' |  | |/.'''. \\    .-------------'| |  | | 
             |  |   |  ||  |    '.    .'                   |     |\`'-.-'   .'  |  /    | ||  |  .   | /|  /    | | \    '-.____...---.| |  '-  
-            |  |   |  ||__|    .'     `.   version : 1.1  |     | '-....-'`    | |     | ||__|.'.'| |//| |     | |  `.             .' | |      
+            |  |   |  ||__|    .'     `.   version : 1.2  |     | '-....-'`    | |     | ||__|.'.'| |//| |     | |  `.             .' | |      
             |  |   |  |      .'  .'`.   `.               .'     '.             | |     | |  .'.'.-'  / | |     | |    `''-...... -'   | |      
             |  |   |  |    .'   /    `.   `.           '-----------'           | '.    | '. .'   \_.'  | '.    | '.                   |_|      
             '--'   '--'   '----'       '----'                                  '---'   '---'           '---'   '---'                           
@@ -101,6 +102,8 @@ print(f"""
 
 {Fore.RED}[4]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[5]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[6]{Fore.LIGHTWHITE_EX} Pubg
 
+
+{Fore.RED}[7]{Fore.LIGHTWHITE_EX} Port Scanner
 
 {Fore.RED}[0]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
@@ -820,3 +823,6 @@ if ask == "5":
 
 if ask == "6":
     Pubg()
+
+if ask == "7":
+    from Port_Scan import Port_Scanner
