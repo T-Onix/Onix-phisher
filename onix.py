@@ -4,7 +4,6 @@ import sys
 import os
 import linecache
 import random
-import requests
 import threading
 from time import sleep
 try:

@@ -73,12 +73,12 @@ print(f"{Red}[3]{White} Custom Port Scan")
 print(f"{Red}[4]{White} Show IP and Exit \n")
 
 try:
-    mode = int(input(Magenta + "Select Any Option : " + White))
+    option = int(input(Magenta + "Select Any Option : " + White))
     print(" ")
 except ValueError or KeyboardInterrupt:
     exit(f"{Red}[-]{Fore.BLUE} An error occurred !!")
 #=============================================================================================
-if mode == 3:
+if option == 3:
     try:
         customPortStart = int(input(Magenta + "Enter starting port number : ".title() + Reset))
         customPortEnd = int(input(Magenta + "Enter ending port number : ".title() + Reset))
@@ -103,19 +103,19 @@ queue = Queue()
 
 #=============================================================================================
 def get_ports(mode):
-    if mode == 1:
+    if option == 1:
         print(f"\n{Fore.YELLOW}亗{White} Scaning {Fore.YELLOW}亗\n" + White)
         for port in range(startfrom , endwith):
             queue.put(port)
 
 #=============================================================================================
-    elif mode == 2:
+    elif option == 2:
         print(f"\n{Fore.YELLOW}亗{White} Scaning {Fore.YELLOW}亗\n" + White)
         for port in range(allPort, allPortEnd+1):
             queue.put(port)
 
 #=============================================================================================
-    elif mode == 3:
+    elif option == 3:
         print(f"\n{Fore.YELLOW}亗{White} Scaning {Fore.YELLOW}亗\n" + White)
         for port in range(customPortStart, customPortEnd+1):
             queue.put(port)
@@ -149,5 +149,5 @@ def run_scanner(threads, mode):
     for thread in thread_list:
         thread.join()
 
-run_scanner(1021, mode)
+run_scanner(1021, option)
 print(f"\n{Fore.YELLOW}Scan Completed in:{White} {current_time}")
