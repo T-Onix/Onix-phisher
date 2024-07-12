@@ -54,7 +54,7 @@ try:
 except KeyboardInterrupt or Exception:
     exit(f"\n{Red}[-]{Fore.BLUE} An Error occurred !!")
 
-
+#=============================================================================================
 startfrom = 1
 endwith = 1025
 
@@ -63,10 +63,10 @@ allPortEnd = 65535
 
 customPortStart = 0
 customPortEnd = 0
-
+#=============================================================================================
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
-
+#=============================================================================================
 print(f"\n{Red}[1]{White} 1024 port Scan ")
 print(f"{Red}[2]{White} Full Scan (1 / 65535)")
 print(f"{Red}[3]{White} Custom Port Scan")
@@ -77,7 +77,7 @@ try:
     print(" ")
 except ValueError or KeyboardInterrupt:
     exit(f"{Red}[-]{Fore.BLUE} An error occurred !!")
-
+#=============================================================================================
 if mode == 3:
     try:
         customPortStart = int(input(Magenta + "Enter starting port number : ".title() + Reset))
@@ -85,12 +85,12 @@ if mode == 3:
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
-
+#=============================================================================================
 print("-"*50)
 print(f"{Green}Target IP :{White} {host}")
 print(f"{Green}Scanning started at :{White} {current_time}")
 print("-"*50 + Reset) 
-
+#=============================================================================================
 def scan(port):
     s = socket.socket()
     s.settimeout(5)

