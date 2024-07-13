@@ -15,7 +15,7 @@ try:
     
 except ImportError or ModuleNotFoundError:
     install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) :")
-    if install.lower == "y" or install.upper == "y":
+    if install == "y" or install == "Y":
         os.system("pip3 install colorama , playsound , pandas , keyboard , pywin32")
         sleep(0.5)
         pass
