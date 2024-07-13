@@ -802,7 +802,9 @@ if ask == "0":
     zero_exit()
 
 if ask == "00":
-    from Port_Scan import Port_Scanner
+
+    path_app = os.getcwd()
+    subprocess.call([f"{path_app}/Port_Scan/port_Scanner.exe"])
 
 if ask == "1":
     instagram()
