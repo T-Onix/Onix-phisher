@@ -14,7 +14,7 @@ try:
     import keyboard
     
 except ImportError or ModuleNotFoundError:
-    install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) : ")
+    install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
     if install == "y":
         os.system("pip install -r requirements.txt")
         sleep(0.5)
