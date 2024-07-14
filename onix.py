@@ -132,11 +132,8 @@ def instagram():
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #====================================================================================================
-    if os.name == "nt":
-        php_server()
-    else:
-        php_server_linux()
-
+    php_server()
+    
     sleep(1)
 
     loaclhost()
