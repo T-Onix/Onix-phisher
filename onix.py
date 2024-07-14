@@ -16,11 +16,11 @@ try:
 except ImportError or ModuleNotFoundError:
     install = input(f"{Fore.RED}unfortunately you dont have excepetd modules !!\n{Fore.GREEN}Want to install ? (y/n) : ")
     if install == "y":
-        os.system("pip3 install colorama , playsound , pandas , keyboard , pywin32")
+        os.system("pip install -r requirements.txt")
         sleep(0.5)
         pass
     else:
-        exit(Fore.GREEN + "have a good day".title())
+        exit(Fore.GREEN + "\nhave a good day".title())
 
 #Change Title====================================================================================================
 if os.name == "nt":
