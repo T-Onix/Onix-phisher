@@ -21,17 +21,21 @@ Be carefull of using it and have fun .
 
 ## Installation
 
+- Run this command on your cmd and type yes
+```
+ssh -R 80:localhost:80 nokey@localhost.run
+``` 
 - Clone this repository 
 ```
-   Git clone https://github.com/T-Onix/Onix-phisher.git
+Git clone https://github.com/T-Onix/Onix-phisher.git
 ```
 - Then go to cloned directory
 ```
-   cd Onix_Phisher
+cd Onix_Phisher
 ```
 - Finally run the program
 ```
-   python Onix.py
+python Onix.py
 ```
 ##
 
