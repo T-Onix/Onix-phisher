@@ -21,6 +21,7 @@ if os.name == "nt":
             pass
         else:
             exit(Fore.GREEN + "\nhave a good day".title())
+#For linux====================================================================================================
 else:
     try:
         from colorama import Fore , init; init()
