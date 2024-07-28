@@ -1,4 +1,3 @@
 colorama
-keyboard 
 pywin32
 pandas
