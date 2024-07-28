@@ -228,7 +228,11 @@ def instagram():
 
                 break
 
+    if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 
@@ -325,8 +329,12 @@ def facebook():
 
                 break
 
-    subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
-    sys.exit()
+    if os.name == "nt":
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
   
 #option 3 ====================================================================================================
 def netflix():
@@ -422,8 +430,12 @@ def netflix():
 
                 break
 
-    subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL ,shell=True)
-    sys.exit()
+    if os.name == "nt":
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
 
 
 #option 4====================================================================================================
@@ -521,7 +533,11 @@ def Google():
 
                 break
 
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell= True)
+    if os.name == "nt":
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
    
 #option 5 ====================================================================================================
@@ -621,9 +637,12 @@ def Github():
                 break
 
     
+    if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
-
+    else:
+        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
 #option 6 ====================================================================================================
 def Pubg():
     global port
@@ -721,7 +740,11 @@ def Pubg():
 
                 break
 
+    if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     
 #Run functions ====================================================================================================
