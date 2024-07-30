@@ -123,7 +123,6 @@ try:
 except KeyboardInterrupt:
     exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
-
 #option 0 ====================================================================================================
 def zero_exit():
     sys.exit()
