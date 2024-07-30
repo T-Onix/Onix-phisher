@@ -118,6 +118,7 @@ print(f"""
 """)
 
 
+
 try:
     ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
 except KeyboardInterrupt:
