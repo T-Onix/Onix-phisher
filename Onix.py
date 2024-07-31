@@ -757,7 +757,7 @@ if ask == "00":
         path_app = os.getcwd()
         subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
     else:
-        print("Sorry this option wont work on your device")
+        print(f"{Fore.RED}[-] {Fore.BLUE}Sorry this option wont work on your device")
 if ask == "1":
     instagram()
 
