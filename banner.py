@@ -2,6 +2,7 @@ import random
 from colorama import Fore 
 
 Banner_color = (Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN)
+
 def banner():
    global Banner_color
 
@@ -14,4 +15,4 @@ def banner():
 ███    ███ ███   ███ ███    ▐███  ▀███           ███          ███    ███   ███           ███   ███    ███     ███    █▄  ▀███████████ 
 ███    ███ ███   ███ ███   ▄███     ███▄         ███          ███    ███   ███     ▄█    ███   ███    ███     ███    ███   ███    ███ 
  ▀██████▀   ▀█   █▀  █▀   ████       ███▄       ▄████▀        ███    █▀    █▀    ▄████████▀    ███    █▀      ██████████   ███    ███          
-      {Fore.RESET}""")
+{Fore.RESET}""")

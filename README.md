@@ -37,6 +37,10 @@ cd Onix_Phisher
 ```
 python Onix.py
 ```
+- For linux
+```
+sudo python Onix.py
+```
 ##
 
 <p align="center">
@@ -54,3 +58,5 @@ it will not work on ```linux```
 ## Tested on
 
 - Windows 
+
+- Linux

