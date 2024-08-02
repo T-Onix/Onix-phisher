@@ -1,17 +1,19 @@
-import sys
+from datetime import datetime
 from queue import Queue
 import threading
-from datetime import datetime
+import sys
 import os
 #=============================================================================================
 try:
     if os.name == "nt":
         import win32gui , win32con
-    else:
-        import socket
         from colorama import Fore , init ; init()
+        import socket
+    else:
+        from colorama import Fore , init ; init()
+        import socket
 except (ImportError , ModuleNotFoundError):
-    os.system("pip3 install colorama , socket , pywin32")
+    exit("You Dont have Expected modules !")
 
 #Title =============================================================================================
 if os.name == "nt":
