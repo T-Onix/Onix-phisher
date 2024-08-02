@@ -736,11 +736,10 @@ if ask == "0":
     zero_exit()
 
 if ask == "00":
-    if os.name == "nt":
-        path_app = os.getcwd()
-        subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
-    else:
-        print(f"\n{Fore.RED}[-] {Fore.BLUE}Sorry this option is not working on your device" + Fore.RESET)
+    path_app = os.getcwd()
+    os.chdir(f"{path_app}/Port_Scan")
+    subprocess.call("python Port_Scanner.py" , shell=True)
+    
 if ask == "1":
     instagram()
 

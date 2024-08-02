@@ -52,8 +52,6 @@ sudo python Onix.py
 Onix Phisher has its own port scanner that you can find ip ports that you get from users 
 
 it can help you in lots of situations without needing any other apps
-
-it will not work on ```linux```
  
 ## Tested on
 
