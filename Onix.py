@@ -1,10 +1,11 @@
+import sys ; sys.dont_write_bytecode = True
+from time import sleep
 import subprocess
-import json
-import sys
-import os
 import linecache
 import banner
-from time import sleep
+import json
+import os
+
 
 if os.name == "nt":
     try:
