@@ -45,7 +45,7 @@ else:
 #build localhost====================================================================================================
 def php_server():
     with open("Server" , "w") as log:
-        subprocess.Popen((f"php -S localhost:{port}") , stderr=log , stdout=log , shell=True)
+        subprocess.Popen((f"php -S localhost:{port}") ,stderr=log , stdout=log , shell=True)
 #build host====================================================================================================
 def loaclhost():
     global port
