@@ -88,14 +88,14 @@ banner.banner()
 #choices====================================================================================================
 print(f""" 
 
-{Fore.RED}[1]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[2]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[3]{Fore.LIGHTWHITE_EX} Github  
+{Fore.RED}[{Fore.GREEN}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.GREEN}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.GREEN}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github  
 
-{Fore.RED}[4]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[5]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[6]{Fore.LIGHTWHITE_EX} Pubg
+{Fore.RED}[{Fore.GREEN}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.GREEN}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.GREEN}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg
 
 
-{Fore.RED}[00]{Fore.LIGHTWHITE_EX} Port Scanner
+{Fore.RED}[{Fore.GREEN}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner
 
-{Fore.RED}[0]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
+{Fore.RED}[{Fore.GREEN}0{Fore.RED}]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
 
 
@@ -754,25 +754,25 @@ def Pubg():
 if ask == "0":
     zero_exit()
 
-if ask == "00":
+if ask == "x" or ask == "X":
     path_app = os.getcwd()
     os.chdir(f"{path_app}/Port_Scan")
     subprocess.call("python Port_Scanner.py" , shell=True)
     
-if ask == "1":
+if ask == "1" or ask == "01":
     instagram()
 
-if ask == "2":
+if ask == "2" or ask == "02":
     facebook()
 
-if ask == "3":
+if ask == "3" or ask == "03":
     Github()
     
-if ask == "4":
+if ask == "4" or ask == "04":
     netflix()
     
-if ask == "5":
+if ask == "5" or ask == "05":
     Google()
 
-if ask == "6":
+if ask == "6" or ask == "06":
     Pubg()
