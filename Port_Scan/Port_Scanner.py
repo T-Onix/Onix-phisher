@@ -63,7 +63,9 @@ print(White + '''
 
 try:
     host = socket.gethostbyname(input(Magenta + "Enter The Domain/IP : " + White))
-except (KeyboardInterrupt , Exception):
+except KeyboardInterrupt:
+    exit(f"\n{Red}[-]{Fore.BLUE} User Exited :)")
+except Exception:
     exit(f"\n{Red}[-]{Fore.BLUE} An Error occurred !!")
 
 #=============================================================================================
@@ -86,9 +88,12 @@ print(f"{Red}[4]{White} Show IP and Exit \n")
 
 try:
     option = int(input(Magenta + "Select Any Option : " + White))
-    print(" ")
-except (ValueError , KeyboardInterrupt):
+    print("")
+
+except ValueError:
     exit(f"{Red}[-]{Fore.BLUE} An error occurred !!")
+except KeyboardInterrupt:
+    exit(f"\n{Red}[-]{Fore.BLUE} User Exited :)")
 #=============================================================================================
 if option == 3:
     try:

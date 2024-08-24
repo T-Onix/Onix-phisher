@@ -69,7 +69,7 @@ if os.name == "posix":
     uid = os.getuid()
     if uid == 1000:
         exit(f"""{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} run with sudo command for running the localhost {Fore.GREEN}(sudo python Onix.py)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Run with sudo command for running the localhost {Fore.GREEN}(sudo python Onix.py)""")
 else:
     pass
 #check php====================================================================================================
