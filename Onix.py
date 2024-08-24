@@ -64,6 +64,14 @@ if os.name == "nt":
     win32gui.ShowWindow(getsize , win32con.SW_MAXIMIZE)
 else:
     pass
+#run with sudo ====================================================================================================
+if os.name == "posix":
+    uid = os.getuid()
+    if uid == 1000:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} run with sudo command for running the localhost {Fore.GREEN}(sudo python Onix.py)""")
+else:
+    pass
 #check php====================================================================================================
 
 check = subprocess.call("php -v" , stdout=subprocess.DEVNULL , shell=True)
@@ -102,7 +110,7 @@ print(f"""
 try:
     ask = input(Fore.MAGENTA + f"Which Option You Want {Fore.GREEN}⮞ " + Fore.RESET)
 except KeyboardInterrupt:
-    exit(f"""\n{Fore.GREEN}│
+    exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
    
 #option 0 ====================================================================================================
