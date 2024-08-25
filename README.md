@@ -21,7 +21,7 @@ Be carefull of using it and have fun .
 
 ## Installation
 
-- Run this command on your cmd and type yes
+- Run this command on your terminal and type yes
 ```
 ssh -R 80:localhost:80 nokey@localhost.run
 ``` 
