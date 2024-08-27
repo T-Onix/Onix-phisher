@@ -103,10 +103,10 @@ if option == 3:
         exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 #=============================================================================================
-print("="*50)
+print("⫘"*50)
 print(f"{Green}Target IP :{White} {host}")
 print(f"{Green}Scanning started at :{White} {current_time}")
-print("="*50 + Reset) 
+print("⫘"*50 + Reset) 
 #=============================================================================================
 def scan(port):
     s = socket.socket()
@@ -121,7 +121,7 @@ queue = Queue()
 #=============================================================================================
 def get_ports(mode):
     if option == 1:
-        print(f"\n{Fore.YELLOW}亗{White} Scaning {Fore.YELLOW}亗\n" + White)
+        print(f"\n{Fore.YELLOW}✫{White} Scaning {Fore.YELLOW}✫\n" + White)
         for port in range(startfrom , endwith):
             queue.put(port)
 
