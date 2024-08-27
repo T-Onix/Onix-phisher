@@ -1,6 +1,7 @@
 from datetime import datetime
 from queue import Queue
 import threading
+import subprocess
 import sys
 import os
 #=============================================================================================
@@ -168,3 +169,15 @@ def run_scanner(threads, mode):
 
 run_scanner(1021, option)
 print(f"\n{Fore.YELLOW}Scan Completed in:{White} {current_time}")
+
+go_back = input(f"\n{Fore.BLUE}[+]{Red} Want to run Onix Phisher {Green}(y/n) {Fore.BLUE}: " + Reset)
+
+if go_back == "y" or go_back == "Y":
+    os.chdir("..")
+    if os.name == "posix":
+        subprocess.call("sudo python Onix.py" , shell=True)
+    elif os.name == "nt":
+        subprocess.call("python Onix.py" , shell=True)
+
+else:
+    sys.exit()
