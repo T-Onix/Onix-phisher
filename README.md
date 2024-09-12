@@ -33,6 +33,14 @@ Git clone https://github.com/T-Onix/Onix-phisher.git
 ```
 cd Onix_Phisher
 ```
+- install requirements
+```
+pip install -r requirements.txt
+```
+- if you are using linux run this
+```
+pip install -r requirements_linux.txt
+```
 - Finally run the program
 ```
 python Onix.py
