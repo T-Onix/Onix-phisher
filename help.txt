@@ -1,20 +1,20 @@
 Welcome to Onix Phisher
 -----------------------------------------------------------------------
 
-This program needs good internet connection to get data from victim
+[+] This program needs good internet connection to get data from victim
 
 -----------------------------------------------------------------------
 
-if you didnt get URL you can check localhost.txt file in which option you selcted folder and get your URL from there
+[+] if you didnt get URL you can check localhost.txt file in which option you selcted folder and get your URL from there
 Or you can change port and try again
 
 -----------------------------------------------------------------------
 
-if the selected URL not opening and responsing you should use VPN unfortunitly
+[+] if the selected URL not opening and responsing you should use VPN unfortunitly
 
 -----------------------------------------------------------------------
 
-!! if program has any issue i will glad to report the problem from telegram (@sunpsz) !!
+[+] !! if program has any issue i will glad to report the problem from telegram (@sunpsz) !!
 
 -----------------------------------------------------------------------
 Thanks

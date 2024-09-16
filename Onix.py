@@ -101,7 +101,7 @@ print(f"""
 {Fore.RED}[{Fore.GREEN}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.GREEN}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.GREEN}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg
 
 
-{Fore.RED}[{Fore.GREEN}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner   {Fore.RED}[{Fore.GREEN}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help
+{Fore.RED}[{Fore.GREEN}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner  {Fore.RED}[{Fore.GREEN}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help
 
 {Fore.RED}[{Fore.GREEN}0{Fore.RED}]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
