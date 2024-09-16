@@ -845,9 +845,18 @@ if ask == "xx" or ask == "XX":
     with open("help.txt" , "r") as hint:
         print(Fore.LIGHTWHITE_EX + hint.read() + Fore.RESET)
         
-    go_back = input(Fore.GREEN + "want to go back to program (y/n) : " + Fore.RESET)
+    go_back = input(f"\n{Fore.YELLOW}[+]{Fore.BLUE} want to go back to program {Fore.GREEN}(y/n) {Fore.BLUE}: " + Fore.RESET)
+    
     if go_back == "y" or go_back == "Y":
         subprocess.call("python Onix.py" , shell=True)
+    elif go_back == "n" or go_back == "N":
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.BLUE}[+]{Fore.GREEN} Have a Good Day""")
+        
+    else:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.BLUE}[-]{Fore.RED} No Such Option !""")
+
 else:
     exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.BLUE}[-]{Fore.RED} No Such Option !""")
