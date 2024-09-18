@@ -96,14 +96,14 @@ banner.banner()
 #choices====================================================================================================
 print(f""" 
 
-{Fore.RED}[{Fore.GREEN}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.GREEN}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.GREEN}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github  
+{Fore.RED}[{Fore.LIGHTGREEN_EX}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.LIGHTGREEN_EX}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.LIGHTGREEN_EX}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github  
 
-{Fore.RED}[{Fore.GREEN}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.GREEN}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.GREEN}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg
+{Fore.RED}[{Fore.LIGHTGREEN_EX}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.LIGHTGREEN_EX}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.LIGHTGREEN_EX}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg
 
 
-{Fore.RED}[{Fore.GREEN}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner  {Fore.RED}[{Fore.GREEN}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help
+{Fore.RED}[{Fore.LIGHTGREEN_EX}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner  {Fore.RED}[{Fore.LIGHTGREEN_EX}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help
 
-{Fore.RED}[{Fore.GREEN}0{Fore.RED}]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
+{Fore.RED}[{Fore.LIGHTGREEN_EX}0{Fore.RED}]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
 
 
@@ -845,7 +845,7 @@ if ask == "xx" or ask == "XX":
     with open("help.txt" , "r") as hint:
         print(Fore.LIGHTWHITE_EX + hint.read() + Fore.RESET)
         
-    go_back = input(f"\n{Fore.YELLOW}[+]{Fore.BLUE} Want To Go Back To Program {Fore.GREEN}(y/n) {Fore.BLUE}: " + Fore.RESET)
+    go_back = input(f"\n\r{Fore.YELLOW}[+]{Fore.BLUE} Want To Go Back To Program {Fore.GREEN}(y/n) {Fore.BLUE}: " + Fore.RESET)
     
     if go_back == "y" or go_back == "Y":
         subprocess.call("python Onix.py" , shell=True)
