@@ -694,7 +694,7 @@ def Github():
         sys.exit()
     else:
         subprocess.call("pkill php" , stdout=subprocess.DEVNULL , shell=True)
-        sys.exit()
+        sys.exit() 
 
 #option 6 ====================================================================================================
 def Pubg():
