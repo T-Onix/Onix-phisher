@@ -37,10 +37,6 @@ cd Onix_Phisher
 ```
 pip install -r requirements.txt
 ```
-- if you are using linux run this
-```
-pip install -r requirements_linux.txt
-```
 - Finally run the program
 ```
 python Onix.py

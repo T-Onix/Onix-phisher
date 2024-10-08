@@ -6,11 +6,10 @@ import banner
 import json
 import os
 
-
+#For Windows====================================================================================================
 if os.name == "nt":
     try:
         from colorama import Fore , init; init()
-        import win32gui, win32con
         import pandas as pd
         
     except (ImportError , ModuleNotFoundError):
@@ -58,12 +57,6 @@ def Sprint(text):
     sys.stdout.write(character)
     sys.stdout.flush()
     sleep(0.1)
-#Fullscreen ====================================================================================================
-if os.name == "nt":
-    getsize = win32gui.GetForegroundWindow()
-    win32gui.ShowWindow(getsize , win32con.SW_MAXIMIZE)
-else:
-    pass
 #run with sudo ====================================================================================================
 if os.name == "posix":
     uid = os.getuid()
