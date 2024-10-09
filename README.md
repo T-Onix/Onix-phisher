@@ -13,8 +13,11 @@ Any illegal activities is your responsibility and its not related to Onix Phishe
 
 Be carefull of using it and have fun . 
 
-##
+## What can this program do
+This tool is for phishing some websites and get user and password of victim acount
+Get device info and gather some device information
 
+#
 <p align="center">
     <img src="Logo/onix.png">
 </p>
