@@ -5,9 +5,8 @@
 
 ##
 
-# Warning
-
-Onix Phisher is only for educational purposes only and it can be dangerous for social media and its illegal
+> [!Warning]
+> Onix Phisher is only for educational purposes only and it can be dangerous for social media and its illegal
 
 Any illegal activities is your responsibility and its not related to Onix Phisher !
 
