@@ -7,10 +7,8 @@
 
 > [!Warning]
 > Onix Phisher is only for educational purposes only and it can be dangerous for social media and its illegal
-
-Any illegal activities is your responsibility and its not related to Onix Phisher !
-
-Be carefull of using it and have fun . 
+> Any illegal activities is your responsibility and its not related to Onix Phisher !
+> Be carefull of using it and have fun . 
 
 ## What can this program do
 This tool is for phishing some websites and get user and password of victim acount
