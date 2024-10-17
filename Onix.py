@@ -15,7 +15,7 @@ if os.name == "nt":
     except (ImportError , ModuleNotFoundError):
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
         if install == "y" or install == "Y":
-            os.system("pip install -r requirements.txt")
+            subprocess.call("pip install -r requirements.txt" , shell=True)
             sleep(0.5)
             pass
         else:
@@ -32,7 +32,7 @@ else:
         if install == "y" or install == "Y":
             print("\nIf this option gives you an error try : sudo (Your package installer) python-colorama python-pandas\n")
             sleep(1)
-            os.system("sudo pip install colorama pandas")
+            subprocess.call("sudo pip install colorama pandas" , shell=True)
             sleep(0.5)
             pass
         else:
