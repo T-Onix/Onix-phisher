@@ -24,19 +24,24 @@ if os.name == "nt":
 #For linux====================================================================================================
 else:
     try:
-        from colorama import Fore , init; init()
+        from colorama import Fore , init ;init()
         import pandas as pd
         
     except (ImportError , ModuleNotFoundError):
-        install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) ⮞ ")
-        if install == "y" or install == "Y":
-            print("\nIf this option gives you an error try : sudo (Your package installer) python-colorama python-pandas\n")
-            sleep(1)
-            subprocess.call("sudo pip install colorama pandas" , shell=True)
-            sleep(0.5)
-            pass
-        else:
-            exit("\nhave a good day".title())
+        try:
+            package_installer = input("\nEnter your package installer (like 'apt install' or 'pacman -S') >> ")
+            python_v = input("\nYour linux using [1]python3 or [2]python for installing packages of python (Enter 1 or 2) >> ")
+            if python_v == "1":
+                subprocess.call(f"{package_installer} python3-colorama python3-pandas" ,  shell=True)
+                sys.exit()
+                
+            elif python_v == "2":
+                subprocess.call(f"{package_installer} python-colorama python-pandas" ,  shell=True)
+                sys.exit()
+        except NameError:
+            exit("\nWrong package installer name or python name !")
+        except KeyboardInterrupt:
+            exit("\n\nUser Exited :)")
         
 #Change Title====================================================================================================
 if os.name == "nt":
