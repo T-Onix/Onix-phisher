@@ -17,23 +17,26 @@ if os.name == "nt":
         install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
         if install == "y" or install == "Y":
             subprocess.call("pip install -r requirements.txt" , shell=True)
-            sleep(0.5)
-            pass
+            sleep(1)
+            sys.exit()
         else:
             exit("\nhave a good day".title())
 
-#For linux====================================================================================================
+#====================================================================================================
 else:
     try:
         from colorama import Fore , init ;init()
         import pandas as pd
         
+        #for termux
         if platform.uname()[1] == "localhost":
             print("You have missing libraries , colorama and pandas !\n")
             subprocess.call("pkg install python-pandas python-colorama" , shell=True)
+            sleep(1)
+            sys.exit()
         else:
             pass
-        
+    #for linux
     except (ImportError , ModuleNotFoundError):
         try:
             package_installer = input("\nEnter your package installer (like 'apt install' or 'pacman -S') >> ")
