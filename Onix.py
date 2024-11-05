@@ -26,7 +26,7 @@ if os.name == "nt":
 try:
     from colorama import Fore , init; init()
     import pandas as pd
-except:
+except (ImportError , ModuleNotFoundError):
     if platform.uname()[1] == "localhost" :
         print("\nYou may have missing libraries , colorama and pandas !\n")
         subprocess.call("pkg install python-pandas python-colorama" , shell=True)
@@ -39,7 +39,6 @@ else:
     try:
         from colorama import Fore , init ;init()
         import pandas as pd
-        
         
     except (ImportError , ModuleNotFoundError):
         try:

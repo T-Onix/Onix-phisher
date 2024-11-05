@@ -22,7 +22,7 @@ if os.name == "nt":
 #for termux ====================================================================================================
 try:
     from colorama import Fore , init; init()
-except:
+except (ImportError , ModuleNotFoundError):
     if platform.uname()[1] == "localhost" :
         print("\nYou may have missing libraries , colorama and pandas !\n")
         subprocess.call("pkg install python-pandas python-colorama" , shell=True)
