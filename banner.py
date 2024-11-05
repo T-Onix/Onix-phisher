@@ -1,5 +1,63 @@
+from time import sleep
+import subprocess
+import platform
 import random
-from colorama import Fore 
+import os
+import sys
+
+#for Windows ====================================================================================================
+if os.name == "nt":
+    try:
+        from colorama import Fore , init; init()
+        import pandas as pd
+        
+    except (ImportError , ModuleNotFoundError):
+        install = input("unfortunately you dont have excepetd modules !!\nWant to install ? (y/n) : ")
+        if install == "y" or install == "Y":
+            subprocess.call("pip install -r requirements.txt" , shell=True)
+            sleep(1)
+            sys.exit()
+        else:
+            exit("\nhave a good day".title())
+#for termux ====================================================================================================
+try:
+    from colorama import Fore , init; init()
+except:
+    if platform.uname()[1] == "localhost" :
+        print("\nYou may have missing libraries , colorama and pandas !\n")
+        subprocess.call("pkg install python-pandas python-colorama" , shell=True)
+        sleep(1)
+        sys.exit()
+    else:
+        pass
+
+#for Linux====================================================================================================
+
+else:
+    try:
+        from colorama import Fore , init ;init()
+        
+        
+    #for linux
+    except (ImportError , ModuleNotFoundError):
+        try:
+            print("You may have missing libraries , colorama and pandas !\n")
+            
+            package_installer = input("\nEnter your package installer (like 'apt install' or 'pacman -S') >> ")
+            python_v = input("\nYour linux using [1]python3 or [2]python for installing packages of python (Enter 1 or 2) >> ")
+            if python_v == "1":
+                subprocess.call(f"{package_installer} python3-colorama python3-pandas" ,  shell=True)
+                sys.exit()
+                
+            elif python_v == "2":
+                subprocess.call(f"{package_installer} python-colorama python-pandas" ,  shell=True)
+                sys.exit()
+        except NameError:
+            exit("\nWrong package installer name or python name !")
+        except KeyboardInterrupt:
+            exit("\n\nUser Exited :)")
+
+#====================================================================================================
 
 Banner_color = (Fore.RED , Fore.MAGENTA , Fore.BLUE , Fore.GREEN)
 

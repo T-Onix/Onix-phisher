@@ -22,23 +22,29 @@ if os.name == "nt":
         else:
             exit("\nhave a good day".title())
 
-#====================================================================================================
+#for termux ====================================================================================================
+try:
+    from colorama import Fore , init; init()
+    import pandas as pd
+except:
+    if platform.uname()[1] == "localhost" :
+        print("\nYou may have missing libraries , colorama and pandas !\n")
+        subprocess.call("pkg install python-pandas python-colorama" , shell=True)
+        sleep(1)
+        sys.exit()
+    else:
+        pass
+#for Linux====================================================================================================
 else:
     try:
         from colorama import Fore , init ;init()
         import pandas as pd
         
-        #for termux
-        if platform.uname()[1] == "localhost":
-            print("You have missing libraries , colorama and pandas !\n")
-            subprocess.call("pkg install python-pandas python-colorama" , shell=True)
-            sleep(1)
-            sys.exit()
-        else:
-            pass
-    #for linux
+        
     except (ImportError , ModuleNotFoundError):
         try:
+            print("\nYou may have missing libraries , colorama and pandas !")
+            
             package_installer = input("\nEnter your package installer (like 'apt install' or 'pacman -S') >> ")
             python_v = input("\nYour linux using [1]python3 or [2]python for installing packages of python (Enter 1 or 2) >> ")
             if python_v == "1":
