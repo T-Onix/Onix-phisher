@@ -2,6 +2,7 @@ import sys ; sys.dont_write_bytecode = True
 from time import sleep
 import subprocess
 import linecache
+import platform
 import banner
 import json
 import os
@@ -26,6 +27,12 @@ else:
     try:
         from colorama import Fore , init ;init()
         import pandas as pd
+        
+        if platform.uname()[1] == "localhost":
+            print("You have missing libraries , colorama and pandas !\n")
+            subprocess.call("pkg install python-pandas python-colorama" , shell=True)
+        else:
+            pass
         
     except (ImportError , ModuleNotFoundError):
         try:
