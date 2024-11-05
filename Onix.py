@@ -130,7 +130,9 @@ try:
 except KeyboardInterrupt:
     exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-   
+except EOFError:
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #option 0 ====================================================================================================
 def zero_exit():
     sys.exit()
@@ -154,6 +156,10 @@ def instagram():
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    
     except ValueError:
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
@@ -278,6 +284,9 @@ def facebook():
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     except ValueError:
             exit(f"""{Fore.YELLOW}│
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
@@ -396,6 +405,9 @@ def netflix():
             
 
     except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     except ValueError:
@@ -520,6 +532,9 @@ def Google():
     except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     except ValueError:
             exit(f"""{Fore.YELLOW}│
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
@@ -639,6 +654,9 @@ def Github():
 
     except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     except ValueError:
             exit(f"""{Fore.YELLOW}│
@@ -760,6 +778,9 @@ def Pubg():
 
     except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     except ValueError:
         exit(f"""{Fore.YELLOW}│
