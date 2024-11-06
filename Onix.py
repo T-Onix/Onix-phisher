@@ -180,7 +180,7 @@ def instagram():
     
     try:
         print(" ")
-        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -307,7 +307,7 @@ def facebook():
     
     try:
         print(" ")
-        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -431,7 +431,7 @@ def netflix():
     
     try:
         print(" ")
-        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -555,7 +555,7 @@ def Google():
     
     try:
         print(" ")
-        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -678,7 +678,7 @@ def Github():
     
     try:
         print(" ")
-        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
@@ -802,7 +802,7 @@ def Pubg():
     
     try:
         print(" ")
-        rotation(Fore.YELLOW + "please wait 10 second".title()  + Fore.RESET)
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
