@@ -67,6 +67,7 @@ else:
 def php_server():
     with open("Server" , "w") as log:
         subprocess.Popen((f"php -S localhost:{port}") ,stderr=log , stdout=log , shell=True)
+        
 #build host====================================================================================================
 def loaclhost():
     global port
@@ -160,7 +161,7 @@ def instagram():
             exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
 
-
+       
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
