@@ -8,7 +8,4 @@ if(isset($user)){
     fclose($filename);
 }
 
-
-
-
 ?>
