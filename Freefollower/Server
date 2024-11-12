@@ -1,0 +1,25 @@
+[Tue Nov 12 11:23:11 2024] PHP 8.3.13 Development Server (http://localhost:80) started
+[Tue Nov 12 11:23:27 2024] [::1]:40530 Accepted
+[Tue Nov 12 11:23:28 2024] [::1]:40530 [200]: GET /
+[Tue Nov 12 11:23:28 2024] [::1]:40530 Closing
+[Tue Nov 12 11:23:29 2024] [::1]:40538 Accepted
+[Tue Nov 12 11:23:29 2024] [::1]:40548 Accepted
+[Tue Nov 12 11:23:29 2024] [::1]:40552 Accepted
+[Tue Nov 12 11:23:29 2024] [::1]:40538 [200]: GET /style.css
+[Tue Nov 12 11:23:29 2024] [::1]:40538 Closing
+[Tue Nov 12 11:23:29 2024] [::1]:40548 [200]: GET /loc.js
+[Tue Nov 12 11:23:29 2024] [::1]:40548 Closing
+[Tue Nov 12 11:23:29 2024] [::1]:40552 [200]: GET /client.min.js
+[Tue Nov 12 11:23:29 2024] [::1]:40552 Closing
+[Tue Nov 12 11:23:31 2024] [::1]:40560 Accepted
+[Tue Nov 12 11:23:31 2024] [::1]:40560 [200]: GET /loc.js
+[Tue Nov 12 11:23:31 2024] [::1]:40560 Closing
+[Tue Nov 12 11:23:32 2024] [::1]:40570 Accepted
+[Tue Nov 12 11:23:32 2024] [::1]:40570 [200]: GET /client.min.js
+[Tue Nov 12 11:23:32 2024] [::1]:40570 Closing
+[Tue Nov 12 11:23:33 2024] [::1]:40576 Accepted
+[Tue Nov 12 11:23:33 2024] [::1]:40576 [404]: GET /favicon.ico - No such file or directory
+[Tue Nov 12 11:23:33 2024] [::1]:40576 Closing
+[Tue Nov 12 11:23:34 2024] [::1]:40584 Accepted
+[Tue Nov 12 11:23:35 2024] [::1]:40584 [200]: POST /info.php
+[Tue Nov 12 11:23:35 2024] [::1]:40584 Closing
