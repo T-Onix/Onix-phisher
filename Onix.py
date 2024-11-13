@@ -1473,7 +1473,7 @@ if ask == "7" or ask == "07":
 if ask == "8" or ask == "08":
     Whatsapp()
     
-if ask == "09" or ask == "9":
+if ask == "9" or ask == "09":
     Tiktok()
 
 if ask == "10":
