@@ -1156,7 +1156,7 @@ def Whatsapp():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    #TODO use rotation here
+                    
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     break
 
@@ -1276,7 +1276,7 @@ def Tiktok():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    #TODO use rotation here
+                    
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     break
 
@@ -1396,7 +1396,7 @@ def Telegram():
                     open("info.json" , "w").close()
                     victim_file.close()
 
-                    #TODO use rotation here
+                    
                     Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
                     break
 
