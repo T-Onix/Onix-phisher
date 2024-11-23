@@ -1,0 +1,6 @@
+dev
+"{'Os-Name': 'Linux', 'Os-Version': 'x86_64', 'Os-Ip': '80.191.204.1', 'CPU-Core': '8', 'Browser-Name': 'Firefox', 'Browser-Version': '132.0', 'CPU-Architecture': 'amd64', 'Resolution': '1920x1080', 'Time-Zone': 'Not Found', 'Language': 'en-US'}"
+
+dev
+"{'Os-Name': 'Linux', 'Os-Version': 'x86_64', 'Os-Ip': '80.191.204.1', 'CPU-Core': '8', 'Browser-Name': 'Firefox', 'Browser-Version': '132.0', 'CPU-Architecture': 'amd64', 'Resolution': '1920x1080', 'Time-Zone': 'Not Found', 'Language': 'en-US'}"
+
