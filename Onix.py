@@ -128,7 +128,7 @@ print(f"""
 {Fore.RED}[{Fore.LIGHTGREEN_EX}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.LIGHTGREEN_EX}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.LIGHTGREEN_EX}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg     {Fore.RED}[{Fore.LIGHTGREEN_EX}08{Fore.RED}]{Fore.LIGHTWHITE_EX} whatsapp        {Fore.RED}[{Fore.LIGHTGREEN_EX}10{Fore.RED}]{Fore.LIGHTWHITE_EX} Telegram
 
 
-{Fore.RED}[{Fore.LIGHTGREEN_EX}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner  {Fore.RED}[{Fore.LIGHTGREEN_EX}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help
+{Fore.RED}[{Fore.LIGHTGREEN_EX}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner  {Fore.RED}[{Fore.LIGHTGREEN_EX}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help        {Fore.RED}[{Fore.LIGHTGREEN_EX}U{Fore.RED}]{Fore.LIGHTWHITE_EX} Update
 
 {Fore.RED}[{Fore.LIGHTGREEN_EX}0{Fore.RED}]{Fore.LIGHTWHITE_EX} Exit{Fore.RESET}
 """)
@@ -1478,6 +1478,19 @@ if ask == "x" or ask == "X":
     path_app = os.getcwd()
     os.chdir(f"{path_app}/Port_Scan")
     subprocess.call("python Port_Scanner.py" , shell=True)
+    
+
+if ask == "u" or ask == "U":
+    try:
+        os.mkdir("Update-Onix")
+    except FileExistsError:
+        exit(Fore.RED + f"\n[-] {Fore.YELLOW}Update-Onix folder is existed ! Move it or delete it" + Fore.RESET)
+    sleep(0.1)
+    os.chdir("Update-Onix")
+    sleep(0.2)
+    save = os.getcwd()
+    subprocess.call("git clone https://github.com/T-Onix/Onix-phisher" , shell=True)
+    exit(Fore.GREEN + f"\n[+] {Fore.BLUE}Update saved in {save}" + Fore.RESET)
     
     
 if ask == "1" or ask == "01":
