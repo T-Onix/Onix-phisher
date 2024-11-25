@@ -29,6 +29,14 @@ ssh -R 80:localhost:80 nokey@localhost.run
 ```
 Git clone https://github.com/T-Onix/Onix-phisher.git
 ```
+- Download Cloudflare
+```
+winget install --id Cloudflare.cloudflared
+```
+- For Linux (Change Package manager If its not Pacman)
+```
+sudo pacman -Sy cloudflared
+```
 - Then go to cloned directory
 ```
 cd Onix_Phisher
