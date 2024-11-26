@@ -1,0 +1,135 @@
+<style>
+        *{
+            font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+/*             background-color: #4d4dff; */
+        }
+        ::selection{
+            color: #000;
+            background-color: rgb(240, 240, 117);
+        }
+body{
+  background-color: #d9d9d9;
+}
+        .container{
+            margin: auto;
+            /* display: flex; */
+            /* display: inline-block; */
+            background-color: #fff;
+            width: 25%;
+            height: 400px;
+            margin-top: 4%;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 7px;
+            box-shadow: inset black 9px;
+        }
+        .logo{
+            /* margin-top: 4px; */
+            width: 12%;
+            margin: auto ;
+            display: block;
+            background-color: #fff;
+            /* align-items: center; */
+           
+        }
+        .name{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 12px;
+            font-family: Avenir Next Medium;
+        }
+        .user{
+            margin-top: 20px;
+            font-weight: 300;
+            color: rgb(105, 104, 104);
+            font-size: 85%;
+
+        }
+        .username{
+            margin-top: 9px;
+            width: 90%;
+            height: 7%;
+            border: 0px;
+            /* border: 1px yellow; */
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: rgb(235, 232, 232);
+            outline: none;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .forget{
+            text-align: right;
+            margin-right: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            padding: 3px;
+        }
+        .forget:hover{
+            text-decoration: underline rgb(255, 208, 0) 2px;
+        }
+        .username:hover{
+            border: 1px solid rgb(255, 208, 0);
+            transition: 0.1s ease-in-out;
+        }
+        div{
+            background-color: #fff;
+        }
+        .submit{
+            margin: auto;
+            display: block;
+            margin-top: 30px;
+            width: 28%;
+            height: 9%;
+            border: none;
+            border-radius: 18px;
+            font-weight: bold;
+            background-color: yellow;
+            cursor: pointer;
+        }
+        .signup{
+            text-align: center;
+            margin-top: 2%;
+            background-color: transparent;
+            font-weight: 400;
+            color: rgb(27, 27, 27);
+            
+        }
+        span{
+            font-weight: bold;
+            font-size: large;
+            cursor: pointer;
+            padding: 2px;
+            color: #000;
+
+        }
+        span:hover{
+            text-decoration: underline rgb(255, 208, 0) 2px;
+        }
+        .container2{
+          border-radius: 20px 20px 0px 0px;
+            background-color: #fff;
+            border-top: 1px solid rgb(218, 215, 215);
+            margin-top: 4%;
+            height: 160px;
+        }
+        .one{
+            width: 7%;
+    margin-left: 9%;
+    margin-top: 3%;
+    color: rgb(105, 104, 104);
+        }
+        bold{
+            font-weight: bold;
+            color: #000;
+            
+        }
+        
+        
+        
+        
+        
+    </style>
