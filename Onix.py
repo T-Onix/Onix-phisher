@@ -134,6 +134,8 @@ print(f"""
 
 {Fore.RED}[{Fore.LIGHTGREEN_EX}04{Fore.RED}]{Fore.LIGHTWHITE_EX} Netflix      {Fore.RED}[{Fore.LIGHTGREEN_EX}05{Fore.RED}]{Fore.LIGHTWHITE_EX} Google      {Fore.RED}[{Fore.LIGHTGREEN_EX}06{Fore.RED}]{Fore.LIGHTWHITE_EX} Pubg     {Fore.RED}[{Fore.LIGHTGREEN_EX}08{Fore.RED}]{Fore.LIGHTWHITE_EX} whatsapp        {Fore.RED}[{Fore.LIGHTGREEN_EX}10{Fore.RED}]{Fore.LIGHTWHITE_EX} Telegram
 
+{Fore.RED}[{Fore.LIGHTGREEN_EX}11{Fore.RED}]{Fore.LIGHTWHITE_EX} Snapchat
+
 
 {Fore.RED}[{Fore.LIGHTGREEN_EX}X{Fore.RED}]{Fore.LIGHTWHITE_EX} Port Scanner  {Fore.RED}[{Fore.LIGHTGREEN_EX}XX{Fore.RED}]{Fore.LIGHTWHITE_EX} Help        {Fore.RED}[{Fore.LIGHTGREEN_EX}U{Fore.RED}]{Fore.LIGHTWHITE_EX} Update
 
@@ -2080,6 +2082,8 @@ if ask == "9" or ask == "09":
 
 if ask == "10":
     Telegram()
+if ask == "11":
+    Snapchat()
 
 
 
