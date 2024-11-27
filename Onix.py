@@ -2513,6 +2513,7 @@ if ask == "9" or ask == "09":
 
 if ask == "10":
     Telegram()
+    
 if ask == "11":
     Snapchat()
 
