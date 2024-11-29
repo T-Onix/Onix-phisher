@@ -2227,20 +2227,20 @@ def Snapchat():
                     
                     if port > 65535:    
                         exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536{Fore.RESET}""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536{Fore.RESET}""")
                         
                     else:
                         break
                     
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :){Fore.RESET}""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :){Fore.RESET}""")
         except EOFError:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :){Fore.RESET}""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :){Fore.RESET}""")
         except ValueError:
             exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port!{Fore.RESET}""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port!{Fore.RESET}""")
 #Run Localhost====================================================================================================
         php_server()
         
