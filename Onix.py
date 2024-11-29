@@ -2620,13 +2620,14 @@ def Snapchat():
 if ask == "0":
     zero_exit()
 
-if ask == "x" or ask == "X":
+elif ask == "x" or ask == "X":
     path_app = os.getcwd()
-    os.chdir(f"{path_app}/Port_Scan")
-    subprocess.call("python Port_Scanner.py" , shell=True)
-    
+    if __name__ == "__main__":
+        os.chdir(f"{path_app}/Port_Scan")
+        subprocess.call("python Port_Scanner.py" , shell=True)
+        
 
-if ask == "u" or ask == "U":
+elif ask == "u" or ask == "U":
     try:
         os.mkdir("Update-Onix")
     except FileExistsError:
@@ -2639,37 +2640,37 @@ if ask == "u" or ask == "U":
     exit(Fore.GREEN + f"\n[+] {Fore.BLUE}Update saved in {save}" + Fore.RESET)
     
     
-if ask == "1" or ask == "01":
+elif ask == "1" or ask == "01":
     instagram()
 
-if ask == "2" or ask == "02":
+elif ask == "2" or ask == "02":
     facebook()
 
-if ask == "3" or ask == "03":
+elif ask == "3" or ask == "03":
     Github()
     
-if ask == "4" or ask == "04":
+elif ask == "4" or ask == "04":
     netflix()
     
-if ask == "5" or ask == "05":
+elif ask == "5" or ask == "05":
     Google()
 
-if ask == "6" or ask == "06":
+elif ask == "6" or ask == "06":
     Pubg()
     
-if ask == "7" or ask == "07":
+elif ask == "7" or ask == "07":
     follower()
     
-if ask == "8" or ask == "08":
+elif ask == "8" or ask == "08":
     Whatsapp()
     
-if ask == "9" or ask == "09":
+elif ask == "9" or ask == "09":
     Tiktok()
 
-if ask == "10":
+elif ask == "10":
     Telegram()
     
-if ask == "11":
+elif ask == "11":
     Snapchat()
 
 
@@ -2683,6 +2684,7 @@ if ask == "xx" or ask == "XX":
     
     if go_back == "y" or go_back == "Y":
         subprocess.call("python Onix.py" , shell=True)  
+        
     elif go_back == "n" or go_back == "N":
         exit(f"""{Fore.YELLOW}│
 ╰┈➤{Fore.BLUE}[+]{Fore.GREEN} Have a Good Day""")

@@ -169,8 +169,10 @@ def run_scanner(threads, mode):
 
 run_scanner(1021, option)
 print(f"\n{Fore.YELLOW}Scan Completed in:{White} {current_time}")
-
-go_back = input(f"\n{Fore.BLUE}[+]{Red} Want to run Onix Phisher {Green}(y/n) {Fore.BLUE}: " + Reset)
+try:
+    go_back = input(f"\n{Fore.BLUE}[+]{Red} Want to run Onix Phisher {Green}(y/n) {Fore.BLUE}: " + Reset)
+except KeyboardInterrupt:
+    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
 
 if go_back == "y" or go_back == "Y":
     os.chdir("..")
