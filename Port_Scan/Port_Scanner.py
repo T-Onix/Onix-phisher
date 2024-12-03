@@ -48,16 +48,16 @@ clear()
 #=============================================================================================
 print(White + '''
         
-     ▒█████   ███▄    █  ██▓▒██   ██▒    ██▓███   ▒█████   ██▀███  ▄▄▄█████▓     ██████  ▄████▄   ▄▄▄       ███▄    █  ███▄    █ ▓█████  ██▀███  
-    ▒██▒  ██▒ ██ ▀█   █ ▓██▒▒▒ █ █ ▒░   ▓██░  ██▒▒██▒  ██▒▓██ ▒ ██▒▓  ██▒ ▓▒   ▒██    ▒ ▒██▀ ▀█  ▒████▄     ██ ▀█   █  ██ ▀█   █ ▓█   ▀ ▓██ ▒ ██▒
-    ▒██░  ██▒▓██  ▀█ ██▒▒██▒░░  █   ░   ▓██░ ██▓▒▒██░  ██▒▓██ ░▄█ ▒▒ ▓██░ ▒░   ░ ▓██▄   ▒▓█    ▄ ▒██  ▀█▄  ▓██  ▀█ ██▒▓██  ▀█ ██▒▒███   ▓██ ░▄█ ▒
-    ▒██   ██░▓██▒  ▐▌██▒░██░ ░ █ █ ▒    ▒██▄█▓▒ ▒▒██   ██░▒██▀▀█▄  ░ ▓██▓ ░      ▒   ██▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ▓██▒  ▐▌██▒▓██▒  ▐▌██▒▒▓█  ▄ ▒██▀▀█▄  
-    ░ ████▓▒░▒██░   ▓██░░██░▒██▒ ▒██▒   ▒██▒ ░  ░░ ████▓▒░░██▓ ▒██▒  ▒██▒ ░    ▒██████▒▒▒ ▓███▀ ░ ▓█   ▓██▒▒██░   ▓██░▒██░   ▓██░░▒████▒░██▓ ▒██▒
-    ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓  ▒▒ ░ ░▓ ░   ▒▓▒░ ░  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░  ▒ ░░      ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒▓ ░▒▓░
-    ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░░░   ░▒ ░   ░▒ ░       ░ ▒ ▒░   ░▒ ░ ▒░    ░       ░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░░ ░░   ░ ▒░░ ░░   ░ ▒░ ░ ░  ░  ░▒ ░ ▒░
-    ░ ░ ░ ▒     ░   ░ ░  ▒ ░ ░    ░     ░░       ░ ░ ░ ▒    ░░   ░   ░         ░  ░  ░  ░          ░   ▒      ░   ░ ░    ░   ░ ░    ░     ░░   ░ 
-        ░ ░           ░  ░   ░    ░                  ░ ░     ░                       ░  ░ ░            ░  ░         ░          ░    ░  ░   ░     
-                                                                                        ░                                                        
+ ▒█████   ███▄    █  ██▓▒██   ██▒       ██████  ▄████▄   ▄▄▄       ███▄    █  ███▄    █ ▓█████  ██▀███  
+▒██▒  ██▒ ██ ▀█   █ ▓██▒▒▒ █ █ ▒░     ▒██    ▒ ▒██▀ ▀█  ▒████▄     ██ ▀█   █  ██ ▀█   █ ▓█   ▀ ▓██ ▒ ██▒
+▒██░  ██▒▓██  ▀█ ██▒▒██▒░░  █   ░     ░ ▓██▄   ▒▓█    ▄ ▒██  ▀█▄  ▓██  ▀█ ██▒▓██  ▀█ ██▒▒███   ▓██ ░▄█ ▒
+▒██   ██░▓██▒  ▐▌██▒░██░ ░ █ █ ▒        ▒   ██▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ▓██▒  ▐▌██▒▓██▒  ▐▌██▒▒▓█  ▄ ▒██▀▀█▄  
+░ ████▓▒░▒██░   ▓██░░██░▒██▒ ▒██▒     ▒██████▒▒▒ ▓███▀ ░ ▓█   ▓██▒▒██░   ▓██░▒██░   ▓██░░▒████▒░██▓ ▒██▒
+░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓  ▒▒ ░ ░▓ ░     ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒▓ ░▒▓░
+░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░░░   ░▒ ░     ░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░░ ░░   ░ ▒░░ ░░   ░ ▒░ ░ ░  ░  ░▒ ░ ▒░
+░ ░ ░ ▒     ░   ░ ░  ▒ ░ ░    ░       ░  ░  ░  ░          ░   ▒      ░   ░ ░    ░   ░ ░    ░     ░░   ░ 
+    ░ ░           ░  ░   ░    ░                  ░ ░     ░                       ░  ░ ░            ░  ░   
+                                                         
 ''' + Reset)
 
 #=============================================================================================
@@ -65,7 +65,11 @@ print(White + '''
 try:
     host = socket.gethostbyname(input(Magenta + "Enter The Domain/IP : " + White))
 except KeyboardInterrupt:
-    exit(f"\n{Red}[-]{Fore.BLUE} User Exited :)")
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+except EOFError:
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 except Exception:
     exit(f"\n{Red}[-]{Fore.BLUE} An Error occurred !!")
 
@@ -94,14 +98,22 @@ try:
 except ValueError:
     exit(f"{Red}[-]{Fore.BLUE} An error occurred !!")
 except KeyboardInterrupt:
-    exit(f"\n{Red}[-]{Fore.BLUE} User Exited :)")
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+except EOFError:
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 #=============================================================================================
 if option == 3:
     try:
         customPortStart = int(input(Magenta + "Enter starting port number : ".title() + Reset))
         customPortEnd = int(input(Magenta + "Enter ending port number : ".title() + Reset))
     except KeyboardInterrupt:
-        exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 
 #=============================================================================================
 print("⫘"*50)
@@ -172,8 +184,11 @@ print(f"\n{Fore.YELLOW}Scan Completed in:{White} {current_time}")
 try:
     go_back = input(f"\n{Fore.BLUE}[+]{Red} Want to run Onix Phisher {Green}(y/n) {Fore.BLUE}: " + Reset)
 except KeyboardInterrupt:
-    exit(f"\n{Fore.RED}[-]{Fore.BLUE} User Exited :)")
-
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+except EOFError:
+    exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 if go_back == "y" or go_back == "Y":
     os.chdir("..")
     if os.name == "posix":
