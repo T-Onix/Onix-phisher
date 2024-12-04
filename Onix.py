@@ -2675,12 +2675,19 @@ elif ask == "11":
 
 
 
-if ask == "xx" or ask == "XX":
+elif ask == "xx" or ask == "XX":
     clear()
     with open("help.txt" , "r") as hint:
         print(Fore.LIGHTWHITE_EX + hint.read() + Fore.RESET)
-        
-    go_back = input(f"\n\r{Fore.YELLOW}[+]{Fore.BLUE} Want To Go Back To Program {Fore.GREEN}(y/n) {Fore.BLUE}: " + Fore.RESET)
+    try:
+        go_back = input(f"\n\r{Fore.YELLOW}[+]{Fore.BLUE} Want To Go Back To Program {Fore.GREEN}(y/n) {Fore.BLUE}: " + Fore.RESET)
+    except KeyboardInterrupt:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
+    
+    except EOFError:
+        exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
     
     if go_back == "y" or go_back == "Y":
         subprocess.call("python Onix.py" , shell=True)  
