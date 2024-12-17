@@ -61,7 +61,7 @@ print(White + '''
 ''' + Reset)
 
 #=============================================================================================
-
+import errno
 try:
     host = socket.gethostbyname(input(Magenta + "Enter The Domain/IP : " + White))
 except KeyboardInterrupt:
@@ -70,7 +70,7 @@ except KeyboardInterrupt:
 except EOFError:
     exit(f"""\n{Fore.YELLOW}│
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
-except Exception:
+except (socket.error , socket.timeout):
     exit(f"\n{Red}[-]{Fore.BLUE} An Error occurred !!")
 
 #=============================================================================================
