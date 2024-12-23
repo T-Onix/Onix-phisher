@@ -2624,12 +2624,15 @@ def Snapchat():
 if ask == "0":
     zero_exit()
 
+
 elif ask == "x" or ask == "X":
-    path_app = os.getcwd()
-    if __name__ == "__main__":
-        os.chdir(f"{path_app}/Port_Scan")
-        subprocess.call("python Port_Scanner.py" , shell=True)
-        
+    try:
+        path_app = os.getcwd()
+        if __name__ == "__main__":
+            os.chdir(f"{path_app}/Port_Scan")
+            subprocess.call("python Port_Scanner.py" , shell=True)
+    except (KeyboardInterrupt , EOFError):
+        exit()
 
 elif ask == "u" or ask == "U":
     try:

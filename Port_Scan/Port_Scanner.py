@@ -72,7 +72,6 @@ except EOFError:
 ╰┈➤{Fore.RED}[-]{Fore.BLUE} User Exited :)""")
 except (socket.error , socket.timeout):
     exit(f"\n{Red}[-]{Fore.BLUE} An Error occurred !!")
-
 #=============================================================================================
 startfrom = 1
 endwith = 1025
