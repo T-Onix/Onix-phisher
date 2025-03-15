@@ -2635,15 +2635,9 @@ elif ask == "x" or ask == "X":
         exit()
 
 elif ask == "u" or ask == "U":
-    # try:
-    #     os.mkdir("Update-Onix")
-    # except FileExistsError:
-    #     exit(Fore.RED + f"\n[-] {Fore.YELLOW}Update-Onix folder is existed ! Move it or delete it" + Fore.RESET)
-    # sleep(0.1)
-    # os.chdir("Update-Onix")
-    # sleep(0.2)
-    # save = os.getcwd()
+
     subprocess.call("git pull https://github.com/T-Onix/Onix-phisher > /dev/null" , shell=True) 
+    clear()
     exit(Fore.GREEN + f"\n[+] {Fore.BLUE}Update Has Been Complete" + Fore.RESET)
     
     
